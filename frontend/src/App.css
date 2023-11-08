@@ -1,0 +1,23 @@
+/* App.css */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1; /* This allows your main content to fill the available space */
+}
+
+.sidebar {
+  width: 20%; /* Sidebar takes up 20% of the width */
+  /* Further sidebar styling */
+}
+
+.content {
+  display: flex;
+  flex: 1; /* Content takes the remaining space */
+}
+
