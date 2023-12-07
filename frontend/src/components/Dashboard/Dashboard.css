@@ -1,0 +1,42 @@
+/* src/components/Dashboard/Dashboard.css */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .dashboard-content {
+    display: flex;
+    width: 100%;
+    max-width: 2000px; /* Adjust based on your design requirements */
+    gap: 20px; /* This adds space between your flex items */
+  }
+  
+  .patient-list {
+    flex: 0 0 70%; /* occupy 80% of the space */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .schedule {
+    flex: 0 0 20%; /* occupy 20% of the space */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Adjust your responsive design as needed */
+  @media (max-width: 768px) {
+    .dashboard-content {
+      flex-direction: column;
+    }
+  
+    .patient-list, 
+    .schedule {
+      flex: 0 0 auto; /* Take up full width on smaller screens */
+    }
+  }
+  
+  /* Continue with additional styling as needed */
+  
