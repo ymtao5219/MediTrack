@@ -1,0 +1,22 @@
+[
+    {
+        "patient_id": 1,
+        "name": "John Doe",
+        "date_of_birth": "1990-01-01",
+        "gender": "Male",
+        "email": "john.doe@example.com",
+        "phone": "1234567890",
+        "address": "123 Main St, Anytown, USA",
+        "registration_date": "2019-01-01"
+    },
+    {
+        "patient_id": 2,
+        "name": "Jane Smith",
+        "date_of_birth": "1985-05-15",
+        "gender": "Female",
+        "email": "jane.smith@example.com",
+        "phone": "1234567890",
+        "address": "124 Main St, Anytown, USA",
+        "registration_date":"2019-01-02"
+    }
+]
