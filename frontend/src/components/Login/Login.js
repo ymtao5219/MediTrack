@@ -4,6 +4,7 @@ import "./Login.css";
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [isDoctor, setIsDoctor] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,6 +36,17 @@ function Login({ onLogin }) {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+          <div className="switch-container">
+          Sign in as a doctor
+            <label className="switch-label">
+              <input 
+                type="checkbox" 
+                checked={isDoctor} 
+                onChange={(e) => setIsDoctor(e.target.checked)} 
+              />
+              <span className="slider"></span>
+            </label>
+          </div>
           <button type="submit" className="login-button">Login</button>
         </div>
       </form>
