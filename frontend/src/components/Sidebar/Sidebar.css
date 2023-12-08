@@ -1,29 +1,79 @@
-/* src/components/Sidebar/Sidebar.css */
 .sidebar {
-    width: 250px; /* Adjust width as needed */
-    background-color: #f0f0f0; /* Adjust the color to match your design */
-    height: 100vh; /* Full-height */
-    padding: 20px;
-  }
-  
-  .nav-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .nav-item {
-    margin-bottom: 10px; /* Spacing between items */
-  }
-  
-  .nav-item a {
-    text-decoration: none;
-    color: #333; /* Adjust the color to match your design */
-    display: block;
-    padding: 10px;
-    border-radius: 5px; /* Optional, for rounded corners */
-  }
-  
-  .nav-item a:hover {
-    background-color: #ddd; /* Adjust hover state color as needed */
-  }
-  
+  width: 20%;
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  background: #a382d5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Makes child elements use full width */
+}
+
+.logo-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Space between logo and nav items */
+}
+
+.sidebar-logo {
+  max-width: 70%; /* Adjust the size of the logo */
+  height: auto;
+}
+
+.nav {
+  padding: 0 20px; /* Padding on the sides */
+  flex-grow: 1; /* Allow nav to take up remaining space */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0; /* Start from the top of the nav */
+}
+
+.nav-item {
+  margin-bottom: 20px; /* Consistent gap between items */
+  padding: 10px; /* Padding for touch targets */
+}
+
+.nav-item a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 18px; /* Slightly larger font for readability */
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+.nav-item a:hover {
+  color: white; /* Hover effect */
+}
+
+.nav-item.active a {
+  color: white;
+  font-weight: 600;
+}
+
+/* Add the logout section at the bottom */
+.sidebar-bottom {
+  padding: 20px;
+  margin-top: auto; /* Pushes it to the bottom */
+}
+
+.logout-section a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.logout-section a:hover {
+  color: white;
+}
