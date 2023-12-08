@@ -1,5 +1,4 @@
 package MediTrack.Medi.repository;
 
-public class AppointmentRepository {
-    
+public interface AppointmentRepository {
 }

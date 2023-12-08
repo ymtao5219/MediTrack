@@ -20,5 +20,28 @@
         "phone": "1234567890",
         "address": "124 Main St, Anytown, USA",
         "registration_date":"2019-01-02"
+    },
+    {
+        "patient_id": 3,
+        "first_name": "John1",
+        "last_name": "Doe1",
+        "date_of_birth": "1990-01-01",
+        "gender": "Male",
+        "email": "john.doe@example.com",
+        "phone": "1234567890",
+        "address": "123 Main St, Anytown, USA",
+        "registration_date": "2019-01-01"
+    },
+    {
+        "patient_id": 4,
+        "first_name": "Jane1",
+        "last_name": "Smith1",
+        "date_of_birth": "1985-05-15",
+        "gender": "Female",
+        "email": "jane.smith@example.com",
+        "phone": "1234567890",
+        "address": "124 Main St, Anytown, USA",
+        "registration_date":"2019-01-02"
     }
+
 ]
