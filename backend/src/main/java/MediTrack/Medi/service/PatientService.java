@@ -41,10 +41,12 @@ public class PatientService {
         patient.setEmail(patientDetails.getEmail());
         patient.setPhone(patientDetails.getPhone());
         patient.setAddress(patientDetails.getAddress());
-        // Add other fields as necessary
 
         return patientRepository.save(patient);
     }
 
+    public Patient addPatient(Patient patient) {
+        return patientRepository.save(patient);
+    }
 
 }
