@@ -1,6 +1,6 @@
 [
     {
-        "patient_id": 1,
+        "patientid": "1",
         "first_name": "John",
         "last_name": "Doe",
         "date_of_birth": "1990-01-01",
@@ -11,7 +11,7 @@
         "registration_date": "2019-01-01"
     },
     {
-        "patient_id": 2,
+        "patientid": "2",
         "first_name": "Jane",
         "last_name": "Smith",
         "date_of_birth": "1985-05-15",
@@ -22,7 +22,7 @@
         "registration_date":"2019-01-02"
     },
     {
-        "patient_id": 3,
+        "patientid": "3",
         "first_name": "John1",
         "last_name": "Doe1",
         "date_of_birth": "1990-01-01",
@@ -33,7 +33,7 @@
         "registration_date": "2019-01-01"
     },
     {
-        "patient_id": 4,
+        "patientid": "4",
         "first_name": "Jane1",
         "last_name": "Smith1",
         "date_of_birth": "1985-05-15",

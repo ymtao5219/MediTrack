@@ -1,5 +1,4 @@
 package MediTrack.Medi.controller;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import MediTrack.Medi.model.Patient;
 import MediTrack.Medi.service.PatientService;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/patients")
@@ -20,12 +20,12 @@ public class PatientController {
         return new ResponseEntity<List<Patient>>(patientService.getAllPatients(),HttpStatus.OK);
 
     }
-/* 
 
-    @GetMapping("/{id}")
-    public Patient getPatientById(@PathVariable String id) {
-        return patientRepository.findById(id).orElse(null);
+    @GetMapping("/{patientid}")
+    public ResponseEntity<Optional<Patient>> getSingle_Patient(@PathVariable String patientid) {
+        return new ResponseEntity<Optional<Patient>>(patientService.getSinglePatient(patientid),HttpStatus.OK);
     }
+/* 
 
     @PostMapping
     public Patient createPatient(@RequestBody Patient patient) {

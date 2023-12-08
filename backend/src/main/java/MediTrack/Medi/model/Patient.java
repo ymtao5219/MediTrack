@@ -11,7 +11,7 @@ import org.bson.types.ObjectId;
 public class Patient {
     @Id
     private ObjectId id;
-    private Integer patient_id;
+    private String patientid;
     private String first_name;
     private String last_name;
     private String date_of_birth;
@@ -20,5 +20,5 @@ public class Patient {
     private String phone;
     private String address;
     private String registration_date;
-    
+
 }
