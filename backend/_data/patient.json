@@ -1,7 +1,8 @@
 [
     {
         "patient_id": 1,
-        "name": "John Doe",
+        "first_name": "John",
+        "last_name": "Doe",
         "date_of_birth": "1990-01-01",
         "gender": "Male",
         "email": "john.doe@example.com",
@@ -11,7 +12,8 @@
     },
     {
         "patient_id": 2,
-        "name": "Jane Smith",
+        "first_name": "Jane",
+        "last_name": "Smith",
         "date_of_birth": "1985-05-15",
         "gender": "Female",
         "email": "jane.smith@example.com",
