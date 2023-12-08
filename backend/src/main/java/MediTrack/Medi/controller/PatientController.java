@@ -37,6 +37,12 @@ public class PatientController {
         }
 
     }
+    @PutMapping("/{patientid}")
+    public ResponseEntity<Patient> updatePatient(@PathVariable String patientid, @RequestBody Patient patientDetails) {
+        Patient updatedPatient = patientService.updatePatient(patientid, patientDetails);
+        return new ResponseEntity<>(updatedPatient, HttpStatus.OK);
+    }
+
 /* 
 
     @PostMapping
@@ -57,10 +63,7 @@ public class PatientController {
                 });
     }
 
-    @DeleteMapping("/{id}")
-    public void deletePatient(@PathVariable String id) {
-        patientRepository.deleteById(id);
-    }
+
     */
 }
 
