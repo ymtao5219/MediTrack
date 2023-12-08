@@ -25,6 +25,18 @@ public class PatientController {
     public ResponseEntity<Optional<Patient>> getSingle_Patient(@PathVariable String patientid) {
         return new ResponseEntity<Optional<Patient>>(patientService.getSinglePatient(patientid),HttpStatus.OK);
     }
+    @DeleteMapping("/{patientid}")
+    public ResponseEntity<Void> deletePatient(@PathVariable String patientid) {
+
+        Optional<Patient> patient = patientService.getSinglePatient(patientid);
+        if (patient.isPresent()) {
+            patientService.deletePatient(patientid);
+            return ResponseEntity.noContent().build(); // 204 No Content
+        } else {
+            return ResponseEntity.notFound().build(); // 404 Not Found
+        }
+
+    }
 /* 
 
     @PostMapping

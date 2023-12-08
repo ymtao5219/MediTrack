@@ -21,4 +21,10 @@ public class PatientService {
     public Optional<Patient> getSinglePatient(String patientid) {
         return patientRepository.findBypatientid(patientid);
     }
+
+    public Optional<Patient> deletePatient(String patientid) {
+        return patientRepository.deleteBypatientid(patientid);
+    }
+
+
 }
