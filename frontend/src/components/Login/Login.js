@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
-import './Login.css';
+import "./Login.css";
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onLogin(username);
+    onLogin(username, password);
   };
 
   return (
-    <div className="login-container">
+    <div className="login-page">
+      <div className="logo-section">
+        <div className="logo">200-OK</div>
+        <div className="logo-subtext">Patient Tracker System</div>
+      </div>
       <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Login</h2>
-        <div className="form-group">
+        <div className="login-title">Sign in</div>
+        <div className="input-container">
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -22,11 +27,19 @@ function Login({ onLogin }) {
             onChange={(e) => setUsername(e.target.value)}
             required
           />
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="login-button">Login</button>
         </div>
-        <button type="submit">Login</button>
       </form>
     </div>
   );
-}
+};
 
 export default Login;

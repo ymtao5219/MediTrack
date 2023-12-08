@@ -1,0 +1,489 @@
+.switch-body {
+    border-radius: 50px;
+    height: 90px;
+    width: 200px;
+  }
+  
+  .switch-body .star {
+    position: absolute;
+  }
+  
+  .switch-body .union {
+    position: absolute;
+  }
+  
+  .switch-body .img {
+    position: absolute;
+  }
+  
+  .switch-body .subtract {
+    position: absolute;
+  }
+  
+  .switch-body .star-2 {
+    height: 6px;
+    left: 128px;
+    position: absolute;
+    top: 10px;
+    width: 6px;
+  }
+  
+  .switch-body .ellipse {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 1px;
+    height: 2px;
+    left: 137px;
+    position: absolute;
+    top: 11px;
+    width: 2px;
+  }
+  
+  .switch-body .div {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 1.5px;
+    height: 3px;
+    left: 94px;
+    position: absolute;
+    top: 38px;
+    width: 3px;
+  }
+  
+  .switch-body .ellipse-2 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 1.5px;
+    height: 3px;
+    left: 176px;
+    position: absolute;
+    top: 22px;
+    width: 3px;
+  }
+  
+  .switch-body .ellipse-3 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 0.5px;
+    height: 1px;
+    left: 162px;
+    position: absolute;
+    top: 21px;
+    width: 1px;
+  }
+  
+  .switch-body .ellipse-4 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 1.5px;
+    height: 3px;
+    left: 55px;
+    position: absolute;
+    top: 29px;
+    width: 3px;
+  }
+  
+  .switch-body .ellipse-5 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 2px;
+    height: 4px;
+    left: 65px;
+    position: absolute;
+    top: 12px;
+    width: 4px;
+  }
+  
+  .switch-body .ellipse-6 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 0.5px;
+    height: 1px;
+    left: 38px;
+    position: absolute;
+    top: 21px;
+    width: 1px;
+  }
+  
+  .switch-body .ellipse-7 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 0.5px;
+    height: 1px;
+    left: 94px;
+    position: absolute;
+    top: 7px;
+    width: 1px;
+  }
+  
+  .switch-body .ellipse-8 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 0.5px;
+    height: 1px;
+    left: 31px;
+    position: absolute;
+    top: 9px;
+    width: 1px;
+  }
+  
+  .switch-body .ellipse-9 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 1px;
+    height: 2px;
+    left: 49px;
+    position: absolute;
+    top: 14px;
+    width: 2px;
+  }
+  
+  .switch-body .ellipse-10 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 1px;
+    height: 2px;
+    left: 35px;
+    position: absolute;
+    top: 33px;
+    width: 2px;
+  }
+  
+  .switch-body .ellipse-11 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 1px;
+    height: 2px;
+    left: 15px;
+    position: absolute;
+    top: 20px;
+    width: 2px;
+  }
+  
+  .switch-body .ellipse-12 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 1.5px;
+    height: 3px;
+    left: 100px;
+    position: absolute;
+    top: 21px;
+    width: 3px;
+  }
+  
+  .switch-body .ellipse-13 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 2px;
+    height: 4px;
+    left: 155px;
+    position: absolute;
+    top: 8px;
+    width: 4px;
+  }
+  
+  .switch-body .ellipse-14 {
+    background: linear-gradient(180deg, rgb(255, 253.52, 218.1) 0%, rgba(255, 253.52, 218.1, 0.59) 100%);
+    border-radius: 1px;
+    height: 2px;
+    left: 113px;
+    position: absolute;
+    top: 13px;
+    width: 2px;
+  }
+  
+  .switch-body.sky {
+    box-shadow: inset 0px 6px 8px 3px #00000040;
+    position: relative;
+  }
+  
+  .switch-body.on {
+    background-color: var(--switch-green);
+  }
+  
+  .switch-body.three-d {
+    box-shadow: var(--switch-in-shadow);
+  }
+  
+  .switch-body.orange {
+    box-shadow: var(--switch-in-shadow);
+    position: relative;
+  }
+  
+  .switch-body.land {
+    background-size: 100% 100%;
+    box-shadow: inset 0px 6px 8px 3px #00000040;
+    position: relative;
+  }
+  
+  .switch-body.off {
+    background-color: #eeeeee;
+  }
+  
+  .switch-body.off.three-d {
+    background-color: #eeeeee;
+  }
+  
+  .switch-body.light.land {
+    background: linear-gradient(180deg, rgb(171.35, 249.98, 255) 0%, rgb(213.18, 255, 171.35) 100%);
+    background-image: url(./mask-group.png);
+  }
+  
+  .switch-body.three-d.on {
+    background-color: var(--switch-green);
+  }
+  
+  .switch-body.orange.on {
+    background-color: #ff9636;
+  }
+  
+  .switch-body.orange.off {
+    background-color: #ffe24a;
+  }
+  
+  .switch-body.dark.land {
+    background: linear-gradient(180deg, rgb(53.69, 74.86, 186.01) 0%, rgb(169.06, 121.31, 216.82) 100%);
+    background-image: url(./image.png);
+  }
+  
+  .switch-body.light.sky {
+    background: linear-gradient(180deg, rgb(102.29, 255, 236.67) 0%, rgb(255, 238, 177.73) 100%);
+  }
+  
+  .switch-body.sky.dark {
+    background: linear-gradient(180deg, rgb(42.78, 68.01, 132.88) 0%, rgb(174.54, 201.9, 255) 100%);
+  }
+  
+  .switch-body.dark .star {
+    height: 14px;
+    left: 107px;
+    top: 25px;
+    width: 13px;
+  }
+  
+  .switch-body.off .star {
+    height: 14px;
+    left: 86px;
+    top: 30px;
+    width: 27px;
+  }
+  
+  .switch-body.on .star {
+    height: 17px;
+    left: 91px;
+    top: 18px;
+    width: 26px;
+  }
+  
+  .switch-body.light.land .star {
+    height: 7px;
+    left: 106px;
+    top: 7px;
+    width: 21px;
+  }
+  
+  .switch-body.land.flat .star {
+    height: 7px;
+    left: 106px;
+    top: 7px;
+    width: 21px;
+  }
+  
+  .switch-body.light.sky .star {
+    height: 21px;
+    left: 23px;
+    top: 18px;
+    width: 34px;
+  }
+  
+  .switch-body.dark .union {
+    height: 3px;
+    left: 89px;
+    width: 3px;
+  }
+  
+  .switch-body.off .union {
+    height: 9px;
+    left: 94px;
+    top: 50px;
+    width: 12px;
+  }
+  
+  .switch-body.on .union {
+    height: 10px;
+    left: 101px;
+    top: 42px;
+    width: 11px;
+  }
+  
+  .switch-body.off.dark .union {
+    top: 12px;
+  }
+  
+  .switch-body.orange.light .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.on.dark .union {
+    top: 12px;
+  }
+  
+  .switch-body.three-d.dark .union {
+    top: 12px;
+  }
+  
+  .switch-body.light.land .union {
+    height: 7px;
+    left: 19px;
+    top: 14px;
+    width: 21px;
+  }
+  
+  .switch-body.land.flat .union {
+    height: 7px;
+    left: 19px;
+    top: 14px;
+    width: 21px;
+  }
+  
+  .switch-body.orange.flat .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.sky.flat .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.three-d.flat .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.off.flat .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.light.on .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.on.flat .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.orange.dark .union {
+    top: 12px;
+  }
+  
+  .switch-body.light.off .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.dark.land .union {
+    top: 14px;
+  }
+  
+  .switch-body.light.three-d .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.light.sky .union {
+    height: 11px;
+    left: 86px;
+    top: 12px;
+    width: 18px;
+  }
+  
+  .switch-body.sky.dark .union {
+    top: 12px;
+  }
+  
+  .switch-body.dark .img {
+    height: 8px;
+    left: 139px;
+    top: 33px;
+    width: 8px;
+  }
+  
+  .switch-body.light.land .img {
+    height: 13px;
+    left: 84px;
+    top: 25px;
+    width: 41px;
+  }
+  
+  .switch-body.land.flat .img {
+    height: 13px;
+    left: 84px;
+    top: 25px;
+    width: 41px;
+  }
+  
+  .switch-body.land.on .img {
+    height: 13px;
+    left: 84px;
+    top: 25px;
+    width: 41px;
+  }
+  
+  .switch-body.off.land .img {
+    height: 13px;
+    left: 84px;
+    top: 25px;
+    width: 41px;
+  }
+  
+  .switch-body.light.sky .img {
+    height: 17px;
+    left: 75px;
+    top: 30px;
+    width: 28px;
+  }
+  
+  .switch-body.dark .subtract {
+    height: 5px;
+    left: 161px;
+    top: 21px;
+    width: 5px;
+  }
+  
+  .switch-body.off .subtract {
+    height: 17px;
+    left: 144px;
+    top: 28px;
+    width: 42px;
+  }
+  
+  .switch-body.light .subtract {
+    height: 17px;
+    left: 144px;
+    top: 28px;
+    width: 42px;
+  }
+  
+  .switch-body.flat .subtract {
+    height: 17px;
+    left: 144px;
+    top: 28px;
+    width: 42px;
+  }
+  
+  .switch-body.on .subtract {
+    height: 17px;
+    left: 144px;
+    top: 28px;
+    width: 42px;
+  }
+  
