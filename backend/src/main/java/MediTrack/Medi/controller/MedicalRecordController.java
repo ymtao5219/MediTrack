@@ -1,6 +1,7 @@
 package MediTrack.Medi.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,16 @@ public class MedicalRecordController {
     @GetMapping
     public ResponseEntity<List<MedicalRecord>> getAllAppointment() {
         return new ResponseEntity<List<MedicalRecord>>(medicalservice.getAllMedicalRecord(),HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional<MedicalRecord>> getSingleAppointment(@PathVariable ObjectId id) {
+        Optional<MedicalRecord> medicalrecord = medicalservice.getSingleMedicalRecord(id);
+        if (medicalrecord.isPresent()) {
+            return new ResponseEntity<Optional<MedicalRecord>>(medicalrecord,HttpStatus.OK);
+        } else {
+            return ResponseEntity.notFound().build(); // 404 Not Found
+        }
     }
     
 }
