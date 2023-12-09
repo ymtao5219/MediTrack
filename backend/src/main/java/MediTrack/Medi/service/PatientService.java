@@ -40,7 +40,6 @@ public class PatientService {
         Patient patient = patientRepository.findById(id)
                          .orElseThrow(() -> new RuntimeException("Patient not found"));
 
-        // Update fields
         patient.setFirstName(patientDetails.getFirstName());
         patient.setLastName(patientDetails.getLastName());
         patient.setDateOfBirth(patientDetails.getDateOfBirth());

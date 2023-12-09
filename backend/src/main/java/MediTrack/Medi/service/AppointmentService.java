@@ -36,4 +36,13 @@ public class AppointmentService {
     public Appointment getSingleAppointment(ObjectId id) {
         return appointmentRepository.findById(id).get();
     }
+
+    public Appointment updateAppointment(ObjectId id, Appointment appointmentDetails) {
+        Appointment appointment = appointmentRepository.findById(id)
+                         .orElseThrow(() -> new RuntimeException("Appointment not found"));
+
+        appointment.setDateOfAppointment(appointmentDetails.getDateOfAppointment());
+        appointment.setNotes(appointmentDetails.getNotes());
+        return appointmentRepository.save(appointment);
+    }
 }

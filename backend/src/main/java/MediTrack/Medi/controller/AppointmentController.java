@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,6 +38,12 @@ public class AppointmentController {
     @GetMapping("/{id}")
     public ResponseEntity<Appointment> getSingleAppointment(@PathVariable ObjectId id) {
         return new ResponseEntity<Appointment>(appointmentService.getSingleAppointment(id),HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Appointment> updateAppointment(@PathVariable ObjectId id, @RequestBody Appointment appointmentDetails) {
+        Appointment updatedAppointment = appointmentService.updateAppointment(id, appointmentDetails);
+        return new ResponseEntity<>(updatedAppointment, HttpStatus.OK);
     }
 
     // TODO: implement with Doctor ID 
