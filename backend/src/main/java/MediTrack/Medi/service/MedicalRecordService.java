@@ -38,4 +38,14 @@ public class MedicalRecordService {
     public Optional<MedicalRecord> getSingleMedicalRecord(ObjectId id) {
         return medicalRecordRepository.findById(id);
     }
+    public MedicalRecord updateMedicalRecord(ObjectId id, MedicalRecord medicalrecordDetails) {
+        MedicalRecord medicalrecord = medicalRecordRepository.findById(id)
+                         .orElseThrow(() -> new RuntimeException("Medical Record not found"));
+
+        medicalrecord.setRecordType(medicalrecordDetails.getRecordType());
+        medicalrecord.setFileLocation(medicalrecordDetails.getFileLocation());
+        medicalrecord.setDateOfSubmission(medicalrecordDetails.getDateOfSubmission());
+        medicalrecord.setRecordDescription(medicalrecordDetails.getRecordDescription());
+        return medicalRecordRepository.save(medicalrecord);
+    }
 }

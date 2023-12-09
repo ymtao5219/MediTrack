@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -46,6 +47,12 @@ public class MedicalRecordController {
         } else {
             return ResponseEntity.notFound().build(); // 404 Not Found
         }
+    }
+
+    @PutMapping("/patients/{patientid}/{id}")
+    public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable ObjectId id, @RequestBody MedicalRecord medicalrecordDetails) {
+        MedicalRecord updatedMedicalRecord = medicalservice.updateMedicalRecord(id, medicalrecordDetails);
+        return new ResponseEntity<>(updatedMedicalRecord, HttpStatus.OK);
     }
     
 }
