@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 public class MedicalRecord {
     @Id
-    private ObjectId recordId;
+    private String recordId;
     private LocalDate dateOfSubmission;
     private String recordType;
     private String recordDescription;

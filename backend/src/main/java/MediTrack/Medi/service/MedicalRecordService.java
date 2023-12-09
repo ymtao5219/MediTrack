@@ -39,10 +39,10 @@ public class MedicalRecordService {
         return medicalRecordRepository.findAll();
     }
 
-    public Optional<MedicalRecord> getSingleMedicalRecord(ObjectId id) {
+    public Optional<MedicalRecord> getSingleMedicalRecord(String id) {
         return medicalRecordRepository.findById(id);
     }
-    public MedicalRecord updateMedicalRecord(ObjectId id, MedicalRecord medicalrecordDetails) {
+    public MedicalRecord updateMedicalRecord(String id, MedicalRecord medicalrecordDetails) {
         MedicalRecord medicalrecord = medicalRecordRepository.findById(id)
                          .orElseThrow(() -> new RuntimeException("Medical Record not found"));
 
@@ -52,7 +52,7 @@ public class MedicalRecordService {
         medicalrecord.setRecordDescription(medicalrecordDetails.getRecordDescription());
         return medicalRecordRepository.save(medicalrecord);
     }
-    public boolean deleteMedicalRecord(ObjectId id, ObjectId patientid) {
+    public boolean deleteMedicalRecord(String id, ObjectId patientid) {
         // Check if the medical record exists
         Optional<MedicalRecord> medicalRecord = medicalRecordRepository.findById(id);
         if (medicalRecord.isPresent()) {

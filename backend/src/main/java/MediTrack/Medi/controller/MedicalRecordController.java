@@ -42,7 +42,7 @@ public class MedicalRecordController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<MedicalRecord>> getSingleAppointment(@PathVariable ObjectId id) {
+    public ResponseEntity<Optional<MedicalRecord>> getSingleAppointment(@PathVariable String id) {
         Optional<MedicalRecord> medicalrecord = medicalservice.getSingleMedicalRecord(id);
         if (medicalrecord.isPresent()) {
             return new ResponseEntity<Optional<MedicalRecord>>(medicalrecord,HttpStatus.OK);
@@ -52,13 +52,13 @@ public class MedicalRecordController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable ObjectId id, @RequestBody MedicalRecord medicalrecordDetails) {
+    public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable String id, @RequestBody MedicalRecord medicalrecordDetails) {
         MedicalRecord updatedMedicalRecord = medicalservice.updateMedicalRecord(id, medicalrecordDetails);
         return new ResponseEntity<>(updatedMedicalRecord, HttpStatus.OK);
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteMedicalRecord(@PathVariable ObjectId id,@PathVariable ObjectId patientid) {
+    public ResponseEntity<Void> deleteMedicalRecord(@PathVariable String id,@PathVariable ObjectId patientid) {
         boolean isDeleted = medicalservice.deleteMedicalRecord(id,patientid);
         if (isDeleted) {
             return ResponseEntity.noContent().build(); // 204 No Content
