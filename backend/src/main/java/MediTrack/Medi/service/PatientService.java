@@ -26,9 +26,9 @@ public class PatientService {
     public boolean deletePatient(ObjectId id) {
         if (patientRepository.existsById(id)) {
             patientRepository.deleteById(id);
-            return true; // Patient found and deleted
+            return true; 
         } else {
-            return false; // Patient not found
+            return false; 
         }
 
     }

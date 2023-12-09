@@ -1,6 +1,7 @@
 package MediTrack.Medi.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,8 +34,8 @@ public class AppointmentService {
         return appointmentRepository.findAll();
     }
 
-    public Appointment getSingleAppointment(ObjectId id) {
-        return appointmentRepository.findById(id).get();
+    public Optional<Appointment> getSingleAppointment(ObjectId id) {
+        return appointmentRepository.findById(id);
     }
 
     public Appointment updateAppointment(ObjectId id, Appointment appointmentDetails) {
@@ -44,5 +45,14 @@ public class AppointmentService {
         appointment.setDateOfAppointment(appointmentDetails.getDateOfAppointment());
         appointment.setNotes(appointmentDetails.getNotes());
         return appointmentRepository.save(appointment);
+    }
+    public boolean deleteAppointment(ObjectId id) {
+        if (appointmentRepository.existsById(id)) {
+            appointmentRepository.deleteById(id);
+            return true; 
+        } else {
+            return false; 
+        }
+
     }
 }
