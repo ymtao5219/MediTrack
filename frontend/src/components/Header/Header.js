@@ -5,7 +5,7 @@ function Header({ userName }) {
   return (
     <header className="App-header">
       {/* You might have a logo here */}
-      <div className="logo">Patient Tracker</div>
+      <div className="logo">200-OK Patient Tracker</div>
 
       {/* The welcome message, you can make this dynamic based on user data */}
 

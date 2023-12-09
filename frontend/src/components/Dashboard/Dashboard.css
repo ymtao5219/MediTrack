@@ -1,42 +1,60 @@
-/* src/components/Dashboard/Dashboard.css */
 .dashboard-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .dashboard-content {
-    display: flex;
-    width: 100%;
-    max-width: 2000px; /* Adjust based on your design requirements */
-    gap: 20px; /* This adds space between your flex items */
-  }
-  
-  .patient-list {
-    flex: 0 0 70%; /* occupy 80% of the space */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .schedule {
-    flex: 0 0 20%; /* occupy 20% of the space */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Adjust your responsive design as needed */
-  @media (max-width: 768px) {
-    .dashboard-content {
-      flex-direction: column;
-    }
-  
-    .patient-list, 
-    .schedule {
-      flex: 0 0 auto; /* Take up full width on smaller screens */
-    }
-  }
-  
-  /* Continue with additional styling as needed */
-  
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  gap: 20px;
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.patient-list {
+  flex: 3;
+}
+
+.schedule {
+  flex: 1;
+}
+
+.patient-list-content {
+  flex-grow: 1;
+}
+
+.patient-list-footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #a382d5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #9170c2;
+}

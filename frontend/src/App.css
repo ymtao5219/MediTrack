@@ -1,23 +1,19 @@
-/* App.css */
-
 .App {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  position: relative; 
+}
+
+.Header {
+  left: 0; 
+  width: 100%;
+  z-index: 1500; 
 }
 
 .main-content {
-  display: flex;
-  flex: 1; /* This allows your main content to fill the available space */
-}
-
-.sidebar {
-  width: 20%; /* Sidebar takes up 20% of the width */
-  /* Further sidebar styling */
+  display: flex; 
+  margin-top: 120px; 
+  margin-left: 300px; 
 }
 
 .content {
-  display: flex;
-  flex: 1; /* Content takes the remaining space */
+  flex-grow: 1;
 }
-
