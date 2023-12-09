@@ -3,8 +3,6 @@ package MediTrack.Medi.service;
 import java.util.List;
 import java.util.Optional;
 
-import javax.management.Query;
-
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -14,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import com.mongodb.BasicDBObject;
 
-import MediTrack.Medi.model.Appointment;
 import MediTrack.Medi.model.MedicalRecord;
 import MediTrack.Medi.model.Patient;
 import MediTrack.Medi.repository.MedicalRecordRepository;

@@ -2,7 +2,6 @@ package MediTrack.Medi.model;
 
 import java.time.LocalDate;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 import lombok.Data;

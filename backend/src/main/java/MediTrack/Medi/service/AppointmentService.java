@@ -34,11 +34,11 @@ public class AppointmentService {
         return appointmentRepository.findAll();
     }
 
-    public Optional<Appointment> getSingleAppointment(ObjectId id) {
+    public Optional<Appointment> getSingleAppointment(String id) {
         return appointmentRepository.findById(id);
     }
 
-    public Appointment updateAppointment(ObjectId id, Appointment appointmentDetails) {
+    public Appointment updateAppointment(String id, Appointment appointmentDetails) {
         Appointment appointment = appointmentRepository.findById(id)
                          .orElseThrow(() -> new RuntimeException("Appointment not found"));
 
@@ -46,7 +46,7 @@ public class AppointmentService {
         appointment.setNotes(appointmentDetails.getNotes());
         return appointmentRepository.save(appointment);
     }
-    public boolean deleteAppointment(ObjectId id) {
+    public boolean deleteAppointment(String id) {
         if (appointmentRepository.existsById(id)) {
             appointmentRepository.deleteById(id);
             return true; 

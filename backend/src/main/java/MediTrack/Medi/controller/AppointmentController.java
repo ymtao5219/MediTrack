@@ -3,8 +3,6 @@ package MediTrack.Medi.controller;
 import java.util.List;
 import java.util.Optional;
 
-import javax.swing.text.html.Option;
-
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import MediTrack.Medi.model.Appointment;
-import MediTrack.Medi.model.Patient;
 import MediTrack.Medi.service.AppointmentService;
 
 @RestController
@@ -40,7 +37,7 @@ public class AppointmentController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Appointment>> getSingleAppointment(@PathVariable ObjectId id) {
+    public ResponseEntity<Optional<Appointment>> getSingleAppointment(@PathVariable String id) {
         Optional <Appointment> appointment = appointmentService.getSingleAppointment(id);
         if (appointment.isPresent()) {
             return new ResponseEntity<Optional<Appointment>>(appointment,HttpStatus.OK);
@@ -51,13 +48,13 @@ public class AppointmentController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Appointment> updateAppointment(@PathVariable ObjectId id, @RequestBody Appointment appointmentDetails) {
+    public ResponseEntity<Appointment> updateAppointment(@PathVariable String id, @RequestBody Appointment appointmentDetails) {
         Appointment updatedAppointment = appointmentService.updateAppointment(id, appointmentDetails);
         return new ResponseEntity<>(updatedAppointment, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteAppointment(@PathVariable ObjectId id) {
+    public ResponseEntity<Void> deleteAppointment(@PathVariable String id) {
 
         Optional<Appointment> appointment = appointmentService.getSingleAppointment(id);
         if (appointment.isPresent()) {
