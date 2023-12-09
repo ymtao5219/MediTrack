@@ -3,17 +3,16 @@
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  padding: 0 50px; /* This adds padding to both sides */
+  padding: 0 50px;
 }
 
 .logo-section {
-  text-align: left; /* Ensures the text is aligned to the left */
+  text-align: left;
 }
 
 .logo {
-  font-size: 36px; /* Adjust the size as needed */
-  font-weight: bold; /* Makes the logo text bold */
-  /* Add other styling for the logo as needed */
+  font-size: 36px; 
+  font-weight: bold;
 }
 
 .logo-subtext {
@@ -22,7 +21,7 @@
 
 .login-form {
   width: 300px;
-  margin-right: 10%; /* This adds a 10% margin to the right of the form */
+  margin-right: 10%;
 }
 
 .login-title {
@@ -32,7 +31,7 @@
 }
 
 .input-container {
-  width: 100%; /* Full width of the form */
+  width: 100%;
 }
 
 .input-container label {
@@ -41,15 +40,15 @@
 }
 
 .input-container input {
-  width: 100%; /* Full width of the container */
+  width: 100%; 
   padding: 10px;
-  margin-bottom: 20px; /* Space between inputs */
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .login-button {
-  width: 100%; /* Full width of the container */
+  width: 100%;
   padding: 10px;
   background-color: #484770;
   border-radius: 9px;
@@ -129,4 +128,3 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* Add any other styles as needed */

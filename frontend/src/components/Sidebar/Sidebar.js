@@ -1,4 +1,3 @@
-// src/components/Sidebar/Sidebar.js
 import React from 'react';
 import './Sidebar.css';
 import logo from './logo_nb.png';

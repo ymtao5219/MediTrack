@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
   padding: 20px;
-  margin-bottom: 0; /* Remove bottom margin */
+  margin-bottom: 0;
 }
 
 .dashboard-content {
   display: flex;
-  flex-direction: row; /* Stack the cards vertically */
+  flex-direction: row;
   width: 100%;
-  max-width: 1200px; /* Maximum width of the content area */
+  max-width: 1200px;
   height: 100%;
   gap: 20px;
 }
@@ -18,13 +18,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-grow: 1; /* Cards will grow to take up available space */
+  flex-grow: 1;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Space between cards */
+  margin-bottom: 20px;
 }
 
 .patient-list {
@@ -36,28 +36,25 @@
 }
 
 .patient-list-content {
-  flex-grow: 1; /* Allows the content to grow and push the buttons down */
-  /* Style for your patient list content */
+  flex-grow: 1;
 }
 
 .patient-list-footer {
   display: flex;
-  justify-content: space-evenly; /* This will space out the buttons evenly */
-  padding-top: 20px; /* Add padding between content and buttons */
+  justify-content: space-evenly;
+  padding-top: 20px;
 }
 
 .button {
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
-  background-color: #a382d5; /* Match your sidebar color */
+  background-color: #a382d5;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .button:hover {
-  background-color: #9170c2; /* A slightly darker shade for the hover effect */
+  background-color: #9170c2;
 }
-
-/* Your @media query and other styles remain the same */

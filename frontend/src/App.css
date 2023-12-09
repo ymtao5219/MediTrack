@@ -15,6 +15,5 @@
 }
 
 .content {
-  flex-grow: 1; /* Allow content to fill the available space */
-  padding-top: /* Height of the WelcomeBanner */; /* Provide space for the WelcomeBanner */
+  flex-grow: 1;
 }

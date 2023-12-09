@@ -1,5 +1,5 @@
 import React from 'react';
-import './WelcomeBanner.css'; // Make sure you create the corresponding CSS file
+import './WelcomeBanner.css';
 
 const WelcomeBanner = ({ userName }) => {
   return (
