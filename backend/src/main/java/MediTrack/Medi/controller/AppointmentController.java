@@ -66,6 +66,22 @@ public class AppointmentController {
 
     }
 
+    @GetMapping("/patients/{patientId}")
+    public ResponseEntity<List<Appointment>> getAppointmentsByPatientId(@PathVariable String patientId) {
+        try {
+            ObjectId patientObjectId = new ObjectId(patientId);
+            List<Appointment> appointments = appointmentService.getAppointmentsByPatientId(patientObjectId);
+
+            if (appointments.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            } else {
+                return new ResponseEntity<>(appointments, HttpStatus.OK);
+            }
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
     // TODO: implement with Doctor ID 
 
 

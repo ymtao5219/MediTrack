@@ -1,5 +1,6 @@
 package MediTrack.Medi.service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -55,4 +56,18 @@ public class AppointmentService {
         }
 
     }
+
+
+
+    public List<Appointment> getAppointmentsByPatientId(ObjectId patientId) {
+        Patient patient = mongoTemplate.findById(patientId, Patient.class);
+        
+        if (patient != null) {
+            return patient.getAppointments();
+        } else {
+            return Collections.emptyList();
+        }
+    }
+
+
 }
