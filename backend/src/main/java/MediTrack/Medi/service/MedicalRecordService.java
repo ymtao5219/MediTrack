@@ -1,5 +1,7 @@
 package MediTrack.Medi.service;
 
+import java.util.List;
+
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -25,5 +27,9 @@ public class MedicalRecordService {
                 .apply(new Update().push("medicalRecords", newMedicalRecord)).first();
         
         return newMedicalRecord;
+    }
+
+    public List<MedicalRecord> getAllMedicalRecord() {
+        return medicalRecordRepository.findAll();
     }
 }
