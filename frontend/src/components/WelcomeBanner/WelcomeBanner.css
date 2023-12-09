@@ -7,7 +7,7 @@
   position: fixed;
   left: 0; /* Align with the left edge of the viewport */
   right: 20px; /* 20px margin on the right side to match the sidebar's margin */
-  top: 20px;
+  top: 100px;
   z-index: 500; /* Below the sidebar's z-index so it doesn't overlap */
   box-sizing: border-box;
   display: flex;

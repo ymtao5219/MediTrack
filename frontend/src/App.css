@@ -1,23 +1,25 @@
-/* App.css */
-
 .App {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  /* Add necessary styles for the main App layout */
+  position: relative; /* Ensures child positioning is relative to this container */
+}
+
+/* Adjust the z-index for Header, Sidebar, and WelcomeBanner for proper layering */
+.Header {
+  position: fixed; /* Fixed to ensure it stays at the top */
+  top: 0; /* Align to the very top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  width: 100%; /* Span across the full viewport width */
+  z-index: 1500; /* Higher than the sidebar and welcome banner to ensure it's on top */
+  /* Add additional styling for your Header component */
 }
 
 .main-content {
-  display: flex;
-  flex: 1; /* This allows your main content to fill the available space */
-}
-
-.sidebar {
-  width: 20%; /* Sidebar takes up 20% of the width */
-  /* Further sidebar styling */
+  /* This container will hold the Sidebar and Dashboard */
+  display: flex; /* Flex layout to put Sidebar and Dashboard side by side */
+  margin-top: /* Height of the Header component */; /* Push down to make space for the Header */
 }
 
 .content {
-  display: flex;
-  flex: 1; /* Content takes the remaining space */
+  flex-grow: 1; /* Allow content to fill the available space */
+  padding-top: /* Height of the WelcomeBanner */; /* Provide space for the WelcomeBanner */
 }
-
