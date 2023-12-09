@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from "../Header/Header";
 import "./Login.css";
 
 function Login({ onLogin }) {
@@ -12,44 +13,49 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div className="login-page">
-      <div className="logo-section">
-        <div className="logo">200-OK</div>
-        <div className="logo-subtext">Patient Tracker System</div>
+    <div className="App">
+      <div>
+        <Header userName={'anonymity'} />
       </div>
-      <form className="login-form" onSubmit={handleSubmit}>
-        <div className="login-title">Sign in</div>
-        <div className="input-container">
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <div className="switch-container">
-          Sign in as a doctor
-            <label className="switch-label">
-              <input 
-                type="checkbox" 
-                checked={isDoctor} 
-                onChange={(e) => setIsDoctor(e.target.checked)} 
-              />
-              <span className="slider"></span>
-            </label>
-          </div>
-          <button type="submit" className="login-button">Login</button>
+      <div className="login-page">
+        <div className="logo-section">
+          <div className="logo">200-OK</div>
+          <div className="logo-subtext">Patient Tracker System</div>
         </div>
-      </form>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <div className="login-title">Sign in</div>
+          <div className="input-container">
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <div className="switch-container">
+              Sign in as a doctor
+              <label className="switch-label">
+                <input
+                  type="checkbox"
+                  checked={isDoctor}
+                  onChange={(e) => setIsDoctor(e.target.checked)}
+                />
+                <span className="slider"></span>
+              </label>
+            </div>
+            <button type="submit" className="login-button">Login</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

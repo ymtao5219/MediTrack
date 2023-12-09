@@ -1,3 +1,13 @@
+.Header {
+  left: 0; 
+  width: 100%;
+  z-index: 1500; 
+}
+
+.App {
+  position: relative; 
+}
+
 .login-page {
   display: flex;
   justify-content: space-between;
