@@ -7,6 +7,8 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.method.P;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,12 +24,12 @@ import MediTrack.Medi.service.MedicalRecordService;
 
 
 @RestController
-@RequestMapping("/medicalrecords")
+@RequestMapping("/patients/{patientid}/medicalrecords")
 public class MedicalRecordController {
     @Autowired
     private MedicalRecordService medicalservice;
 
-    @PostMapping("/patients/{patientid}")
+    @PostMapping()
     public ResponseEntity<MedicalRecord> createMedicalRecord(@RequestBody MedicalRecord medicalrecord,
             @PathVariable ObjectId patientid) {
         MedicalRecord newMedicalRecord = medicalservice.createMedicalRecord(medicalrecord, patientid);
@@ -49,10 +51,19 @@ public class MedicalRecordController {
         }
     }
 
-    @PutMapping("/patients/{patientid}/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable ObjectId id, @RequestBody MedicalRecord medicalrecordDetails) {
         MedicalRecord updatedMedicalRecord = medicalservice.updateMedicalRecord(id, medicalrecordDetails);
         return new ResponseEntity<>(updatedMedicalRecord, HttpStatus.OK);
     }
     
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteMedicalRecord(@PathVariable ObjectId id,@PathVariable ObjectId patientid) {
+        boolean isDeleted = medicalservice.deleteMedicalRecord(id,patientid);
+        if (isDeleted) {
+            return ResponseEntity.noContent().build(); // 204 No Content
+        } else {
+            return ResponseEntity.notFound().build(); // 404 Not Found
+        }
+    }
 }
