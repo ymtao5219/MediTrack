@@ -1,22 +1,17 @@
 .App {
-  /* Add necessary styles for the main App layout */
-  position: relative; /* Ensures child positioning is relative to this container */
+  position: relative; 
 }
 
-/* Adjust the z-index for Header, Sidebar, and WelcomeBanner for proper layering */
 .Header {
-  position: fixed; /* Fixed to ensure it stays at the top */
-  top: 0; /* Align to the very top of the viewport */
-  left: 0; /* Align to the left of the viewport */
-  width: 100%; /* Span across the full viewport width */
-  z-index: 1500; /* Higher than the sidebar and welcome banner to ensure it's on top */
-  /* Add additional styling for your Header component */
+  left: 0; 
+  width: 100%;
+  z-index: 1500; 
 }
 
 .main-content {
-  /* This container will hold the Sidebar and Dashboard */
-  display: flex; /* Flex layout to put Sidebar and Dashboard side by side */
-  margin-top: /* Height of the Header component */; /* Push down to make space for the Header */
+  display: flex; 
+  margin-top: 120px; 
+  margin-left: 300px; 
 }
 
 .content {
