@@ -1,9 +1,23 @@
 .welcome-banner {
-    padding: 20px;
-    background-color: #f8f9fa;
-    text-align: center;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    /* Add any additional styling you need here */
-  }
-  
+  margin-left: calc(20% + 40px);
+  padding: 20px;
+  background-color: #a382d5; /* Matching the sidebar color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0; /* Align with the left edge of the viewport */
+  right: 20px; /* 20px margin on the right side to match the sidebar's margin */
+  top: 20px;
+  z-index: 500; /* Below the sidebar's z-index so it doesn't overlap */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* Spreads out the child elements */
+  align-items: center; /* Vertically center the content */
+}
+
+.welcome-banner h2,
+.welcome-banner p {
+  color: #FFFFFF; /* White text color */
+  margin: 0; /* Remove default margins */
+  /* Add other typography styles as needed */
+}
