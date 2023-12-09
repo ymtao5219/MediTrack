@@ -1,4 +1,5 @@
 package MediTrack.Medi.controller;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,32 +22,32 @@ public class PatientController {
 
     }
 
-    @GetMapping("/{patientid}")
-    public ResponseEntity<Optional<Patient>> getSingle_Patient(@PathVariable String patientid) {
-        return new ResponseEntity<Optional<Patient>>(patientService.getSinglePatient(patientid),HttpStatus.OK);
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional<Patient>> getSingle_Patient(@PathVariable ObjectId id) {
+        return new ResponseEntity<Optional<Patient>>(patientService.getSinglePatient(id),HttpStatus.OK);
     }
-    @DeleteMapping("/{patientid}")
-    public ResponseEntity<Void> deletePatient(@PathVariable String patientid) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePatient(@PathVariable ObjectId id) {
 
-        Optional<Patient> patient = patientService.getSinglePatient(patientid);
+        Optional<Patient> patient = patientService.getSinglePatient(id);
         if (patient.isPresent()) {
-            patientService.deletePatient(patientid);
+            patientService.deletePatient(id);
             return ResponseEntity.noContent().build(); // 204 No Content
         } else {
             return ResponseEntity.notFound().build(); // 404 Not Found
         }
 
     }
-    @PutMapping("/{patientid}")
-    public ResponseEntity<Patient> updatePatient(@PathVariable String patientid, @RequestBody Patient patientDetails) {
-        Patient updatedPatient = patientService.updatePatient(patientid, patientDetails);
+    @PutMapping("/{id}")
+    public ResponseEntity<Patient> updatePatient(@PathVariable ObjectId id, @RequestBody Patient patientDetails) {
+        Patient updatedPatient = patientService.updatePatient(id, patientDetails);
         return new ResponseEntity<>(updatedPatient, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Patient> addPatient(@RequestBody Patient patient) {
-        Patient newPatient = patientService.addPatient(patient);
-        return new ResponseEntity<>(newPatient, HttpStatus.CREATED);
+    public ResponseEntity<Patient> addPatient(@RequestBody Patient patientDetails) {
+        Patient newPatient = patientService.addPatient(patientDetails);
+        return new ResponseEntity<>(newPatient, HttpStatus.OK);
     }
 
 

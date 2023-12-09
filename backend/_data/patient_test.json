@@ -1,0 +1,26 @@
+[
+    {
+        "_id": { "$oid": "61d5d3e12345678912345678" },
+        "userId": { "$oid": "61d5d3e12345678912345679" },
+        "firstName": "John",
+        "lastName": "Doe",
+        "dateOfBirth": "1990-01-01",
+        "gender": "Male",
+        "contactNumber": "123-456-7890",
+        "emailAddress": "johndoe@example.com",
+        "address": "123 Main St, Anytown, AN",
+        "registrationDate": "2021-01-10"
+    },
+    {
+        "_id": { "$oid": "61d5d3e12345678912345683" },
+        "userId": { "$oid": "61d5d3e12345678912345684" },
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "dateOfBirth": "1985-05-22",
+        "gender": "Female",
+        "contactNumber": "987-654-3210",
+        "emailAddress": "alicesmith@example.com",
+        "address": "456 Side St, Othertown, OT",
+        "registrationDate": "2021-01-20"
+    }
+]

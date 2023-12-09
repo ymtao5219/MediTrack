@@ -3,6 +3,7 @@ package MediTrack.Medi.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,35 +19,43 @@ public class PatientService {
 
     }
 
-    public Optional<Patient> getSinglePatient(String patientid) {
-        return patientRepository.findBypatientid(patientid);
+    public Optional<Patient> getSinglePatient(ObjectId id) {
+        return patientRepository.findById(id);
     }
 
-    public Optional<Patient> deletePatient(String patientid) {
-        return patientRepository.deleteBypatientid(patientid);
+    public boolean deletePatient(ObjectId id) {
+        if (patientRepository.existsById(id)) {
+            patientRepository.deleteById(id);
+            return true; // Patient found and deleted
+        } else {
+            return false; // Patient not found
+        }
+
     }
 
 
 
     
-    public Patient updatePatient(String patientid, Patient patientDetails) {
-        Patient patient = patientRepository.findBypatientid(patientid)
+    public Patient updatePatient(ObjectId id, Patient patientDetails) {
+        Patient patient = patientRepository.findById(id)
                          .orElseThrow(() -> new RuntimeException("Patient not found"));
 
         // Update fields
-        patient.setFirst_name(patientDetails.getFirst_name());
-        patient.setLast_name(patientDetails.getLast_name());
-        patient.setDate_of_birth(patientDetails.getDate_of_birth());
+        patient.setFirstName(patientDetails.getFirstName());
+        patient.setLastName(patientDetails.getLastName());
+        patient.setDateOfBirth(patientDetails.getDateOfBirth());
         patient.setGender(patientDetails.getGender());
-        patient.setEmail(patientDetails.getEmail());
-        patient.setPhone(patientDetails.getPhone());
+        patient.setEmailAddress(patientDetails.getEmailAddress());
+        patient.setContactNumber(patientDetails.getContactNumber());
         patient.setAddress(patientDetails.getAddress());
-
+        // Leave to update medical records and appointments
+        // patient.setMedicalRecords(patientDetails.getMedicalRecords());
+        // patient.setAppointments(patientDetails.getAppointments());
         return patientRepository.save(patient);
     }
 
-    public Patient addPatient(Patient patient) {
-        return patientRepository.save(patient);
+    public Patient addPatient(Patient patientDetails) {
+        return patientRepository.save(patientDetails);
     }
 
 }

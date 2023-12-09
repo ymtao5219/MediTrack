@@ -1,47 +1,60 @@
 [
     {
-        "patientid": "1",
-        "first_name": "John",
-        "last_name": "Doe",
-        "date_of_birth": "1990-01-01",
+        "_id": { "$oid": "61d5d3e12345678912345678" },
+        "userId": { "$oid": "61d5d3e12345678912345679" },
+        "firstName": "John",
+        "lastName": "Doe",
+        "dateOfBirth": "1990-01-01",
         "gender": "Male",
-        "email": "john.doe@example.com",
-        "phone": "1234567890",
-        "address": "123 Main St, Anytown, USA",
-        "registration_date": "2019-01-01"
+        "contactNumber": "123-456-7890",
+        "emailAddress": "johndoe@example.com",
+        "address": "123 Main St, Anytown, AN",
+        "registrationDate": "2021-01-10",
+        "medicalRecords": [
+            {
+                "recordId": { "$oid": "61d5d3e12345678912345680" },
+                "dateOfSubmission": "2021-02-15",
+                "recordType": "General Checkup",
+                "recordDescription": "Annual physical examination",
+                "fileLocation": "/path/to/physical-exam-results.pdf"
+            }
+        ],
+        "appointments": [
+            {
+                "appointmentId": { "$oid": "61d5d3e12345678912345681" },
+                "doctorId": { "$oid": "61d5d3e12345678912345682" },
+                "dateOfAppointment": "2021-03-20",
+                "notes": "Follow-up appointment"
+            }
+        ]
     },
     {
-        "patientid": "2",
-        "first_name": "Jane",
-        "last_name": "Smith",
-        "date_of_birth": "1985-05-15",
+        "_id": { "$oid": "61d5d3e12345678912345683" },
+        "userId": { "$oid": "61d5d3e12345678912345684" },
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "dateOfBirth": "1985-05-22",
         "gender": "Female",
-        "email": "jane.smith@example.com",
-        "phone": "1234567890",
-        "address": "124 Main St, Anytown, USA",
-        "registration_date":"2019-01-02"
-    },
-    {
-        "patientid": "3",
-        "first_name": "John1",
-        "last_name": "Doe1",
-        "date_of_birth": "1990-01-01",
-        "gender": "Male",
-        "email": "john.doe@example.com",
-        "phone": "1234567890",
-        "address": "123 Main St, Anytown, USA",
-        "registration_date": "2019-01-01"
-    },
-    {
-        "patientid": "4",
-        "first_name": "Jane1",
-        "last_name": "Smith1",
-        "date_of_birth": "1985-05-15",
-        "gender": "Female",
-        "email": "jane.smith@example.com",
-        "phone": "1234567890",
-        "address": "124 Main St, Anytown, USA",
-        "registration_date":"2019-01-02"
+        "contactNumber": "987-654-3210",
+        "emailAddress": "alicesmith@example.com",
+        "address": "456 Side St, Othertown, OT",
+        "registrationDate": "2021-01-20",
+        "medicalRecords": [
+            {
+                "recordId": { "$oid": "61d5d3e12345678912345685" },
+                "dateOfSubmission": "2021-04-10",
+                "recordType": "Dermatology Consultation",
+                "recordDescription": "Consultation for skin rash",
+                "fileLocation": "/path/to/dermatology-consultation.pdf"
+            }
+        ],
+        "appointments": [
+            {
+                "appointmentId": { "$oid": "61d5d3e12345678912345686" },
+                "doctorId": { "$oid": "61d5d3e12345678912345687" },
+                "dateOfAppointment": "2021-05-05",
+                "notes": "Skin rash follow-up"
+            }
+        ]
     }
-
 ]

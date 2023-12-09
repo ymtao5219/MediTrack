@@ -3,7 +3,11 @@ package MediTrack.Medi.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+
+import java.time.LocalDate;
+import java.util.List;
 
 import org.bson.types.ObjectId;
 @Document(collection = "patients")
@@ -11,14 +15,16 @@ import org.bson.types.ObjectId;
 public class Patient {
     @Id
     private ObjectId id;
-    private String patientid;
-    private String first_name;
-    private String last_name;
-    private String date_of_birth;
+    private ObjectId userId; // Reference to User
+    private String firstName;
+    private String lastName;
+    private LocalDate dateOfBirth;
     private String gender;
-    private String email;
-    private String phone;
+    private String contactNumber;
+    private String emailAddress;
     private String address;
-    private String registration_date;
+    private LocalDate registrationDate;
+    private List<MedicalRecord> medicalRecords;
+    private List<Appointment> appointments;
 
 }
