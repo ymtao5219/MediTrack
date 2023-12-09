@@ -1,5 +1,7 @@
 package MediTrack.Medi.service;
 
+import java.util.List;
+
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -25,5 +27,13 @@ public class AppointmentService {
                 .apply(new Update().push("appointments", newAppointment)).first();
         
         return newAppointment;
+    }
+
+    public List<Appointment> getAllAppointment() {
+        return appointmentRepository.findAll();
+    }
+
+    public Appointment getSingleAppointment(ObjectId id) {
+        return appointmentRepository.findById(id).get();
     }
 }

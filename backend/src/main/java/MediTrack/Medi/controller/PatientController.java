@@ -49,29 +49,5 @@ public class PatientController {
         Patient newPatient = patientService.addPatient(patientDetails);
         return new ResponseEntity<>(newPatient, HttpStatus.CREATED);
     }
-
-
-/* 
-
-    @PostMapping
-    public Patient createPatient(@RequestBody Patient patient) {
-        return patientRepository.save(patient);
-    }
-    @PutMapping("/{id}")
-    public Patient updatePatient(@PathVariable String id, @RequestBody Patient patientDetails) {
-        return patientRepository.findById(id)
-                .map(patient -> {
-                    patient.setFirstName(patientDetails.getFirstName());
-                    patient.setLastName(patientDetails.getLastName());
-                    // ... other fields
-                    return patientRepository.save(patient);
-                }).orElseGet(() -> {
-                    patientDetails.setPatientId(id);
-                    return patientRepository.save(patientDetails);
-                });
-    }
-
-
-    */
 }
 
