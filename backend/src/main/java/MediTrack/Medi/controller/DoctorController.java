@@ -6,6 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import MediTrack.Medi.model.Doctor;
 import MediTrack.Medi.service.DoctorService;
+import jakarta.validation.Valid;
+
 import java.util.List;
 import java.util.Optional;
 import org.bson.types.ObjectId;
@@ -30,14 +32,14 @@ public class DoctorController {
     }
 
     @PostMapping
-    public ResponseEntity<Doctor> addDoctor(@RequestBody Doctor doctorDetails, @RequestParam String userId) {
+    public ResponseEntity<Doctor> addDoctor(@Valid @RequestBody Doctor doctorDetails, @RequestParam String userId) {
         doctorDetails.setUserId(userId);
         Doctor newDoctor = doctorService.addDoctor(doctorDetails,userId);
         return new ResponseEntity<>(newDoctor, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Doctor> updateDoctor(@PathVariable String id, @RequestBody Doctor doctorDetails) {
+    public ResponseEntity<Doctor> updateDoctor(@PathVariable String id, @Valid @RequestBody Doctor doctorDetails) {
         Doctor updatedDoctor = doctorService.updateDoctor(id, doctorDetails);
         if (updatedDoctor != null) {
             return ResponseEntity.ok(updatedDoctor);

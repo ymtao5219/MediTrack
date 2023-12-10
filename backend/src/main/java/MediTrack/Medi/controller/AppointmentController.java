@@ -81,7 +81,15 @@ public class AppointmentController {
         }
     }
 
-    // TODO: implement with Doctor ID 
+    @GetMapping("/doctors/{doctorId}")
+    public ResponseEntity<List<Appointment>> getAppointmentsByDoctorId(@PathVariable String doctorId) {
 
+        List<Appointment> appointment = appointmentService.getAppointmentsByDoctorId(doctorId);
+        if (appointment != null) {
+            return new ResponseEntity<List<Appointment>>(appointment,HttpStatus.OK);
+        } else {
+            return ResponseEntity.notFound().build(); // 404 Not Found
+        }
+    }
 
 }
