@@ -27,7 +27,7 @@ public class DoctorService {
 
     // Get a single doctor by ID
     public Optional<Doctor> getDoctorById(String id) {
-        return doctorRepository.findById(new ObjectId(id));
+        return doctorRepository.findById(id);
     }
 
     // Add a new doctor
@@ -50,7 +50,7 @@ public class DoctorService {
 
     // Update a doctor's details
     public Doctor updateDoctor(String id, Doctor doctorDetails) {
-        Doctor doctor = doctorRepository.findById(new ObjectId(id))
+        Doctor doctor = doctorRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Doctor not found"));
 
         doctor.setFirstName(doctorDetails.getFirstName());
@@ -66,9 +66,8 @@ public class DoctorService {
 
     // Delete a doctor
     public boolean deleteDoctor(String id) {
-        ObjectId objectId = new ObjectId(id);
-        if (doctorRepository.existsById(objectId)) {
-            doctorRepository.deleteById(objectId);
+        if (doctorRepository.existsById(id)) {
+            doctorRepository.deleteById(id);
             return true;
         } else {
             return false;
