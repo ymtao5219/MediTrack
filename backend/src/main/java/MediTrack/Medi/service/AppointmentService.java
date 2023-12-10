@@ -3,6 +3,7 @@ package MediTrack.Medi.service;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.Comparator;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,7 +64,9 @@ public class AppointmentService {
         Patient patient = mongoTemplate.findById(patientId, Patient.class);
         
         if (patient != null) {
-            return patient.getAppointments();
+            List<Appointment> appointments = patient.getAppointments();
+            appointments.sort(Comparator.comparing(Appointment::getDateOfAppointment).reversed());
+            return appointments;
         } else {
             return Collections.emptyList();
         }
