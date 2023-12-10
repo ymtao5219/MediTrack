@@ -27,7 +27,7 @@ public class AppointmentController {
 
     @PostMapping("/patients/{patientid}")
     public ResponseEntity<Appointment> createAppointment(@RequestBody Appointment appointment,
-            @PathVariable ObjectId patientid) {
+            @PathVariable String patientid) {
         Appointment newAppointment = appointmentService.createAppointment(appointment, patientid);
         return new ResponseEntity<>(newAppointment, HttpStatus.CREATED);
     }
@@ -69,8 +69,7 @@ public class AppointmentController {
     @GetMapping("/patients/{patientId}")
     public ResponseEntity<List<Appointment>> getAppointmentsByPatientId(@PathVariable String patientId) {
         try {
-            ObjectId patientObjectId = new ObjectId(patientId);
-            List<Appointment> appointments = appointmentService.getAppointmentsByPatientId(patientObjectId);
+            List<Appointment> appointments = appointmentService.getAppointmentsByPatientId(patientId);
 
             if (appointments.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);

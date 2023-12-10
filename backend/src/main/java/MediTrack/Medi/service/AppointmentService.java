@@ -23,7 +23,7 @@ public class AppointmentService {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public Appointment createAppointment(Appointment appointment, ObjectId patientid) {
+    public Appointment createAppointment(Appointment appointment, String patientid) {
         Appointment newAppointment = appointmentRepository.insert(appointment);
 
         mongoTemplate.update(Patient.class).matching(Criteria.where("id").is(patientid))
@@ -60,7 +60,7 @@ public class AppointmentService {
 
 
 
-    public List<Appointment> getAppointmentsByPatientId(ObjectId patientId) {
+    public List<Appointment> getAppointmentsByPatientId(String patientId) {
         Patient patient = mongoTemplate.findById(patientId, Patient.class);
         
         if (patient != null) {

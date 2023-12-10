@@ -8,13 +8,12 @@ import lombok.Data;
 import java.time.LocalDate;
 import java.util.List;
 
-import org.bson.types.ObjectId;
 @Document(collection = "patients")
 @Data
 public class Patient {
     @Id
-    private ObjectId id;
-    private ObjectId userId; // Reference to User
+    private String id;
+    private String userId; // Reference to User
     private String firstName;
     private String lastName;
     private LocalDate dateOfBirth;

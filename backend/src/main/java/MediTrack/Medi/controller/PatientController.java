@@ -23,7 +23,7 @@ public class PatientController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Patient>> getSingle_Patient(@PathVariable ObjectId id) {
+    public ResponseEntity<Optional<Patient>> getSingle_Patient(@PathVariable String id) {
         Optional <Patient> patient = patientService.getSinglePatient(id);
         if (patient.isPresent()) {
             return new ResponseEntity<Optional<Patient>>(patient,HttpStatus.OK);
@@ -34,7 +34,7 @@ public class PatientController {
         // return new ResponseEntity<Optional<Patient>>(patientService.getSinglePatient(id),HttpStatus.OK);
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePatient(@PathVariable ObjectId id) {
+    public ResponseEntity<Void> deletePatient(@PathVariable String id) {
 
         Optional<Patient> patient = patientService.getSinglePatient(id);
         if (patient.isPresent()) {
@@ -46,7 +46,7 @@ public class PatientController {
 
     }
     @PutMapping("/{id}")
-    public ResponseEntity<Patient> updatePatient(@PathVariable ObjectId id, @RequestBody Patient patientDetails) {
+    public ResponseEntity<Patient> updatePatient(@PathVariable String id, @RequestBody Patient patientDetails) {
         Patient updatedPatient = patientService.updatePatient(id, patientDetails);
         return new ResponseEntity<>(updatedPatient, HttpStatus.OK);
     }

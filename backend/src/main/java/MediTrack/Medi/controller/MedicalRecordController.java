@@ -56,7 +56,7 @@ public class MedicalRecordController {
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteMedicalRecord(@PathVariable String id,@PathVariable ObjectId patientid) {
+    public ResponseEntity<Void> deleteMedicalRecord(@PathVariable String id,@PathVariable String patientid) {
         boolean isDeleted = medicalservice.deleteMedicalRecord(id,patientid);
         if (isDeleted) {
             return ResponseEntity.noContent().build(); // 204 No Content

@@ -49,7 +49,7 @@ public class MedicalRecordService {
         medicalrecord.setRecordDescription(medicalrecordDetails.getRecordDescription());
         return medicalRecordRepository.save(medicalrecord);
     }
-    public boolean deleteMedicalRecord(String id, ObjectId patientid) {
+    public boolean deleteMedicalRecord(String id, String patientid) {
         // Check if the medical record exists
         Optional<MedicalRecord> medicalRecord = medicalRecordRepository.findById(id);
         if (medicalRecord.isPresent()) {

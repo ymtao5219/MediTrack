@@ -19,11 +19,11 @@ public class PatientService {
 
     }
 
-    public Optional<Patient> getSinglePatient(ObjectId id) {
+    public Optional<Patient> getSinglePatient(String id) {
         return patientRepository.findById(id);
     }
 
-    public boolean deletePatient(ObjectId id) {
+    public boolean deletePatient(String id) {
         if (patientRepository.existsById(id)) {
             patientRepository.deleteById(id);
             return true; 
@@ -36,7 +36,7 @@ public class PatientService {
 
 
     
-    public Patient updatePatient(ObjectId id, Patient patientDetails) {
+    public Patient updatePatient(String id, Patient patientDetails) {
         Patient patient = patientRepository.findById(id)
                          .orElseThrow(() -> new RuntimeException("Patient not found"));
 
