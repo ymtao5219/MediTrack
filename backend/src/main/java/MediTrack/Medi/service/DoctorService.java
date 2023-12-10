@@ -1,5 +1,6 @@
 package MediTrack.Medi.service;
 
+import MediTrack.Medi.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,12 +10,15 @@ import MediTrack.Medi.repository.DoctorRepository;
 import java.util.List;
 import java.util.Optional;
 import org.bson.types.ObjectId;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class DoctorService {
 
     @Autowired
     private DoctorRepository doctorRepository;
+    @Autowired
+    private UserService userService;
 
     // Get all doctors
     public List<Doctor> getAllDoctors() {
@@ -27,8 +31,21 @@ public class DoctorService {
     }
 
     // Add a new doctor
-    public Doctor addDoctor(Doctor doctorDetails) {
-        return doctorRepository.save(doctorDetails);
+    public Doctor addDoctor(Doctor doctor, String userId) {
+        // Find the associated user
+        User user = userService.findUserById(userId).orElseThrow(() -> new RuntimeException("User not found"));
+
+        // Set the User's ObjectId in the Doctor
+        doctor.setUserId(user.getId());
+
+        // Save the Doctor
+        Doctor savedDoctor = doctorRepository.save(doctor);
+
+        // Update the User's referenceId with the Doctor's ID and save the User
+        user.setReferenceId(savedDoctor.getId());
+        userService.updateUser(user.getId(), user);
+
+        return savedDoctor;
     }
 
     // Update a doctor's details
