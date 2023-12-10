@@ -61,15 +61,7 @@ public class PatientController {
     }
 
     @PostMapping
-    public ResponseEntity<?> addPatient(@Valid @RequestBody Patient patientDetails, BindingResult bindingResult,@RequestParam String userId) {
-        if (bindingResult.hasErrors()) {
-            Map<String, String> errorMap = new HashMap<>();
-            bindingResult.getFieldErrors().forEach(error -> 
-                errorMap.put(error.getField(), error.getDefaultMessage()));
-            // Return a 400 Bad Request with the error details
-            return ResponseEntity.badRequest().body(errorMap);
-        }
-
+    public ResponseEntity<?> addPatient(@Valid @RequestBody Patient patientDetails,@RequestParam String userId) {
         patientDetails.setUserId(userId);
         Patient newPatient = patientService.addPatient(patientDetails,userId);
         return new ResponseEntity<>(newPatient, HttpStatus.CREATED);
