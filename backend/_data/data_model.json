@@ -2,6 +2,7 @@
     "patients": [
         {
             "_id": "exampleObjectId1",
+            "userId": "exampleObjectId9", 
             "firstName": "John",
             "lastName": "Doe",
             "dateOfBirth": "1990-01-01",
@@ -9,38 +10,35 @@
             "contactNumber": "123-456-7890",
             "emailAddress": "john.doe@email.com",
             "address": "123 Main St, City, Country",
-            "registrationDate": "2023-10-28"
+            "registrationDate": "2023-10-28",
+            "medicalRecords": [
+                {
+                    "recordId": "exampleObjectId2",
+                    "dateOfSubmission": "2023-10-28",
+                    "recordType": "X-ray",
+                    "recordDescription": "Chest X-ray",
+                    "fileLocation": "/path/to/file/xray1.jpg"
+                }
+            ],
+            "appointments": [
+                {
+                    "appointmentId": "exampleObjectId3",
+                    "doctorId": "exampleObjectId5",
+                    "dateOfAppointment": "2023-10-29",
+                    "notes": "Patient complained about chest pain."
+                }
+            ]
         }
     ],
     "doctors": [
         {
             "_id": "exampleObjectId5",
+            "userId": "exampleObjectId7", 
             "firstName": "Alice",
             "lastName": "Smith",
             "specialization": "Cardiologist",
             "contactNumber": "234-567-8901",
-            "emailAddress": "alice.smith@email.com",
-            "userId": "exampleObjectId6"
-        }
-    ],
-    "medicalRecords": [
-        {
-            "_id": "exampleObjectId2",
-            "patientId": "exampleObjectId1",
-            "doctorId": "exampleObjectId5",
-            "dateOfSubmission": "2023-10-28",
-            "recordType": "X-ray",
-            "recordDescription": "Chest X-ray",
-            "fileLocation": "/path/to/file/xray1.jpg"
-        }
-    ],
-    "visits": [
-        {
-            "_id": "exampleObjectId9",
-            "patientId": "exampleObjectId1",
-            "doctorId": "exampleObjectId5",
-            "dateOfVisit": "2023-10-29",
-            "notes": "Patient complained about chest pain."
+            "emailAddress": "alice.smith@email.com"
         }
     ],
     "users": [
@@ -49,7 +47,14 @@
             "username": "dr.alice",
             "hashedPassword": "hashedPasswordHere",
             "userType": "Doctor",
-            "referenceId": "exampleObjectId8"
+            "referenceId": "exampleObjectId5" 
+        },
+        {
+            "_id": "exampleObjectId9",
+            "username": "john.doe",
+            "hashedPassword": "anotherHashedPassword",
+            "userType": "Patient",
+            "referenceId": "exampleObjectId1" 
         }
     ]
 }
