@@ -71,6 +71,9 @@ public class AppointmentService {
             return Collections.emptyList();
         }
     }
-
+    // Method to get all appointments by doctorId
+    public List<Appointment> getAppointmentsByDoctorId(String doctorId) {
+        return appointmentRepository.findByDoctorId(doctorId);
+    }
 
 }
