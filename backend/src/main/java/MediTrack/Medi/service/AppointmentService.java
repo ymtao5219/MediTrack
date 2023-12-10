@@ -3,7 +3,6 @@ package MediTrack.Medi.service;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.Comparator;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,7 +64,8 @@ public class AppointmentService {
         
         if (patient != null) {
             List<Appointment> appointments = patient.getAppointments();
-            appointments.sort(Comparator.comparing(Appointment::getDateOfAppointment).reversed());
+            // TODO : sort it with OTHER methods 
+            // appointments.sort(Comparator.comparing(Appointment::getDateOfAppointment).reversed());
             return appointments;
         } else {
             return Collections.emptyList();
