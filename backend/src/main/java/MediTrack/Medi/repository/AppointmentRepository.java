@@ -1,5 +1,8 @@
 package MediTrack.Medi.repository;
 
-public class AppointmentRepository {
-    
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import MediTrack.Medi.model.Appointment;
+
+public interface AppointmentRepository extends MongoRepository<Appointment, String> {
 }

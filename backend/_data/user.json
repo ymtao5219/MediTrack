@@ -1,0 +1,16 @@
+[
+    {
+        "user_id": 301,
+        "username": "john_doe",
+        "password": "encrypted_password",
+        "role": "patient",
+        "linked_id": 1
+    },
+    {
+        "user_id": 302,
+        "username": "dr_alice",
+        "password": "encrypted_password",
+        "role": "doctor",
+        "linked_id": 1
+    }
+]
