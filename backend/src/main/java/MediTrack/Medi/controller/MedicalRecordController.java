@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import MediTrack.Medi.model.MedicalRecord;
 import MediTrack.Medi.service.MedicalRecordService;
+import jakarta.validation.Valid;
 
 
 
@@ -28,8 +29,8 @@ public class MedicalRecordController {
     private MedicalRecordService medicalservice;
 
     @PostMapping()
-    public ResponseEntity<MedicalRecord> createMedicalRecord(@RequestBody MedicalRecord medicalrecord,
-            @PathVariable ObjectId patientid) {
+    public ResponseEntity<MedicalRecord> createMedicalRecord(@Valid @RequestBody MedicalRecord medicalrecord,
+            @PathVariable String patientid) {
         MedicalRecord newMedicalRecord = medicalservice.createMedicalRecord(medicalrecord, patientid);
         return new ResponseEntity<>(newMedicalRecord, HttpStatus.CREATED);
     }

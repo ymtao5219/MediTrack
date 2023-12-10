@@ -23,7 +23,7 @@ public class MedicalRecordService {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public MedicalRecord createMedicalRecord(MedicalRecord medicalrecord, ObjectId patientid) {
+    public MedicalRecord createMedicalRecord(MedicalRecord medicalrecord, String patientid) {
         MedicalRecord newMedicalRecord = medicalRecordRepository.insert(medicalrecord);
 
         mongoTemplate.update(Patient.class).matching(Criteria.where("id").is(patientid))

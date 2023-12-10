@@ -53,12 +53,10 @@ public class AppointmentController {
         return new ResponseEntity<>(updatedAppointment, HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteAppointment(@PathVariable String id) {
-
-        Optional<Appointment> appointment = appointmentService.getSingleAppointment(id);
-        if (appointment.isPresent()) {
-            appointmentService.deleteAppointment(id);
+    @DeleteMapping("/patients/{patientid}/{id}")
+    public ResponseEntity<Void> deleteAppointment(@PathVariable String id,@PathVariable String patientid) {
+        boolean isDeleted = appointmentService.deleteAppointment(id, patientid);
+        if (isDeleted) {
             return ResponseEntity.noContent().build(); // 204 No Content
         } else {
             return ResponseEntity.notFound().build(); // 404 Not Found

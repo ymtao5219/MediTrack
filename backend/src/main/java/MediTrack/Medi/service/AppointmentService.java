@@ -4,12 +4,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
+
+import com.mongodb.BasicDBObject;
 
 import MediTrack.Medi.model.Appointment;
 import MediTrack.Medi.model.Patient;
@@ -47,14 +48,21 @@ public class AppointmentService {
         appointment.setNotes(appointmentDetails.getNotes());
         return appointmentRepository.save(appointment);
     }
-    public boolean deleteAppointment(String id) {
-        if (appointmentRepository.existsById(id)) {
-            appointmentRepository.deleteById(id);
+    public boolean deleteAppointment(String appointmentId, String patientId) {
+        Optional<Appointment> appointment = appointmentRepository.findById(appointmentId);
+
+        if (appointment.isPresent()) {
+            // Delete the appointment from the appointment collection
+            appointmentRepository.deleteById(appointmentId);
+
+            // Delete the appointment from the patient's appointments array
+            mongoTemplate.update(Patient.class).matching(Criteria.where("id").is(patientId))
+                    .apply(new Update().pull("appointments", new BasicDBObject("_id", appointmentId))).first();
+
             return true; 
         } else {
             return false; 
         }
-
     }
 
 
