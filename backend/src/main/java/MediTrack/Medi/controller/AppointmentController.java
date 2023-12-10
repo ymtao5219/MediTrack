@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import MediTrack.Medi.model.Appointment;
@@ -47,10 +48,15 @@ public class AppointmentController {
         
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Appointment> updateAppointment(@PathVariable String id, @RequestBody Appointment appointmentDetails) {
-        Appointment updatedAppointment = appointmentService.updateAppointment(id, appointmentDetails);
-        return new ResponseEntity<>(updatedAppointment, HttpStatus.OK);
+    @PutMapping("/patients/{patientid}/{id}")
+    public ResponseEntity<Appointment> updateAppointment(@PathVariable String patientid,@PathVariable String id, @RequestBody Appointment appointmentDetails) {
+        boolean isUpdated = appointmentService.updateAppointment(id, appointmentDetails,patientid);
+        if (isUpdated) {
+            return ResponseEntity.ok().build(); // 200 Ok
+        } else {
+            return ResponseEntity.badRequest().build(); // 400 Update Error
+        }
+
     }
 
     @DeleteMapping("/patients/{patientid}/{id}")
