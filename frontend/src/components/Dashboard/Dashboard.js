@@ -3,48 +3,56 @@ import './Dashboard.css';
 import axios from 'axios';
 
 // Dashboard component
-function Dashboard() {
-  const [patients, setPatients] = useState([]);
-  // doctorId = '61a8b9e7f1b74e5f4c8b4579'; // Replace with actual doctor ID
+function Dashboard({ currentView }) {
+  const [data, setData] = useState([]);
   useEffect(() => {
-    const fetchPatients = async () => {
+    const fetchData = async () => {
+      let url = '';
+      if (currentView === 'patientsInfo') {
+        url = `http://localhost:8080/patients/61d5d3e12345678912345678`; // Replace with correct endpoint
+      } else if (currentView === 'doctorsInfo') {
+        url = `http://localhost:8080/doctors/61a8b9e7f1b74e5f4c8b4567`; // Replace with correct endpoint
+      }
+
       try {
-        const response = await axios.get(`http://localhost:8080/doctors/61d5d3e12345678912345678`);
-        console.log(response.data);
-        setPatients(response.data); // Assuming the API returns an array of patients
+        const response = await axios.get(url);
+        console.log('Data fetched:', response.data);
+        setData(response.data);
       } catch (error) {
-        console.error('Error fetching patient data:', error);
+        console.error('Error fetching data:', error);
       }
     };
 
-    fetchPatients();
-  }, []); // The effect runs when the doctorId changes
+    fetchData();
+  }, [currentView]);// Add currentView to the dependency array
+
 
   return (
     <div className="dashboard-container">
       <div className="dashboard-content">
+        {/* First card: dynamic based on currentView */}
         <div className="patient-list dashboard-card">
           <div className="patient-list-header">
-            <h3>Patient List</h3>
+            <h3>{currentView === 'patientsInfo' ? 'Patient Information' : 'Doctor Information'}</h3>
           </div>
           <div className="patient-list-content">
-          {patients.length > 0 ? (
+            {data.length > 0 ? (
               <ul>
-                {patients.map((patient) => (
-                  <li key={patient.id}>
-                    {patient.name} - {patient.appointmentDate} {/* Adjust based on actual patient object */}
+                {data.map((item) => (
+                  <li key={item.id}>
+                    {currentView === 'patients' ? 
+                      `${item.firstName} ${item.lastName} - DOB: ${item.dateOfBirth}` :
+                      `${item.firstName} ${item.lastName} - Specialization: ${item.specialization}`}
                   </li>
                 ))}
               </ul>
             ) : (
-              <p>No patients scheduled 1234.</p>
+              <p>No {currentView} found.</p>
             )}
           </div>
-          <div className="patient-list-footer">
-            <button className="button">Add new Patient</button>
-            <button className="button">Add new Event</button>
-          </div>
         </div>
+
+        {/* Second card: Schedule or other fixed content */}
         <aside className="schedule dashboard-card">
           <header>
             <h3>Schedule</h3>
@@ -61,5 +69,6 @@ function Dashboard() {
     </div>
   );
 }
+
 
 export default Dashboard;
