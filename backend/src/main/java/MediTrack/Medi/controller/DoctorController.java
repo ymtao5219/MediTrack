@@ -30,8 +30,9 @@ public class DoctorController {
     }
 
     @PostMapping
-    public ResponseEntity<Doctor> addDoctor(@RequestBody Doctor doctorDetails) {
-        Doctor newDoctor = doctorService.addDoctor(doctorDetails);
+    public ResponseEntity<Doctor> addDoctor(@RequestBody Doctor doctorDetails, @RequestParam String userId) {
+        doctorDetails.setUserId(userId);
+        Doctor newDoctor = doctorService.addDoctor(doctorDetails,userId);
         return new ResponseEntity<>(newDoctor, HttpStatus.CREATED);
     }
 
