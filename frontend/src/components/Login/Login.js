@@ -3,21 +3,19 @@ import Header from "../Header/Header";
 import axios from 'axios'; // Ensure axios is installed
 import "./Login.css";
 
-function Login({ onLogin }) {
+function Login({ onLogin, toggleView }) { // Accept toggleView as a prop
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isDoctor, setIsDoctor] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onLogin(username, password);
+    onLogin(username, password, isDoctor);
   };
 
   return (
     <div className="App">
-      <div>
-        <Header userName={'anonymity'} />
-      </div>
+      <Header userName={'anonymity'} />
       <div className="login-page">
         <div className="logo-section">
           <div className="logo">200-OK</div>
@@ -54,6 +52,11 @@ function Login({ onLogin }) {
               </label>
             </div>
             <button type="submit" className="login-button">Login</button>
+          </div>
+          <div className="signup-toggle">
+            <button type="button" onClick={toggleView} className="toggle-button">
+              Don't have an account? Sign Up
+            </button>
           </div>
         </form>
       </div>
