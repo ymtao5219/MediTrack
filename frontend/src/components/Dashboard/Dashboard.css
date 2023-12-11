@@ -58,3 +58,33 @@
 .button:hover {
   background-color: #9170c2;
 }
+
+.patient-list-content ul {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0;
+  margin: 0;
+}
+
+.patient-list-content li {
+  padding: 10px; /* Adds spacing within each list item */
+  margin-bottom: 10px; /* Adds space between list items */
+  border-bottom: 1px solid #e0e0e0; /* Adds a subtle line between items */
+  transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.patient-list-content li:hover {
+  background-color: #f5f5f5; /* Adds a hover effect */
+}
+
+/* Typography */
+.patient-list-content {
+  font-size: 16px; /* Adjust as needed */
+  color: #333; /* Darker text color for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .patient-list-content {
+    font-size: 14px; /* Slightly smaller font for smaller screens */
+  }
+}
