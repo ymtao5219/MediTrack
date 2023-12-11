@@ -3,6 +3,7 @@ package MediTrack.Medi.service;
 import MediTrack.Medi.model.User;
 import MediTrack.Medi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,12 @@ public class  UserService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     public User createUser(User user) {
+        String encodedPassword = passwordEncoder.encode(user.getHashedPassword());
+        user.setHashedPassword(encodedPassword);
         return userRepository.save(user);
     }
 
