@@ -12,7 +12,8 @@ import WelcomeBanner from './components/WelcomeBanner/WelcomeBanner';
 function App() {
   const [user, setUser] = useState(null);
   const [view, setView] = useState('login'); // State to manage login or signup view
-
+  const [currentView, setCurrentView] = useState('patients');
+  
   const handleLogin = (username, password) => {
     // Your login logic here
     setUser(username);
@@ -25,6 +26,10 @@ function App() {
 
   const toggleView = () => {
     setView(view === 'login' ? 'signup' : 'login');
+  };
+
+  const handleSidebarClick = (view) => {
+    setCurrentView(view);
   };
 
   // If user is not logged in, show the Login or Signup component
@@ -40,9 +45,9 @@ function App() {
       <Header userName={user} />
       <WelcomeBanner userName={user} />
       <div className="main-content">
-        <Sidebar />
+        <Sidebar onSidebarClick={handleSidebarClick} />
         <div className="content">
-          <Dashboard />
+          <Dashboard currentView={currentView} />
         </div>
       </div>
     </div>
