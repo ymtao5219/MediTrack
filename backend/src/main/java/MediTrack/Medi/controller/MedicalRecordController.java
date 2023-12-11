@@ -51,9 +51,15 @@ public class MedicalRecordController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable String id, @RequestBody MedicalRecord medicalrecordDetails) {
-        MedicalRecord updatedMedicalRecord = medicalservice.updateMedicalRecord(id, medicalrecordDetails);
-        return new ResponseEntity<>(updatedMedicalRecord, HttpStatus.OK);
+    public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable String id,@PathVariable String patientid ,@RequestBody MedicalRecord medicalrecordDetails) {
+        boolean isUpdated = medicalservice.updateMedicalRecord(id, patientid,medicalrecordDetails);
+
+        if (isUpdated) {
+            return ResponseEntity.ok().build(); // 200 Ok
+        } else {
+            return ResponseEntity.badRequest().build(); // 400 Update Error
+        }
+
     }
     
     @DeleteMapping("/{id}")
