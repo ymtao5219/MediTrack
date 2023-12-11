@@ -4,13 +4,15 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
+import com.mongodb.BasicDBObject;
+import com.mongodb.client.result.UpdateResult;
 
+import org.springframework.data.mongodb.core.query.Query;
 import MediTrack.Medi.model.Appointment;
 import MediTrack.Medi.model.Patient;
 import MediTrack.Medi.repository.AppointmentRepository;
@@ -39,22 +41,42 @@ public class AppointmentService {
         return appointmentRepository.findById(id);
     }
 
-    public Appointment updateAppointment(String id, Appointment appointmentDetails) {
+    public boolean updateAppointment(String id, Appointment appointmentDetails, String patientId) {
         Appointment appointment = appointmentRepository.findById(id)
                          .orElseThrow(() -> new RuntimeException("Appointment not found"));
 
         appointment.setDateOfAppointment(appointmentDetails.getDateOfAppointment());
         appointment.setNotes(appointmentDetails.getNotes());
-        return appointmentRepository.save(appointment);
+        appointmentRepository.save(appointment);
+        // Update the appointment in the patient's appointments array
+        // Create a query to match the patient and the specific appointment
+        Query query = new Query(Criteria.where("_id").is(patientId).and("appointments.appointmentId").is(id));
+
+        // Define the update object to set the new values of the appointment fields
+        Update update = new Update()
+            .set("appointments.$.dateOfAppointment", appointmentDetails.getDateOfAppointment())
+            .set("appointments.$.notes", appointmentDetails.getNotes());
+        // Perform the update operation
+        UpdateResult updateResult = mongoTemplate.updateFirst(query, update, Patient.class);
+
+        // Check if the update was successful
+        return updateResult.getModifiedCount() > 0;
     }
-    public boolean deleteAppointment(String id) {
-        if (appointmentRepository.existsById(id)) {
-            appointmentRepository.deleteById(id);
+    public boolean deleteAppointment(String appointmentId, String patientId) {
+        Optional<Appointment> appointment = appointmentRepository.findById(appointmentId);
+
+        if (appointment.isPresent()) {
+            // Delete the appointment from the appointment collection
+            appointmentRepository.deleteById(appointmentId);
+
+            // Delete the appointment from the patient's appointments array
+            mongoTemplate.update(Patient.class).matching(Criteria.where("id").is(patientId))
+                    .apply(new Update().pull("appointments", new BasicDBObject("_id", appointmentId))).first();
+
             return true; 
         } else {
             return false; 
         }
-
     }
 
 

@@ -7,10 +7,12 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
 import com.mongodb.BasicDBObject;
+import com.mongodb.client.result.UpdateResult;
 
 import MediTrack.Medi.model.MedicalRecord;
 import MediTrack.Medi.model.Patient;
@@ -23,7 +25,7 @@ public class MedicalRecordService {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public MedicalRecord createMedicalRecord(MedicalRecord medicalrecord, ObjectId patientid) {
+    public MedicalRecord createMedicalRecord(MedicalRecord medicalrecord, String patientid) {
         MedicalRecord newMedicalRecord = medicalRecordRepository.insert(medicalrecord);
 
         mongoTemplate.update(Patient.class).matching(Criteria.where("id").is(patientid))
@@ -39,7 +41,7 @@ public class MedicalRecordService {
     public Optional<MedicalRecord> getSingleMedicalRecord(String id) {
         return medicalRecordRepository.findById(id);
     }
-    public MedicalRecord updateMedicalRecord(String id, MedicalRecord medicalrecordDetails) {
+    public boolean updateMedicalRecord(String id, String patientId,MedicalRecord medicalrecordDetails) {
         MedicalRecord medicalrecord = medicalRecordRepository.findById(id)
                          .orElseThrow(() -> new RuntimeException("Medical Record not found"));
 
@@ -47,7 +49,24 @@ public class MedicalRecordService {
         medicalrecord.setFileLocation(medicalrecordDetails.getFileLocation());
         medicalrecord.setDateOfSubmission(medicalrecordDetails.getDateOfSubmission());
         medicalrecord.setRecordDescription(medicalrecordDetails.getRecordDescription());
-        return medicalRecordRepository.save(medicalrecord);
+        medicalRecordRepository.save(medicalrecord);
+
+        Query query = new Query(Criteria.where("_id").is(patientId).and("medicalRecords.recordId").is(id));
+
+
+
+        // Define the update object to set the new values of the appointment fields
+        Update update = new Update()
+            .set("medicalRecords.$.recordType", medicalrecord.getRecordType())
+            .set("medicalRecords.$.fileLocation", medicalrecord.getFileLocation())
+            .set("medicalRecords.$.recordDescription", medicalrecord.getRecordDescription())
+            .set("medicalRecords.$.dateOfSubmission", medicalrecord.getDateOfSubmission());
+        // Perform the update operation
+        UpdateResult updateResult = mongoTemplate.updateFirst(query, update, Patient.class);
+
+        // Check if the update was successful
+        return updateResult.getModifiedCount() > 0;
+
     }
     public boolean deleteMedicalRecord(String id, String patientid) {
         // Check if the medical record exists

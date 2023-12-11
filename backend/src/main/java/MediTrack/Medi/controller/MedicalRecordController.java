@@ -7,6 +7,7 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,9 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import MediTrack.Medi.model.MedicalRecord;
 import MediTrack.Medi.service.MedicalRecordService;
+import jakarta.validation.Valid;
 
 
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/patients/{patientid}/medicalrecords")
 public class MedicalRecordController {
@@ -28,8 +30,8 @@ public class MedicalRecordController {
     private MedicalRecordService medicalservice;
 
     @PostMapping()
-    public ResponseEntity<MedicalRecord> createMedicalRecord(@RequestBody MedicalRecord medicalrecord,
-            @PathVariable ObjectId patientid) {
+    public ResponseEntity<MedicalRecord> createMedicalRecord(@Valid @RequestBody MedicalRecord medicalrecord,
+            @PathVariable String patientid) {
         MedicalRecord newMedicalRecord = medicalservice.createMedicalRecord(medicalrecord, patientid);
         return new ResponseEntity<>(newMedicalRecord, HttpStatus.CREATED);
     }
@@ -50,9 +52,15 @@ public class MedicalRecordController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable String id, @RequestBody MedicalRecord medicalrecordDetails) {
-        MedicalRecord updatedMedicalRecord = medicalservice.updateMedicalRecord(id, medicalrecordDetails);
-        return new ResponseEntity<>(updatedMedicalRecord, HttpStatus.OK);
+    public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable String id,@PathVariable String patientid ,@RequestBody MedicalRecord medicalrecordDetails) {
+        boolean isUpdated = medicalservice.updateMedicalRecord(id, patientid,medicalrecordDetails);
+
+        if (isUpdated) {
+            return ResponseEntity.ok().build(); // 200 Ok
+        } else {
+            return ResponseEntity.badRequest().build(); // 400 Update Error
+        }
+
     }
     
     @DeleteMapping("/{id}")

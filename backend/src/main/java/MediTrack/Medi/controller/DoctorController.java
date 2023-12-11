@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.*;
 import MediTrack.Medi.model.Doctor;
 import MediTrack.Medi.service.DoctorService;
 import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 import java.util.Optional;
 import org.bson.types.ObjectId;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/doctors")
 public class DoctorController {

@@ -12,11 +12,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import javax.validation.Valid;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/patients")
 public class PatientController {
