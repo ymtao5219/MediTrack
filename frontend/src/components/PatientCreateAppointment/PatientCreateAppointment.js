@@ -26,7 +26,9 @@ function PatientCreateAppointment({ patientId }) {
       notes
     }).then(response => {
       console.log('Appointment created:', response.data);
-      // Handle successful creation
+      setSelectedDoctor('');
+      setAppointmentDate('');
+      setNotes('');
     }).catch(error => {
       console.error('Error creating appointment:', error);
       // Handle error
