@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 import java.util.Optional;
-import org.bson.types.ObjectId;
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/doctors")
