@@ -26,6 +26,11 @@ function Sidebar({ userType, onSidebarClick }) {
                 {/* Add other doctor-specific items here */}
               </>
             )}
+            <li className="nav-item" onClick={() => onSidebarClick('makeAppointment')}>
+              <a href="#">Make Appointment</a>
+            </li>
+            <li className="nav-item"><a href="/payment-info">Payment Info</a></li>
+            <li className="nav-item"><a href="/patient-list">Patient List</a></li>
             {/* Add the rest of your navigation items here */}
           </ul>
         </nav>
