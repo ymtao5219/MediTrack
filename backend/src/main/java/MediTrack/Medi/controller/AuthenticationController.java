@@ -17,15 +17,6 @@ public class AuthenticationController {
     @Autowired
     private AuthenticationService authenticationService;
 
-
-/* 
-    @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody User user) {
-        user.setHashedPassword(passwordEncoder.encode(user.getHashedPassword()));
-        userRepository.save(user);
-        return ResponseEntity.ok("User registered successfully");
-    }
-*/
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(@RequestBody User user) {
         return ResponseEntity.ok(authenticationService.register(user));
