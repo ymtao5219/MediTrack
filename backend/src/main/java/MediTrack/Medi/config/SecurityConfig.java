@@ -43,7 +43,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(req ->
                                 req.requestMatchers("/auth/**").permitAll()
                                 //.requestMatchers("/patients/**","/doctors/**").hasAnyRole("Doctor")
-                                .anyRequest().permitAll()
+                                .anyRequest().authenticated()
                 )
             .sessionManagement(session -> session
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))                

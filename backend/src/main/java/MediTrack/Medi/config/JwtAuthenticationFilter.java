@@ -20,14 +20,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import MediTrack.Medi.repository.TokenRepository;
+import MediTrack.Medi.service.UserService;
 
 @Component
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
   @Autowired
   private JwtTokenProvider jwtTokenProvider;
-  private UserDetailsService userDetailsService;
-  private TokenRepository tokenRepository;
+  private final UserDetailsService userDetailsService;
+  private final TokenRepository tokenRepository;
 
   @Override
   protected void doFilterInternal(
@@ -42,7 +43,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     final String authHeader = request.getHeader("Authorization");
     final String jwt;
     final String userName;
-    final boolean tmp;
     if (authHeader == null ||!authHeader.startsWith("Bearer ")) {
       filterChain.doFilter(request, response);
       return;
@@ -56,7 +56,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
           .orElse(false);
       if (jwtTokenProvider.isTokenValid(jwt, userDetails) && isTokenValid) {
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
-            userDetails,
+            userDetails,    
             null,
             userDetails.getAuthorities()
         );
