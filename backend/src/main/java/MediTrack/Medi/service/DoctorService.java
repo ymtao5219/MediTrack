@@ -10,7 +10,6 @@ import MediTrack.Medi.repository.DoctorRepository;
 import java.util.List;
 import java.util.Optional;
 import org.bson.types.ObjectId;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class DoctorService {
