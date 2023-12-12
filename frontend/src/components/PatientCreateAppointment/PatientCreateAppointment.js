@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './PatientCreateAppointment.css';
 
 function PatientCreateAppointment({ patientId }) {
   const [doctors, setDoctors] = useState([]);
@@ -18,7 +19,7 @@ function PatientCreateAppointment({ patientId }) {
     e.preventDefault();
     console.log('Creating appointment...');
     console.log('Patient ID:', patientId);
-    axios.post('http://localhost:8080/appointments/patients/${patientid}', {
+    axios.post('http://localhost:8080/appointments/patients/61d5d3e12345678912345678', {
       doctorId: selectedDoctor,
       dateOfAppointment: appointmentDate,
       notes
@@ -32,7 +33,7 @@ function PatientCreateAppointment({ patientId }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="create-appointment-form">
       <h2>Create Appointment</h2>
       <label>
         Select Doctor:
