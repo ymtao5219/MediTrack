@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Dashboard.css';
 import axios from 'axios';
 import PatientCreateAppointment from '../PatientCreateAppointment/PatientCreateAppointment';
+import CreateMedicalRecord from '../CreateMedicalRecord/CreateMedicalRecord';
 
 // Dashboard component
 function Dashboard({ currentView }) {
@@ -78,7 +79,12 @@ function Dashboard({ currentView }) {
       case 'makeAppointment':
         return <PatientCreateAppointment patientId={'61d5d3e12345678912345678'} />; 
         //hard coded patient id, TODO: change to dynamic
-      default:
+      
+      case 'createMedicalRecord':
+        return <CreateMedicalRecord patientId={'61d5d3e12345678912345678'} />;
+        // hard coded patient id, TODO: change to dynamic
+        
+        default:
         return <p>No {currentView} found.</p>;
     }
   };

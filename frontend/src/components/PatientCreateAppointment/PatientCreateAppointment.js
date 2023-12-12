@@ -19,7 +19,8 @@ function PatientCreateAppointment({ patientId }) {
     e.preventDefault();
     console.log('Creating appointment...');
     console.log('Patient ID:', patientId);
-    axios.post('http://localhost:8080/appointments/patients/61d5d3e12345678912345678', {
+    console.log('Doctor ID:', selectedDoctor);
+    axios.post(`http://localhost:8080/appointments/patients/${patientId}`, {
       doctorId: selectedDoctor,
       dateOfAppointment: appointmentDate,
       notes
