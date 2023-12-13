@@ -3,24 +3,17 @@ package MediTrack.Medi.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.logout.LogoutHandler;
 
-import MediTrack.Medi.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 @Configuration
@@ -32,6 +25,7 @@ public class SecurityConfig {
     private JwtAuthenticationFilter jwtAuthFilter;
 
     private final AuthenticationProvider authenticationProvider;
+    private final LogoutHandler logoutHandler;
 
 
     // private static final String[] WHITE_LIST_URL = {"/**"};
@@ -42,21 +36,19 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req ->
                                 req.requestMatchers("/auth/**").permitAll()
-                                //.requestMatchers("/patients/**","/doctors/**").hasAnyRole("Doctor")
-                                .anyRequest().permitAll()
+                                //TODO: comment this for dev .requestMatchers("/doctors/**").hasAnyRole("DOCTOR")
+                                .anyRequest().permitAll()// TODO: comment this for dev .authenticated()
                 )
             .sessionManagement(session -> session
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))                
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 // TODO : logout
-                /* 
                 .logout(logout ->
-                        logout.logoutUrl("/api/v1/auth/logout")
+                        logout.logoutUrl("/auth/logout")
                                 .addLogoutHandler(logoutHandler)
                                 .logoutSuccessHandler((request, response, authentication) -> SecurityContextHolder.clearContext())
                 )
-                */
         ;
 
         return http.build();
