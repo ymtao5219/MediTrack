@@ -19,12 +19,12 @@ function PatientCreateAppointment({ patientId }) {
     e.preventDefault();
     console.log('Creating appointment...');
     console.log('Patient ID:', patientId);
-    console.log('Doctor ID:', selectedDoctor);
     axios.post(`http://localhost:8080/appointments/patients/${patientId}`, {
       doctorId: selectedDoctor,
       dateOfAppointment: appointmentDate,
       notes
     }).then(response => {
+      console.log('Doctor ID:', selectedDoctor);
       console.log('Appointment created:', response.data);
       setSelectedDoctor('');
       setAppointmentDate('');
@@ -40,7 +40,11 @@ function PatientCreateAppointment({ patientId }) {
       <h2>Create Appointment</h2>
       <label>
         Select Doctor:
-        <select value={selectedDoctor} onChange={(e) => setSelectedDoctor(e.target.value)}>
+        <select value={selectedDoctor} onChange={(e) => 
+        {
+          console.log("New selected doctor:", e.target.value);
+          setSelectedDoctor(e.target.value)}
+        }>
           {doctors.map(doctor => (
             <option key={doctor._id} value={doctor._id}>{doctor.firstName} {doctor.lastName} - {doctor.specialization}</option>
           ))}
