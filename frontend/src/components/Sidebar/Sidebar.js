@@ -14,27 +14,22 @@ function Sidebar({ userType, onSidebarClick }) {
             {userType === 'patient' && (
               <>
                 <li className="nav-item" onClick={() => onSidebarClick('patientsInfo')}><a href="#">Patient Info</a></li>
+                <li className="nav-item" onClick={() => onSidebarClick('medicalRecords')}><a href="#">Medical Records</a></li>
                 <li className="nav-item"><a href="/payment-info">Payment Info</a></li>
-                {/* Add other patient-specific items here */}
+                <li className="nav-item" onClick={() => onSidebarClick('makeAppointment')}>
+                  <a href="#">Make Appointment</a>
+                </li>
               </>
             )}
             {userType === 'doctor' && (
               <>
                 <li className="nav-item" onClick={() => onSidebarClick('doctorsInfo')}><a href="#">Doctor Info</a></li>
-                <li className="nav-item" onClick={() => onSidebarClick('medicalRecords')}><a href="#">Medical Records</a></li>
+                <li className="nav-item" onClick={() => onSidebarClick('createMedicalRecord')}>
+                  <a href="#">Create Medical Record</a>
+                </li>
                 <li className="nav-item"><a href="/patient-list">Patient List</a></li>
-                {/* Add other doctor-specific items here */}
               </>
             )}
-            <li className="nav-item" onClick={() => onSidebarClick('makeAppointment')}>
-              <a href="#">Make Appointment</a>
-            </li>
-            <li className="nav-item" onClick={() => onSidebarClick('createMedicalRecord')}> 
-              <a href="#">Create Medical Record</a>
-            </li>
-            <li className="nav-item"><a href="/payment-info">Payment Info</a></li>
-            <li className="nav-item"><a href="/patient-list">Patient List</a></li>
-            {/* Add the rest of your navigation items here */}
           </ul>
         </nav>
       </div>

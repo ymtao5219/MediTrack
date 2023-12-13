@@ -85,7 +85,7 @@ function Dashboard({ currentView }) {
         // hard coded patient id, TODO: change to dynamic
         
         default:
-        return <p>No {currentView} found.</p>;
+        return <p>No contents found.</p>;
     }
   };
 
