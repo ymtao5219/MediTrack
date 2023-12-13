@@ -3,6 +3,14 @@ import './Sidebar.css';
 import logo from './logo_nb.png';
 
 function Sidebar({ userType, onSidebarClick }) {
+  // Handle the logout event
+  const handleLogout = () => {
+    // Perform logout logic here (e.g., clearing local storage, reset user state)
+    
+    // Redirect to the main page (or login page)
+    window.location.href = '/';
+  };
+
   return (
     <aside className="sidebar">
       <div className="logo-container">
@@ -30,6 +38,9 @@ function Sidebar({ userType, onSidebarClick }) {
                 <li className="nav-item"><a href="/patient-list">Patient List</a></li>
               </>
             )}
+            <li className="nav-item" onClick={handleLogout}>
+              <a href="/" onClick={(e) => {e.preventDefault(); handleLogout();}}>Log Out</a>
+            </li>
           </ul>
         </nav>
       </div>
