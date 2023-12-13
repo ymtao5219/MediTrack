@@ -42,8 +42,8 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req ->
                                 req.requestMatchers("/auth/**").permitAll()
-                                //.requestMatchers("/patients/**","/doctors/**").hasAnyRole("Doctor")
-                                .anyRequest().permitAll()
+                                //TODO: comment this for dev .requestMatchers("/doctors/**").hasAnyRole("DOCTOR")
+                                .anyRequest().permitAll()// TODO: comment this for dev .authenticated()
                 )
             .sessionManagement(session -> session
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))                
