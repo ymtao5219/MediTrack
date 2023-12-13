@@ -18,6 +18,9 @@ function Sidebar({ userType, onSidebarClick }) {
                 <li className="nav-item" onClick={() => onSidebarClick('makeAppointment')}>
                   <a href="#">Make Appointment</a>
                 </li>
+                <li className="nav-item" onClick={() => onSidebarClick('patientAppointments')}>
+                  <a href="#">My Appointments</a>
+                </li>
               </>
             )}
             {userType === 'doctor' && (

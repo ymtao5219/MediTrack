@@ -7,6 +7,7 @@ import MedicalRecords from '../MedicalRecords/MedicalRecords';
 import DoctorInfo from '../DoctorInfo/DoctorInfo';
 import PatientInfo from '../PatientInfo/PatientInfo';
 import DoctorAppointments from '../DoctorAppointments/DoctorAppointments';
+import PatientAppointments from '../PatientAppointments/PatientAppointments';
 
 // Dashboard component
 function Dashboard({ currentView }) {
@@ -64,6 +65,10 @@ function Dashboard({ currentView }) {
         return <DoctorAppointments doctorId={'657514a0c6f2772cb05410c4'} />;
       // hard coded doctor id, TODO: change to dynamic
 
+      case 'patientAppointments':
+        return <PatientAppointments patientId={'61d5d3e12345678912345678'} />;
+      // hard coded patient id, TODO: change to dynamic
+      
       default:
         return <p>No contents found.</p>;
     }
