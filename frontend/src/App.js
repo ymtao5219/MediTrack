@@ -14,9 +14,12 @@ function App() {
   const [view, setView] = useState('login'); // State to manage login or signup view
   const [currentView, setCurrentView] = useState('patients');
   
-  const handleLogin = (username, password) => {
+  const handleLogin = (username, password, isDoctor) => {
     // Your login logic here
-    setUser(username);
+    setUser({
+      username: username,
+      userType: isDoctor ? 'doctor' : 'patient'
+    });
   };
 
   const handleSignup = (username, password, email) => {
@@ -42,10 +45,10 @@ function App() {
   // User is logged in, show the main content
   return (
     <div className="App">
-      <Header userName={user} />
-      <WelcomeBanner userName={user} />
+      <Header userName={user ? user.username : 'anonymity'} />
+      <WelcomeBanner userName={user ? user.username : 'anonymity'} />
       <div className="main-content">
-        <Sidebar onSidebarClick={handleSidebarClick} />
+      {user && <Sidebar userType={user.userType} onSidebarClick={handleSidebarClick} />}
         <div className="content">
           <Dashboard currentView={currentView} />
         </div>
