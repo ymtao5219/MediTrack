@@ -4,11 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import com.fasterxml.jackson.core.exc.StreamWriteException;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,18 +14,12 @@ import MediTrack.Medi.config.JwtTokenProvider;
 import MediTrack.Medi.model.User;
 import MediTrack.Medi.repository.TokenRepository;
 import MediTrack.Medi.repository.UserRepository;
-import MediTrack.Medi.request.AuthenticationRequest;
 import MediTrack.Medi.response.AuthenticationResponse;
 import MediTrack.Medi.token.Token;
 import MediTrack.Medi.token.TokenType;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.IOException;
-import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
-import java.util.Date;
 
 @Service
 public class AuthenticationService {
