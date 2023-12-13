@@ -10,7 +10,6 @@ function MedicalRecords({ records }) {
                         <h4>Record Type: {record.recordType}</h4>
                         <p>Date of Submission: {record.dateOfSubmission}</p>
                         <p>Description: {record.recordDescription}</p>
-                        <p>File: <a href={record.fileLocation} target="_blank" rel="noopener noreferrer">View File</a></p>
                     </div>
                 </li>
             ))}

@@ -23,7 +23,6 @@ function Sidebar({ userType, onSidebarClick }) {
               <>
                 <li className="nav-item" onClick={() => onSidebarClick('patientsInfo')}><a href="#">Patient Info</a></li>
                 <li className="nav-item" onClick={() => onSidebarClick('medicalRecords')}><a href="#">Medical Records</a></li>
-                <li className="nav-item"><a href="/payment-info">Payment Info</a></li>
                 <li className="nav-item" onClick={() => onSidebarClick('makeAppointment')}>
                   <a href="#">Make Appointment</a>
                 </li>
@@ -35,7 +34,9 @@ function Sidebar({ userType, onSidebarClick }) {
                 <li className="nav-item" onClick={() => onSidebarClick('createMedicalRecord')}>
                   <a href="#">Create Medical Record</a>
                 </li>
-                <li className="nav-item"><a href="/patient-list">Patient List</a></li>
+                <li className="nav-item" onClick={() => onSidebarClick('doctorAppointments')}>
+                  <a href="#">Doctor Appointments</a>
+                </li>
               </>
             )}
             <li className="nav-item" onClick={handleLogout}>
