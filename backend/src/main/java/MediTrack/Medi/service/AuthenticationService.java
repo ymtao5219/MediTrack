@@ -48,10 +48,6 @@ public class AuthenticationService {
             // Add a field error to the BindingResult
             bindingResult.addError(new FieldError("User", "username", "Username already exists"));
         }
-        // Check if referenceId already exists
-        if (repository.findByReferenceId(requestUser.getReferenceId()) != null) {
-            bindingResult.addError(new FieldError("User", "referenceId", "Reference ID already exists"));
-        }
         if (bindingResult.hasErrors()) {
             // Throw a MethodArgumentNotValidException with the BindingResult
             throw new MethodArgumentNotValidException(null, bindingResult);
