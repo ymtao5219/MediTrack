@@ -51,6 +51,7 @@ public class User implements UserDetails{
     public String getUsername() {
         return username;
     }
+    public String getReferenceId() {return referenceId;}
     @Override
     public boolean isAccountNonExpired() {
         // Implement logic to determine if account is expired. For now, returning true.
