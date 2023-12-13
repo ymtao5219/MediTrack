@@ -1,29 +1,50 @@
 import React, { useState } from 'react';
+// import { useNavigate } from 'react-router-dom'; // Import useHistory hook from 'react-router-dom'
+import axios from 'axios';
 import Header from "../Header/Header";
 import "./Signup.css";
 
-function Signup({ onSignup, toggleView }) {
+function Signup({ toggleView }) {
+  // const navigate = useNavigate(); // Instantiate the useHistory hook
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [userType, setUserType] = useState('patient'); // new state for user type
-  const [specialization, setSpecialization] = useState(''); // for doctor
-  const [dateOfBirth, setDateOfBirth] = useState(''); // for patient
-  const [gender, setGender] = useState(''); // for patient
+  const [userType, setUserType] = useState('patient');
+  const [specialization, setSpecialization] = useState(''); // for doctors
+  const [dateOfBirth, setDateOfBirth] = useState(''); // for patients
+  const [gender, setGender] = useState(''); // for patients
+  const [errorMessage, setErrorMessage] = useState(''); // State for error messages
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    console.log('Form submitted');
     e.preventDefault();
 
     // Check if passwords match
     if (password !== confirmPassword) {
-      alert('Passwords do not match.');
+      setErrorMessage('Passwords do not match.'); // Set error message state
       return;
     }
 
-    // Additional logic for handling signup based on user type
-    // For now, we're just passing the information to onSignup
-    onSignup(username, password, email, userType, { specialization, dateOfBirth, gender });
+    // Construct the signup data based on user type
+    const signupData = {
+      username,
+      hashedPassword: password, // Note: Ensure backend expects 'hashedPassword' not 'password'
+      email,
+      userType,
+      ...(userType === 'doctor' && { specialization }),
+      ...(userType === 'patient' && { dateOfBirth, gender }),
+    };
+
+    try {
+      const response = await axios.post('http://localhost:8080/auth/register', signupData);
+      console.log('User registered:', response.data);
+      // Redirect to login page after successful signup
+      // navigate('/login'); 
+    } catch (error) {
+      console.error('Error during signup:', error.response?.data?.message || error.message);
+      setErrorMessage(error.response?.data?.message || 'An error occurred during signup.'); // Set error message state
+    }
   };
 
   return (
@@ -32,6 +53,8 @@ function Signup({ onSignup, toggleView }) {
       <div className="signup-page">
         <form className="signup-form" onSubmit={handleSubmit}>
           <div className="signup-title">Sign up</div>
+          {/* Display error message if any */}
+          {errorMessage && <div className="error-message">{errorMessage}</div>}
 
           {/* Email Input */}
           <div className="input-container">
@@ -99,31 +122,36 @@ function Signup({ onSignup, toggleView }) {
                 id="specialization"
                 value={specialization}
                 onChange={(e) => setSpecialization(e.target.value)}
-                required
+                required={userType === 'doctor'}
               />
             </div>
           )}
+
           {userType === 'patient' && (
             <>
-              <div className="input-container">
-                <label htmlFor="dateOfBirth">Date of Birth:</label>
-                <input
-                  type="date"
-                  id="dateOfBirth"
-                  value={dateOfBirth}
-                  onChange={(e) => setDateOfBirth(e.target.value)}
-                  required
-                />
-              </div>
+                <div className="input-container">
+                    <label htmlFor="dateOfBirth">Date of Birth:</label>
+                    <input
+                        type="date"
+                        id="dateOfBirth"
+                        value={dateOfBirth}
+                        onChange={(e) => setDateOfBirth(e.target.value)}
+                        required={userType === 'patient'}
+                    />
+                </div>
               <div className="input-container">
                 <label htmlFor="gender">Gender:</label>
-                <input
-                  type="text"
+                <select
                   id="gender"
                   value={gender}
                   onChange={(e) => setGender(e.target.value)}
-                  required
-                />
+                  required={userType === 'patient'}
+                >
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
             </>
           )}
