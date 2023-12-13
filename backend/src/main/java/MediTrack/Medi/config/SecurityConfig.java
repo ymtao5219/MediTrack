@@ -37,7 +37,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(req ->
                                 req.requestMatchers("/auth/**").permitAll()
                                 //TODO: comment this for dev .requestMatchers("/doctors/**").hasAnyRole("DOCTOR")
-                                .anyRequest().authenticated()// TODO: comment this for dev .authenticated()
+                                .anyRequest().permitAll()// TODO: comment this for dev .authenticated()
                 )
             .sessionManagement(session -> session
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))                
