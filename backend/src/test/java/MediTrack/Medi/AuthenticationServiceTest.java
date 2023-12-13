@@ -13,6 +13,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,7 +48,7 @@ public class AuthenticationServiceTest {
     }
 
     @Test
-    public void testRegister() {
+    public void testRegister() throws MethodArgumentNotValidException {
         when(userRepository.save(any(User.class))).thenReturn(testUser);
         when(passwordEncoder.encode(anyString())).thenReturn("encodedPassword");
         when(jwtTokenProvider.generateToken(any(User.class))).thenReturn("jwtToken");

@@ -6,6 +6,11 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.BeanPropertyBindingResult;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+
 import com.fasterxml.jackson.core.exc.StreamWriteException;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -35,11 +40,26 @@ public class AuthenticationService {
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
 
-    public AuthenticationResponse register(User requestUser) {
+    public AuthenticationResponse register(User requestUser) throws MethodArgumentNotValidException {
+        // Create a BindingResult to hold the validation error
+        BindingResult bindingResult = new BeanPropertyBindingResult(requestUser, "User");
+        // Check if username already exists
+        if (repository.findByUsername(requestUser.getUsername()) != null) {
+            // Add a field error to the BindingResult
+            bindingResult.addError(new FieldError("User", "username", "Username already exists"));
+        }
+        // Check if referenceId already exists
+        if (repository.findByReferenceId(requestUser.getReferenceId()) != null) {
+            bindingResult.addError(new FieldError("User", "referenceId", "Reference ID already exists"));
+        }
+        if (bindingResult.hasErrors()) {
+            // Throw a MethodArgumentNotValidException with the BindingResult
+            throw new MethodArgumentNotValidException(null, bindingResult);
+        }
         var user = User.builder()
             .username(requestUser.getUsername())
             .hashedPassword(passwordEncoder.encode(requestUser.getHashedPassword()))
-            .userType(requestUser.getUserType())
+            .userType(requestUser.getUserType()).referenceId(requestUser.getReferenceId())
             .build();
         var savedUser = repository.save(user);
         var jwtToken = jwtTokenProvider.generateToken(user);
