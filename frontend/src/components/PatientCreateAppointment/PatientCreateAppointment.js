@@ -13,7 +13,8 @@ function PatientCreateAppointment({ patientId }) {
     axios.get('http://localhost:8080/doctors')
       .then(response => setDoctors(response.data))
       .catch(error => console.error('Error fetching doctors:', error));
-  }, []);
+    console.log(doctors.userId);
+    }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,10 +44,11 @@ function PatientCreateAppointment({ patientId }) {
         <select value={selectedDoctor} onChange={(e) => 
         {
           console.log("New selected doctor:", e.target.value);
-          setSelectedDoctor(e.target.value)}
+          setSelectedDoctor(e.target.value);
+        }
         }>
           {doctors.map(doctor => (
-            <option key={doctor._id} value={doctor._id}>{doctor.firstName} {doctor.lastName} - {doctor.specialization}</option>
+            <option key={doctor._id} value={doctor.id}>{doctor.firstName} {doctor.lastName} - {doctor.specialization}</option>
           ))}
         </select>
       </label>
