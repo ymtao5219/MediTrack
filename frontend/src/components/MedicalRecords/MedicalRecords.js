@@ -1,6 +1,9 @@
 import React from 'react';
 
 function MedicalRecords({ records }) {
+    if (!Array.isArray(records) || records.length === 0) {
+        return <p>No medical records found.</p>;
+    }
     const recordsArray = Object.values(records); // Convert object to array
     return (
         <ul>
