@@ -48,7 +48,7 @@ function PatientCreateAppointment({ patientId }) {
         }
         }>
           {doctors.map(doctor => (
-            <option key={doctor._id} value={doctor.id}>{doctor.firstName} {doctor.lastName} - {doctor.specialization}</option>
+            <option key={doctor.id} value={doctor.id}>{doctor.firstName} {doctor.lastName} - {doctor.specialization}</option>
           ))}
         </select>
       </label>
