@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from "../Header/Header";
 import "./Signup.css";
 
 function Signup({ onSignup, toggleView }) {
@@ -28,7 +27,6 @@ function Signup({ onSignup, toggleView }) {
 
   return (
     <div className="App">
-      <Header userName={'anonymity'} />
       <div className="signup-page">
         <form className="signup-form" onSubmit={handleSubmit}>
           <div className="signup-title">Sign up</div>
