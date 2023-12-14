@@ -17,7 +17,7 @@ function Sidebar({ userType, onSidebarClick }) {
       </div>
       <nav className="nav">
         <ul className="nav-list">
-          {userType === 'patient' && (
+          {userType === 'Patient' && (
             <>
               <li className={`nav-item ${activeItem === 'patientsInfo' ? 'active' : ''}`} onClick={() => handleSidebarClick('patientsInfo')}>
                 <i className="fa-solid fa-user"></i>
@@ -37,7 +37,7 @@ function Sidebar({ userType, onSidebarClick }) {
               </li>
             </>
           )}
-          {userType === 'doctor' && (
+          {userType === 'Doctor' && (
             <>
               <li className={`nav-item ${activeItem === 'doctorsInfo' ? 'active' : ''}`} onClick={() => handleSidebarClick('doctorsInfo')}>
                 <i className="fa-solid fa-user-md"></i>
