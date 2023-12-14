@@ -12,7 +12,7 @@ import PatientAppointments from '../PatientAppointments/PatientAppointments';
 // Dashboard component
 function Dashboard({ currentView , userId}) {
   const [data, setData] = useState([]);
-
+  console.log(userId);
   const viewTitles = {
     patientsInfo: 'Patient Information',
     doctorsInfo: 'Doctor Information',
@@ -26,7 +26,7 @@ function Dashboard({ currentView , userId}) {
       if (currentView === 'patientsInfo') {
         url = `http://localhost:8080/patients/${userId}`; // Replace with correct endpoint
       } else if (currentView === 'doctorsInfo') {
-        url = `http://localhost:8080/doctors/61a8b9e7f1b74e5f4c8b4567`; // Replace with correct endpoint
+        url = `http://localhost:8080/doctors/${userId}`; // Replace with correct endpoint
       }
       else if (currentView === 'medicalRecords') {
         url = `http://localhost:8080/patients/${userId}/medicalrecords`; // Replace with correct endpoint
@@ -58,7 +58,7 @@ function Dashboard({ currentView , userId}) {
       //hard coded patient id, TODO: change to dynamic
 
       case 'createMedicalRecord':
-        return <CreateMedicalRecord patientId={'61d5d3e12345678912345678'} />;
+        return <CreateMedicalRecord patientId={{userId}} />;
       // hard coded patient id, TODO: change to dynamic
 
       case 'doctorAppointments':

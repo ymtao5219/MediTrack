@@ -1,17 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './CreateMedicalRecord.css'; // Make sure to create this CSS file
+import './CreateMedicalRecord.css';
 
-function CreateMedicalRecord({ patientId }) {
+function CreateMedicalRecord() {
+    const [patients, setPatients] = useState([]);
+    const [selectedPatientId, setSelectedPatientId] = useState('');
     const [recordType, setRecordType] = useState('');
     const [recordDescription, setRecordDescription] = useState('');
     const [file, setFile] = useState(null);
     const [dateOfSubmission, setDateOfSubmission] = useState('');
 
+    useEffect(() => {
+        // Fetch patients list on component mount
+        axios.get('http://localhost:8080/patients')
+            .then(response => {
+                setPatients(response.data);
+            })
+            .catch(error => console.error('Error fetching patients:', error));
+    }, []);
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post(`http://localhost:8080/patients/${patientId}/medicalrecords`, {
+        // Ensure a patient is selected
+        if (!selectedPatientId) {
+            alert('Please select a patient.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('dateOfSubmission', dateOfSubmission);
+        formData.append('recordType', recordType);
+        formData.append('recordDescription', recordDescription);
+        if (file) {
+            formData.append('file', file);
+        }
+        console.log('selectedPatientId',selectedPatientId);
+        axios.post(`http://localhost:8080/patients/${selectedPatientId}/medicalrecords`, {
             dateOfSubmission,
             recordType,
             recordDescription,
@@ -19,6 +44,7 @@ function CreateMedicalRecord({ patientId }) {
         })
             .then(response => {
                 console.log('Medical record created:', response.data);
+                // Reset form fields
                 setDateOfSubmission('');
                 setRecordDescription('');
                 setRecordType('');
@@ -26,13 +52,24 @@ function CreateMedicalRecord({ patientId }) {
             })
             .catch(error => {
                 console.error('Error creating medical record:', error);
-                // Handle error
             });
     };
+
 
     return (
         <form onSubmit={handleSubmit} className="medical-record-form">
             <h2>Add Medical Record</h2>
+            <label>
+                Select Patient:
+                <select value={selectedPatientId} onChange={(e) => setSelectedPatientId(e.target.value)}>
+                    <option value="">Select a patient</option>
+                    {patients.map(patient => (
+                        <option key={patient.id} value={patient.id}>
+                            {patient.firstName} {patient.lastName}
+                        </option>
+                    ))}
+                </select>
+            </label>
             <label>
                 Date of Submission:
                 <input type="date" value={dateOfSubmission} onChange={(e) => setDateOfSubmission(e.target.value)} />
