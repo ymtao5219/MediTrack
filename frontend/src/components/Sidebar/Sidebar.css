@@ -1,22 +1,22 @@
 .sidebar {
   width: 13%; /* Width of the sidebar */
-  margin-left: calc(0 + 0px);
-  margin-right: calc(3%);
-  margin-top: calc(1% - 10px);
+  margin-left: 0;
+  margin-right: 3%;
+  margin-top: 1%;
   margin-bottom: auto;
   position: fixed;
   top: 100px;
-  right: 5px; 
-  bottom: 20px; /* Distance from the bottom */
-  left: 20px; /* Distance from the left */
-  background: linear-gradient(145deg, #9b7bdc, #a382d5); /* A subtle gradient for visual appeal */
-  border-radius: 12px; /* Softer round corners */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow for a floating effect */
+  right: 5px;
+  bottom: 20px;
+  left: 20px;
+  background: linear-gradient(145deg, #9b7bdc, #a382d5);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
-  z-index: 100; /* High z-index to ensure sidebar is above other content */
+  z-index: 100;
   display: flex;
   flex-direction: column;
-  transition: top 0.3s, left 0.3s, width 0.3s; /* Smooth transition for properties */
+  transition: top 0.3s, left 0.3s, width 0.3s;
   font-size: 18px;
 }
 
@@ -57,11 +57,24 @@
 
 /* Navigation item styles */
 .nav-item {
-  margin-bottom: calc(10% + 1px);
-  margin-right: calc(10% + 1px);
+  display: flex;
+  align-items: left; /* Align the items vertically */
+  justify-content: left; /* Center the items horizontally */
+  margin-bottom: 10px; /* Spacing between items */
   text-transform: initial;
-  border-radius: 6px; /* Rounded edges for each nav item */
-  transition: background-color 0.3s; /* Transition for background hover effect */
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  padding: 10px 15px; /* Give some padding around the text */
+  border-radius: 4px; /* Match the border-radius with the nav-item */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover and active states */
+}
+
+.nav-item:not(.active):hover a {
+  background-color: rgba(255, 255, 255, 0.1); /* Only apply hover background to non-active items */
+}
+/* Active state style for nav-item */
+.nav-item.active, .nav-item.active a {
+  background-color: #7e57c2; /* Active item background color */
 }
 
 /* Hover effect on navigation items */
@@ -88,8 +101,6 @@
 .nav-item.active a {
   color: white;
   font-weight: 600;
-  background-color: rgba(255, 255, 255, 0.2); /* Background to indicate active item */
-  border-radius: 6px; /* Consistent rounded edges for active state */
 }
 
 /* Sidebar bottom section styles */
@@ -124,32 +135,32 @@
 
   
     /* Adjust sidebar items to only show icons */
-    .nav-item {
-      justify-content: center; /* Center the icons in the nav item */
-      margin-bottom: 15px; /* Adjust spacing between items */
-    }
-  
-    /* Adjust icons in sidebar items */
-    .nav-item-icon {
-      display: block; /* Ensure icons are displayed */
-      width: 30px; /* Adjust icon size */
-      height: 30px; /* Adjust icon size */
-      margin: 0 auto; /* Center icons horizontally */
-    }
-  
-    /* Optional: Add tooltips on hover for each nav item */
-    .nav-item:hover::after {
-      content: attr(data-tooltip); /* Use the data-tooltip attribute for content */
-      position: absolute;
-      left: 100%; /* Position tooltip to the right of the item */
-      margin-left: 10px; /* Space between item and tooltip */
-      white-space: nowrap; /* Prevent wrapping of text */
-      background-color: rgba(0, 0, 0, 0.75); /* Tooltip background color */
-      color: white; /* Tooltip text color */
-      padding: 5px 8px; /* Padding inside the tooltip */
-      border-radius: 4px; /* Slightly rounded corners for the tooltip */
-      font-size: 14px; /* Font size for the tooltip */
-      z-index: 200; /* Ensure tooltip is above other elements */
-    }
+  .nav-item {
+    margin-bottom: 15px; /* Adjust spacing between items */
   }
-  
+
+  /* Adjust icons in sidebar items */
+    .nav-item-icon {
+    display: block; /* Ensure icons are displayed */
+      width: 30px; /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
+      margin: 0 auto; /* Center icons horizontally */
+  }
+
+  /* Tooltip styles */
+  .nav-item:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 100%;
+    margin-left: 10px;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 200;
+    top: 50%; /* Center tooltip vertically */
+    transform: translateY(-50%); /* Adjust tooltip position to truly center it */
+  }
+}
