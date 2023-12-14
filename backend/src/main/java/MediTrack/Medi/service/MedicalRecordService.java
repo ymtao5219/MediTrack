@@ -1,5 +1,6 @@
 package MediTrack.Medi.service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.result.UpdateResult;
 
+import MediTrack.Medi.model.Appointment;
 import MediTrack.Medi.model.MedicalRecord;
 import MediTrack.Medi.model.Patient;
 import MediTrack.Medi.repository.MedicalRecordRepository;
@@ -35,6 +37,19 @@ public class MedicalRecordService {
 
     public List<MedicalRecord> getAllMedicalRecord() {
         return medicalRecordRepository.findAll();
+    }
+
+    public List<MedicalRecord> getMedicalRecordsByPatientId(String patientId) {
+        Patient patient = mongoTemplate.findById(patientId, Patient.class);
+        
+        if (patient != null) {
+            List<MedicalRecord> medicalRecords = patient.getMedicalRecords();
+            // TODO : sort it with OTHER methods 
+            // appointments.sort(Comparator.comparing(Appointment::getDateOfAppointment).reversed());
+            return medicalRecords;
+        } else {
+            return Collections.emptyList();
+        }
     }
 
     public Optional<MedicalRecord> getSingleMedicalRecord(String id) {
