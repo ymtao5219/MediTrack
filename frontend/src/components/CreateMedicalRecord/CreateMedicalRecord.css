@@ -1,49 +1,51 @@
 .medical-record-form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .medical-record-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .medical-record-form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .medical-record-form input,
-  .medical-record-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .medical-record-form textarea {
-    height: 100px;
-    resize: vertical;
-  }
-  
-  .medical-record-form button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #5c6bc0;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .medical-record-form button:hover {
-    background-color: #3f51b5;
-  }
-  
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medical-record-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.medical-record-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.medical-record-form input,
+.medical-record-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.medical-record-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.medical-record-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #9575cd; /* Purple background */
+  color: white;
+  border: none;
+  border-radius: 20px; /* Rounded corners for a modern look */
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+.medical-record-form button:hover {
+  background-color: #7e57c2; /* Slightly darker shade on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
