@@ -1,53 +1,100 @@
-/* Signup.css */
+/* Signup.css  */
+
 .signup-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .signup-form {
-    width: 300px;
-    padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background: white;
-  }
-  
-  .signup-title {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 24px;
-  }
-  
-  .input-container {
-    margin-bottom: 20px;
-  }
-  
-  .input-container label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .input-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .signup-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .signup-button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: start; /* Align to the top */
+  padding-top: 5vh; /* Provide some space on top */
+  height: 90vh; /* Slightly less than full height to allow for some margin */
+  background: #f7f8fa;
+}
+
+.signup-form {
+  width: 350px; /* Consistent width */
+  max-height: 80vh; /* Maximum height before scrolling */
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  background: white;
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-title {
+  font-size: 20px;
+  font-weight: 500; /* Semi-bold */
+  color: #37352f; /* Dark grey */
+  margin-bottom: 24px; /* Consistent spacing */
+}
+
+.input-container {
+  margin-bottom: 16px; /* Consistent spacing */
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 8px;
+  color: #68615e; /* Soft grey text */
+  font-size: 14px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e8e8e8; /* Light border for inputs */
+  border-radius: 6px; /* Slightly rounded corners for inputs */
+  box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+/* Custom select box style */
+
+.input-container select {
+  width: 100%; /* Full width */
+  padding: 12px; /* Same padding as input for consistency */
+  border: 1px solid #e8e8e8; /* Light border like the input fields */
+  border-radius: 6px; /* Rounded corners for the select box */
+  background-color: white; /* Background color */
+  box-sizing: border-box; /* Ensures padding does not affect width */
+  font-size: 14px; /* Font size to match input fields */
+  color: #68615e; /* Text color to match the aesthetic */
+  -webkit-appearance: none; /* Remove default styling on WebKit browsers */
+  -moz-appearance: none; /* Remove default styling on Firefox browsers */
+  appearance: none; /* Remove default styling */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M6%200l6%206H0z%22%20fill%3D%22%2368615e%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow icon */
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* Position for the icon */
+  background-size: 12px; /* Size of the icon */
+}
+
+.input-container select:focus {
+  outline: none; /* Remove the focus outline */
+  border-color: #5058c4; /* Highlight color when select is focused */
+}
+
+
+.signup-button {
+  padding: 12px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #5058c4; /* Your chosen color for the button */
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase; /* Stylistic choice for buttons */
+  margin-bottom: 16px; /* Consistent spacing */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #4048b3; /* A darker shade for hover effect */
+}
+
+.toggle-view {
+  text-align: center; /* Ensures text inside the div is centered */
+}
+
+.toggle-button {
+  width: 100%; /* Ensures the button stretches to the width of its container */
+  padding: 10px 0; 
+}

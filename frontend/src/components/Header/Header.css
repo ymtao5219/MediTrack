@@ -1,17 +1,72 @@
 /* Header.css */
 .App-header {
-    background-color: #f5f5f5;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: fixed; /* This will make the header fixed at the top of the page */
+  top: 0; /* Align the header at the top */
+  left: 0; /* Align the header to the left */
+  right: 0; /* Align the header to the right */
+  width: 98%; /* Ensure the header spans the full width of the page */
+  height: [DesiredHeight]px;
+  /* margin-right: calc(0% + 10px); */
+  background-color: #ffffff; /* A clean white background */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for any changes */
+  z-index: 1000; /* Ensure the header stays above other content */
+}
+
+.logo {
+  font-size: 1.5em; /* Increased logo size */
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  align-items: center;
+  color: #5B63D8; /* A gentle, modern color for the logo */
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+/* Assuming you have navigation items, let's add some style to them */
+.nav-item {
+  font-size: 1rem;
+  color: #333; /* Dark color for contrast */
+  text-transform: initial; /* Stylistic choice for nav items */
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+.nav-item:hover {
+  color: #5B63D8; /* Highlight the nav item with the primary color on hover */
+  cursor: pointer; /* Change cursor to indicate clickable items */
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column; /* Stack items vertically on smaller screens */
   }
-  
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
+
+  .nav-item {
+    padding: 5px 5px; /* Reduce padding on smaller screens */
   }
-  
-  /* ...other styles */
-  
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  /* Other styling */
+}
+
+.user-avatar {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px;
+  border-radius: 50%; /* Keeps the avatar circular */
+  margin-left: 10px;
+  margin-right: 30px;
+  box-shadow: 0 0 0 3px #5D63D1; /* Creates a white halo effect */
+  /* Add any additional styling if needed */
+}

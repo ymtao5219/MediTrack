@@ -1,22 +1,61 @@
 .welcome-banner {
-  margin-left: calc(20% + 40px);
+  margin-left: calc(15% + 5px);
+  margin-right: calc(0% + 10px);
+  margin-top: 1%; 
+  margin-bottom: auto;
   padding: 20px;
-  background-color: #a382d5; 
+  background: linear-gradient(135deg, #5058c4, #7e57c2); /* A subtle gradient */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  left: 0; 
-  right: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+  position: relative;
+  left: 0;
+  right: 20px;
   top: 100px;
-  z-index: 500; 
+  z-index: 500;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease; /* Smooth transition for any changes */
 }
 
-.welcome-banner h2,
+.welcome-banner h2 {
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 2.5rem; /* Larger font size for the main heading */
+  font-weight: 300; /* Lighter font weight for a modern look */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Text shadow for better legibility */
+}
+
 .welcome-banner p {
-  color: #FFFFFF; 
-  margin: 0; 
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.9; /* Slightly transparent for a layering effect */
+  max-width: 60%; /* Maximum width to avoid overstretching on wide screens */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .welcome-banner {
+    right: 0;
+    margin-left: calc(20% + 5px);
+    margin-right: calc(3%);
+    margin-top: calc(5% + 0px);
+    margin-bottom: auto;
+    padding: 15px; /* Smaller padding */
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center text for stacked layout */
+  }
+
+  .welcome-banner h2 {
+    font-size: 1.8rem; /* Smaller font size for small screens */
+    margin-bottom: 10px; /* Add space between the heading and paragraph */
+  }
+
+  .welcome-banner p {
+    font-size: 0.9rem; /* Smaller font size for the paragraph */
+  }
+
 }

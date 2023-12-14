@@ -1,0 +1,124 @@
+.patient-appointments {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .patient-appointments h2 {
+    color: #5B63D8;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .edit-appointment {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .edit-appointment label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .edit-appointment input,
+  .edit-appointment textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-appointment button {
+    background-color: #5058c4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    margin-right: 10px;
+  }
+  
+  .edit-appointment button:hover {
+    background-color: #a389d4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .patient-appointments ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .patient-appointments li {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .patient-appointments li p {
+    margin: 0 0 10px;
+    color: #333;
+  }
+  
+  .patient-appointments li button {
+    background-color: #5058c4;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    margin-right: 10px;
+  }
+  
+  .patient-appointments li button:hover {
+    background-color: #a389d4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Styles */
+.patient-appointments .button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px; /* Rounded corners for a modern look */
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px; /* Space between buttons */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); /* Subtle shadow for depth */
+    outline: none; /* Remove default focus outline */
+  }
+  
+  /* Edit Button Styles */
+  .patient-appointments .button-edit {
+    background-color: #4CAF50; /* Green background for an 'edit' context */
+    color: white;
+  }
+  
+  .patient-appointments .button-edit:hover {
+    background-color: #45a049; /* Darker shade on hover for effect */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Delete Button Styles */
+  .patient-appointments .button-delete {
+    background-color: #f44336; /* Red background for a 'delete' context */
+    color: white;
+  }
+  
+  .patient-appointments .button-delete:hover {
+    background-color: #d32f2f; /* Darker shade on hover for effect */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  

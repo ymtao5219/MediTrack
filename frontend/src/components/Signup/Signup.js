@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from "../Header/Header";
 import "./Signup.css";
 
 function Signup({ onSignup, toggleView }) {
@@ -7,7 +6,7 @@ function Signup({ onSignup, toggleView }) {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [userType, setUserType] = useState('patient'); // new state for user type
+  const [userType, setUserType] = useState('Patient'); // new state for user type
   const [specialization, setSpecialization] = useState(''); // for doctor
   const [dateOfBirth, setDateOfBirth] = useState(''); // for patient
   const [gender, setGender] = useState(''); // for patient
@@ -28,7 +27,6 @@ function Signup({ onSignup, toggleView }) {
 
   return (
     <div className="App">
-      <Header userName={'anonymity'} />
       <div className="signup-page">
         <form className="signup-form" onSubmit={handleSubmit}>
           <div className="signup-title">Sign up</div>
@@ -85,13 +83,13 @@ function Signup({ onSignup, toggleView }) {
           <div className="input-container">
             <label>User Type:</label>
             <select value={userType} onChange={(e) => setUserType(e.target.value)}>
-              <option value="patient">Patient</option>
-              <option value="doctor">Doctor</option>
+              <option value="Patient">Patient</option>
+              <option value="Doctor">Doctor</option>
             </select>
           </div>
 
           {/* Conditional Fields Based on User Type */}
-          {userType === 'doctor' && (
+          {userType === 'Doctor' && (
             <div className="input-container">
               <label htmlFor="specialization">Specialization:</label>
               <input
@@ -103,7 +101,7 @@ function Signup({ onSignup, toggleView }) {
               />
             </div>
           )}
-          {userType === 'patient' && (
+          {userType === 'Patient' && (
             <>
               <div className="input-container">
                 <label htmlFor="dateOfBirth">Date of Birth:</label>

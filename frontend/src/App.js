@@ -18,7 +18,7 @@ function App() {
     // Your login logic here
     setUser({
       username: username,
-      userType: isDoctor ? 'doctor' : 'patient'
+      userType: isDoctor ? 'Doctor' : 'Patient'
     });
   };
 
@@ -45,7 +45,7 @@ function App() {
   // User is logged in, show the main content
   return (
     <div className="App">
-      <Header userName={user ? user.username : 'anonymity'} />
+      <Header userName={user ? user.username : 'anonymity'} userType={user.userType} />
       <WelcomeBanner userName={user ? user.username : 'anonymity'} />
       <div className="main-content">
       {user && <Sidebar userType={user.userType} onSidebarClick={handleSidebarClick} />}

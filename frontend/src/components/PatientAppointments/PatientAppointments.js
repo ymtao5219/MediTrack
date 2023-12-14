@@ -80,8 +80,8 @@ function PatientAppointments({ patientId }) {
               <p>Doctor: {appointment.doctorName}</p>
               <p>Date: {appointment.dateOfAppointment}</p>
               <p>Notes: {appointment.notes}</p>
-              <button onClick={() => handleEditAppointment(appointment.appointmentId)}>Edit</button>
-              <button onClick={() => handleDeleteAppointment(appointment.appointmentId)}>Delete</button>
+              <button className="button button-edit" onClick={() => handleEditAppointment(appointment.appointmentId)}>Edit</button>
+              <button className="button button-delete" onClick={() => handleDeleteAppointment(appointment.appointmentId)}>Delete</button>
             </li>
           ))}
         </ul>

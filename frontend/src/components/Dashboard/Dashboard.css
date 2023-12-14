@@ -1,17 +1,25 @@
+/* Base Styles */
 .dashboard-container {
+  /* position: fixed; Remove this line */
+  margin-left: calc(-5%);
+  margin-right: calc(5%);
+  margin-top: calc(1%);
+  border-radius: 10px;
+  z-index: 500;
   display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin-bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease; /* Smooth transition for any changes */
 }
 
 .dashboard-content {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 1200px;
   height: 100%;
   gap: 20px;
+  overflow-y: auto;
+  align-items: flex-start; /* Add this line so cards align with the sidebar */
 }
 
 .dashboard-card {
@@ -19,16 +27,23 @@
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  background: linear-gradient(to right bottom, #ffffff, #f3f4f6);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .patient-list {
-  flex: 3;
+  flex: 2;
 }
 
 .schedule {
@@ -37,6 +52,7 @@
 
 .patient-list-content {
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 .patient-list-footer {
@@ -48,43 +64,72 @@
 .button {
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
-  background-color: #a382d5;
+  border-radius: 20px;
+  background-color: #5058c4;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .button:hover {
-  background-color: #9170c2;
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .patient-list-content ul {
-  list-style-type: none; /* Removes default list styling */
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .patient-list-content li {
-  padding: 10px; /* Adds spacing within each list item */
-  margin-bottom: 10px; /* Adds space between list items */
-  border-bottom: 1px solid #e0e0e0; /* Adds a subtle line between items */
-  transition: background-color 0.2s; /* Smooth transition for hover effect */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eaecef;
+  transition: background-color 0.2s;
 }
 
 .patient-list-content li:hover {
-  background-color: #f5f5f5; /* Adds a hover effect */
+  background-color: #e9ecef;
+  border-left: 4px solid #5058c4;
 }
 
 /* Typography */
 .patient-list-content {
-  font-size: 16px; /* Adjust as needed */
-  color: #333; /* Darker text color for readability */
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .dashboard-content {
+    /* Removed negative margins and set them to 0 to ensure proper alignment */
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    flex-direction: column;
+    align-items: center; /* Center aligns the items for smaller screens */
+    width: 100%; /* sets the width to 100% */
+  }
+
+  .dashboard-card,
+  .patient-list,
+  .schedule {
+    /* Set each card to take the full width of the container */
+    width: 100%; 
+    /* Reset flex-grow to ensure they don't try to fill available height */
+    flex-grow: 0; 
+    /* Optional: Set a max-width if you want to constrain the card widths */
+    max-width: 500px; /* Adjust as needed */
+  }
+
   .patient-list-content {
-    font-size: 14px; /* Slightly smaller font for smaller screens */
+    font-size: 14px;
+  }
+
+  .patient-list-footer {
+    flex-direction: column;
+    gap: 10px;
   }
 }
