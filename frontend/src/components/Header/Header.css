@@ -1,5 +1,10 @@
 /* Header.css */
 .App-header {
+  position: fixed; /* This will make the header fixed at the top of the page */
+  top: 0; /* Align the header at the top */
+  left: 0; /* Align the header to the left */
+  width: 100%; /* Ensure the header spans the full width of the page */
+  height: [DesiredHeight]px;
   margin-right: calc(0% + 10px);
   background-color: #ffffff; /* A clean white background */
   padding: 20px;
@@ -8,6 +13,7 @@
   align-items: center;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1); /* Subtle shadow for depth */
   transition: all 0.3s ease-in-out; /* Smooth transition for any changes */
+  z-index: 1000; /* Ensure the header stays above other content */
 }
 
 .logo {
