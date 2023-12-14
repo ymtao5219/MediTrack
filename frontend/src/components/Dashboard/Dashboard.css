@@ -65,7 +65,7 @@
   padding: 10px 15px;
   border: none;
   border-radius: 20px;
-  background-color: #9575cd;
+  background-color: #5058c4;
   color: white;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -91,7 +91,7 @@
 
 .patient-list-content li:hover {
   background-color: #e9ecef;
-  border-left: 4px solid #9575cd;
+  border-left: 4px solid #5058c4;
 }
 
 /* Typography */

@@ -9,7 +9,7 @@
   right: 5px;
   bottom: 20px;
   left: 20px;
-  background: linear-gradient(145deg, #9b7bdc, #a382d5);
+  background: linear-gradient(145deg, #5058c4, #7e57c2);
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
@@ -74,7 +74,7 @@
 }
 /* Active state style for nav-item */
 .nav-item.active, .nav-item.active a {
-  background-color: #7e57c2; /* Active item background color */
+  background-color: #5d17d4; /* Active item background color */
 }
 
 /* Hover effect on navigation items */
