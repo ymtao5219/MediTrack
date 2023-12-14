@@ -1,17 +1,46 @@
 /* Header.css */
 .App-header {
-    background-color: #f5f5f5;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin-right: calc(0% + 10px);
+  background-color: #ffffff; /* A clean white background */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for any changes */
+}
+
+.logo {
+  font-size: 2em; /* Increased logo size */
+  font-weight: bold;
+  color: #5B63D8; /* A gentle, modern color for the logo */
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+/* Assuming you have navigation items, let's add some style to them */
+.nav-item {
+  font-size: 1rem;
+  color: #333; /* Dark color for contrast */
+  text-transform: initial; /* Stylistic choice for nav items */
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+.nav-item:hover {
+  color: #5B63D8; /* Highlight the nav item with the primary color on hover */
+  cursor: pointer; /* Change cursor to indicate clickable items */
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column; /* Stack items vertically on smaller screens */
   }
-  
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
+
+  .nav-item {
+    padding: 5px 10px; /* Reduce padding on smaller screens */
   }
-  
-  /* ...other styles */
-  
+}
