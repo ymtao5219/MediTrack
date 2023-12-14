@@ -1,13 +1,10 @@
 /* Base Styles */
 .dashboard-container {
-  margin-left: calc(16% + 5px);
-  margin-right: calc(0% + 10px);
+  /* position: fixed; Remove this line */
+  margin-left: calc(-5%);
+  margin-right: calc(5%);
   margin-top: calc(1%);
-  padding: 20px;
   border-radius: 10px;
-  position: fixed;
-  left: 0;
-  right: 20px;
   z-index: 500;
   display: flex;
   justify-content: space-between;
@@ -19,9 +16,9 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 1200px;
   height: 100%;
   gap: 20px;
+  overflow-y: auto;
   align-items: flex-start; /* Add this line so cards align with the sidebar */
 }
 
@@ -46,7 +43,7 @@
 }
 
 .patient-list {
-  flex: 3;
+  flex: 2;
 }
 
 .schedule {
@@ -107,17 +104,24 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .dashboard-content {
-    margin-left: calc(0% + 0px); /* Adjusted to create a balanced layout */
-    margin-top: calc(0% + 1px); /* Adjusted to create a balanced layout */
+    /* Removed negative margins and set them to 0 to ensure proper alignment */
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     flex-direction: column;
-    gap: 10px;
-    align-items: flex-start; /* aligns the items at the start of the container */
+    align-items: center; /* Center aligns the items for smaller screens */
     width: 100%; /* sets the width to 100% */
   }
 
-  .dashboard-card {
-    width: 100%; /* sets the width to 100% */
-    padding: 15px;
+  .dashboard-card,
+  .patient-list,
+  .schedule {
+    /* Set each card to take the full width of the container */
+    width: 100%; 
+    /* Reset flex-grow to ensure they don't try to fill available height */
+    flex-grow: 0; 
+    /* Optional: Set a max-width if you want to constrain the card widths */
+    max-width: 500px; /* Adjust as needed */
   }
 
   .patient-list-content {
