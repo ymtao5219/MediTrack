@@ -1,17 +1,19 @@
 import React from 'react';
-import './Header.css'; // Make sure to create a corresponding CSS file for styling
+import './Header.css'; // Ensure your CSS file is updated accordingly
+import patientAvatar from './patient-avatar.png'; // Placeholder path to patient avatar image
+import doctorAvatar from './doctor-avatar.png'; // Placeholder path to doctor avatar image
 
-function Header({ userName }) {
+function Header({ userName, userType }) {
+  // Choose the avatar based on the user type
+  const avatarSrc = userType === 'Doctor' ? doctorAvatar : patientAvatar;
   return (
     <header className="App-header">
-      {/* You might have a logo here */}
+      {/* Logo */}
       <div className="logo">200-OK Patient Tracker</div>
 
-      {/* The welcome message, you can make this dynamic based on user data */}
-
-      {/* User info and logout could also go here */}
+      {/* User Greeting and Avatar */}
       <div className="user-info">
-      {userName}
+      <img src={avatarSrc} alt={userType} className="user-avatar" />
         {/* Add more user details or a logout button here */}
       </div>
     </header>
