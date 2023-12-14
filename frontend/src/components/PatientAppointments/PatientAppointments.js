@@ -31,7 +31,7 @@ function PatientAppointments({ patientId }) {
   };
 
   const submitEditedAppointment = () => {
-    axios.put(`http://localhost:8080/appointments/${currentAppointment.appointmentId}`, editedAppointmentData)
+    axios.put(`http://localhost:8080/appointments/patients/${patientId}/${currentAppointment.appointmentId}`, editedAppointmentData)
       .then(() => {
         fetchAppointments();
         setIsEditing(false);
