@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from "../Header/Header";
 import axios from 'axios'; // Ensure axios is installed
 import "./Login.css";
 
@@ -15,12 +14,15 @@ function Login({ onLogin, toggleView }) { // Accept toggleView as a prop
 
   return (
     <div className="App">
-      <Header userName={'anonymity'} />
-      <div className="login-page">
+      <div class="container">
+      
         <div className="logo-section">
+        <div class="title-section">
           <div className="logo">200-OK</div>
           <div className="logo-subtext">Patient Tracker System</div>
-        </div>
+          </div>
+          <div className="login-page">
+        
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="login-title">Sign in</div>
           <div className="input-container">
@@ -41,7 +43,7 @@ function Login({ onLogin, toggleView }) { // Accept toggleView as a prop
               required
             />
             <div className="switch-container">
-              Sign in as a doctor
+              <div className='switch-text'>Sign in as a doctor</div>
               <label className="switch-label">
                 <input
                   type="checkbox"
@@ -59,8 +61,10 @@ function Login({ onLogin, toggleView }) { // Accept toggleView as a prop
             </button>
           </div>
         </form>
+        </div>
       </div>
-    </div>
+      </div>
+      </div>
   );
 };
 
