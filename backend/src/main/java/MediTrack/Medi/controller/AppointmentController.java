@@ -28,6 +28,7 @@ public class AppointmentController {
     @PostMapping("/patients/{patientid}")
     public ResponseEntity<Appointment> createAppointment(@RequestBody Appointment appointment,
             @PathVariable String patientid) {
+        appointment.setPatientId(patientid);
         Appointment newAppointment = appointmentService.createAppointment(appointment, patientid);
         return new ResponseEntity<>(newAppointment, HttpStatus.CREATED);
     }
