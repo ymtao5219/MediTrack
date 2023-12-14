@@ -3,9 +3,10 @@
   position: fixed; /* This will make the header fixed at the top of the page */
   top: 0; /* Align the header at the top */
   left: 0; /* Align the header to the left */
-  width: 100%; /* Ensure the header spans the full width of the page */
+  right: 0; /* Align the header to the right */
+  width: 98%; /* Ensure the header spans the full width of the page */
   height: [DesiredHeight]px;
-  margin-right: calc(0% + 10px);
+  /* margin-right: calc(0% + 10px); */
   background-color: #ffffff; /* A clean white background */
   padding: 20px;
   display: flex;
