@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import MediTrack.Medi.service.AuthenticationService;
 import MediTrack.Medi.model.User;
 import MediTrack.Medi.response.AuthenticationResponse;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/auth")
 public class AuthenticationController {
