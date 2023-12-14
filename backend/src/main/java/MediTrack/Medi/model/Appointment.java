@@ -9,6 +9,7 @@ import lombok.Data;
 public class Appointment {
     @Id
     private String appointmentId;
+    private String patientId;
     private String doctorId;
     private LocalDate dateOfAppointment;
     private String notes;
