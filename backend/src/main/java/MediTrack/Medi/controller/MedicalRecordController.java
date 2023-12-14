@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import MediTrack.Medi.model.Appointment;
 import MediTrack.Medi.model.MedicalRecord;
 import MediTrack.Medi.service.MedicalRecordService;
 import jakarta.validation.Valid;
@@ -36,8 +37,18 @@ public class MedicalRecordController {
     }
 
     @GetMapping
-    public ResponseEntity<List<MedicalRecord>> getAllAppointment() {
-        return new ResponseEntity<List<MedicalRecord>>(medicalservice.getAllMedicalRecord(),HttpStatus.OK);
+    public ResponseEntity<List<MedicalRecord>> getMedicalRecordsByPatientId(@PathVariable String patientid) {
+        try {
+            List<MedicalRecord> medicalRecords = medicalservice.getMedicalRecordsByPatientId(patientid);
+
+            if (medicalRecords.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            } else {
+                return new ResponseEntity<>(medicalRecords, HttpStatus.OK);
+            }
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
     }
 
     @GetMapping("/{id}")
