@@ -3,6 +3,11 @@ import './Dashboard.css';
 import axios from 'axios';
 import PatientCreateAppointment from '../PatientCreateAppointment/PatientCreateAppointment';
 import CreateMedicalRecord from '../CreateMedicalRecord/CreateMedicalRecord';
+import MedicalRecords from '../MedicalRecords/MedicalRecords';
+import DoctorInfo from '../DoctorInfo/DoctorInfo';
+import PatientInfo from '../PatientInfo/PatientInfo';
+import DoctorAppointments from '../DoctorAppointments/DoctorAppointments';
+import PatientAppointments from '../PatientAppointments/PatientAppointments';
 
 // Dashboard component
 function Dashboard({ currentView }) {
@@ -43,48 +48,28 @@ function Dashboard({ currentView }) {
   const renderContent = () => {
     switch (currentView) {
       case 'patientsInfo':
-        return (
-          <>
-            <li>First Name: {data.firstName}</li>
-            <li>Last Name: {data.lastName}</li>
-            <li>Date of Birth: {data.dateOfBirth}</li>
-            <li>Gender: {data.gender}</li>
-            <li>Address: {data.address}</li>
-            <li>Contact Number: {data.contactNumber}</li>
-          </>
-        );
+        return <PatientInfo data={data} />;
       case 'doctorsInfo':
-        return (
-          <>
-            <li>First Name: {data.firstName}</li>
-            <li>Last Name: {data.lastName}</li>
-            <li>Specialization: {data.specialization}</li>
-            <li>Contact Number: {data.contactNumber}</li>
-            <li>Email Address: {data.emailAddress}</li>
-          </>
-        );
+        return <DoctorInfo data={data} />;
       case 'medicalRecords':
-        const recordsArray = Object.values(data); // Convert object to array
-        return (
-          <ul>
-            {recordsArray.map((record, index) => (
-              <li key={index}>
-                {/* Example: assuming record has a 'dateOfSubmission' field */}
-                Record Date: {record.dateOfSubmission}
-                {/* Add more fields as needed */}
-              </li>
-            ))}
-          </ul>
-        );
+        return <MedicalRecords records={data} />;
       case 'makeAppointment':
-        return <PatientCreateAppointment patientId={'61d5d3e12345678912345678'} />; 
-        //hard coded patient id, TODO: change to dynamic
-      
+        return <PatientCreateAppointment patientId={'61d5d3e12345678912345678'} />;
+      //hard coded patient id, TODO: change to dynamic
+
       case 'createMedicalRecord':
         return <CreateMedicalRecord patientId={'61d5d3e12345678912345678'} />;
-        // hard coded patient id, TODO: change to dynamic
-        
-        default:
+      // hard coded patient id, TODO: change to dynamic
+
+      case 'doctorAppointments':
+        return <DoctorAppointments doctorId={'657514a0c6f2772cb05410c4'} />;
+      // hard coded doctor id, TODO: change to dynamic
+
+      case 'patientAppointments':
+        return <PatientAppointments patientId={'61d5d3e12345678912345678'} />;
+      // hard coded patient id, TODO: change to dynamic
+      
+      default:
         return <p>No contents found.</p>;
     }
   };
