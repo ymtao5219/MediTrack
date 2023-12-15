@@ -1,0 +1,245 @@
+[{
+  "_id": {
+    "$oid": "61a8b9e7f1b74e5f4c8b4567"
+  },
+  "userId": {
+    "$oid": "61a8b9e7f1b74e5f4c8b4578"
+  },
+  "firstName": "Emily",
+  "lastName": "Johnson",
+  "specialization": "Neurologist",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "emily.johnson@email.com"
+},{
+  "_id": {
+    "$oid": "61a8b9e7f1b74e5f4c8b4568"
+  },
+  "userId": {
+    "$oid": "61a8b9e7f1b74e5f4c8b4579"
+  },
+  "firstName": "Michael",
+  "lastName": "Brown",
+  "specialization": "Orthopedic",
+  "contactNumber": "987-654-3210",
+  "emailAddress": "michael.brown@email.com"
+},{
+  "_id": {
+    "$oid": "6575198f41457d16c8cbe86f"
+  },
+  "userId": "657514a0c6f2772cb05410c4",
+  "firstName": "John",
+  "lastName": "Doe",
+  "specialization": "Cardiologist",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john.doe@email.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "65753737281fcf223503f91b"
+  },
+  "userId": "6575367e281fcf223503f91a",
+  "firstName": "Amanda",
+  "lastName": "Doe",
+  "specialization": "Cardiologist",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john.doe@email.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "6575491428b5b47142a2fca1"
+  },
+  "userId": "6575367e281fcf223503f91a",
+  "firstName": "Amanda",
+  "lastName": "Li",
+  "specialization": "Cardiologist",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john.doe@email.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657a31c3330daa2596c657e6"
+  },
+  "userId": "657a2e77330daa2596c657e0",
+  "firstName": "Li",
+  "lastName": "Hong",
+  "specialization": "Cardiologist",
+  "contactNumber": "234-567-8901",
+  "emailAddress": "alice.smith@email.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b5a2e0220f04ebbafb70e"
+  },
+  "userId": "657b5a2e0220f04ebbafb70c",
+  "firstName": "aaa",
+  "lastName": "aaa",
+  "specialization": "fweefwwe",
+  "contactNumber": "9686876",
+  "emailAddress": "a@gak.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b5c2f1b66134a031eb1b8"
+  },
+  "userId": "657b5c2f1b66134a031eb1b6",
+  "firstName": "Yiming",
+  "lastName": "Yuan",
+  "specialization": "Sleep",
+  "contactNumber": "123.123.123",
+  "emailAddress": "123@123.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b5e79fe91c61df2f137b2"
+  },
+  "userId": "657b5e79fe91c61df2f137b0",
+  "firstName": "sean",
+  "lastName": "hong",
+  "specialization": "DDDDD",
+  "contactNumber": "1231234124",
+  "emailAddress": "seanhong@gmail.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b5f41d4b23c7ad9f2de14"
+  },
+  "userId": "657b5f40d4b23c7ad9f2de12",
+  "firstName": "sean",
+  "lastName": "hong",
+  "specialization": "SEAN",
+  "contactNumber": "4134160444",
+  "emailAddress": "seanhong@gmail.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b5fa9d4b23c7ad9f2de17"
+  },
+  "userId": "657b5fa9d4b23c7ad9f2de15",
+  "firstName": "sean",
+  "lastName": "hong",
+  "specialization": "SEAN",
+  "contactNumber": "4134160444",
+  "emailAddress": "seanhong@gmail.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b5fd21b66134a031eb1c1"
+  },
+  "userId": "657b5fd21b66134a031eb1bf",
+  "firstName": "ALex",
+  "lastName": "Yuan",
+  "specialization": "haha",
+  "contactNumber": "123.456.78",
+  "emailAddress": "123@123.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b6154d4b23c7ad9f2de1a"
+  },
+  "userId": "657b6152d4b23c7ad9f2de18",
+  "firstName": "SeanHong",
+  "lastName": "SeanHong",
+  "specialization": "SeanHong",
+  "contactNumber": "1234124214321",
+  "emailAddress": "seanhong@gmail.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b6196d4b23c7ad9f2de1d"
+  },
+  "userId": "657b6196d4b23c7ad9f2de1b",
+  "firstName": "seanhong99",
+  "lastName": "seanhong99",
+  "specialization": "seanhong99",
+  "contactNumber": "1232134124",
+  "emailAddress": "seanhong@gmail.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b64b6ec5d0a3c8ee3a220"
+  },
+  "userId": "657b64b6ec5d0a3c8ee3a21e",
+  "firstName": "seanhong98",
+  "lastName": "seanhong98",
+  "specialization": "seanhong98",
+  "contactNumber": "1212423432",
+  "emailAddress": "seanhong98@gmail.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b6510ec5d0a3c8ee3a223"
+  },
+  "userId": "657b6510ec5d0a3c8ee3a221",
+  "firstName": "seanhong97",
+  "lastName": "seanhong97",
+  "specialization": "seanhong97",
+  "contactNumber": "213123342342",
+  "emailAddress": "seanhong97@gmail.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b65661b66134a031eb1cf"
+  },
+  "userId": "657b65661b66134a031eb1cd",
+  "firstName": "44",
+  "lastName": "44",
+  "specialization": "gfdffcvtf",
+  "contactNumber": "22",
+  "emailAddress": "44@44.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b727b6773a32a847c4cf3"
+  },
+  "userId": "657b727b6773a32a847c4cf1",
+  "firstName": "seanhong95",
+  "lastName": "seanhong95",
+  "specialization": "124rewfdwe",
+  "contactNumber": "21412412",
+  "emailAddress": "seanhong95@gmail.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b73006773a32a847c4cf6"
+  },
+  "userId": "657b72ac6773a32a847c4cf4",
+  "firstName": "sadasdfds",
+  "lastName": "dsfdsf",
+  "specialization": "dsffdsf",
+  "contactNumber": "234-567-8901",
+  "emailAddress": "alice.smith@email.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b7f581b66134a031eb1e8"
+  },
+  "userId": "657b7f581b66134a031eb1e6",
+  "firstName": "dra",
+  "lastName": "dra",
+  "specialization": "sleep",
+  "contactNumber": "123",
+  "emailAddress": "dra@dra.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b903858f49963849f5ccc"
+  },
+  "userId": "657b903858f49963849f5cca",
+  "firstName": "Seanhong56",
+  "lastName": "Seanhong56",
+  "specialization": "sdfsfsdf",
+  "contactNumber": "32325325",
+  "emailAddress": "seanhong56@gmail.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+},{
+  "_id": {
+    "$oid": "657b9640b0a10b7262339daa"
+  },
+  "userId": "657b9640b0a10b7262339da8",
+  "firstName": "Aq",
+  "lastName": "Dai",
+  "specialization": "Psychiatrist",
+  "contactNumber": "896868594",
+  "emailAddress": "dai@gm.com",
+  "_class": "MediTrack.Medi.model.Doctor"
+}]

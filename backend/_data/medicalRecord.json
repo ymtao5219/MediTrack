@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "657b83a11b66134a031eb1eb"
+  },
+  "dateOfSubmission": {
+    "$date": {
+      "$numberLong": "1703739600000"
+    }
+  },
+  "recordType": "test T",
+  "recordDescription": "ttt",
+  "_class": "MediTrack.Medi.model.MedicalRecord"
+},{
+  "_id": {
+    "$oid": "657b89cf2ab7bc0aabbc1893"
+  },
+  "dateOfSubmission": {
+    "$date": {
+      "$numberLong": "1702530000000"
+    }
+  },
+  "recordType": "New test type",
+  "recordDescription": "new desc",
+  "_class": "MediTrack.Medi.model.MedicalRecord"
+},{
+  "_id": {
+    "$oid": "657b905f58f49963849f5cce"
+  },
+  "dateOfSubmission": {
+    "$date": {
+      "$numberLong": "1702530000000"
+    }
+  },
+  "recordType": "T",
+  "recordDescription": "dsfsdffsdf",
+  "_class": "MediTrack.Medi.model.MedicalRecord"
+}]
