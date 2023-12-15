@@ -24,6 +24,9 @@ function PatientAppointments({ patientId }) {
     const fetchAppointments = async () => {
         try {
             const response = await axios.get(`http://localhost:8080/appointments/patients/${patientId}`);
+            console.log('patientId', patientId);
+            console.log('Appointments fetched:');
+            console.log(response);
             const appointmentsWithDoctor = await Promise.all(response.data.map(async (appointment) => {
                 const doctorName = await fetchDoctorName(appointment.doctorId);
                 return { ...appointment, doctorName };
@@ -32,6 +35,7 @@ function PatientAppointments({ patientId }) {
         } catch (error) {
             console.error('Error fetching appointments:', error);
         }
+        
     };
 
     const handleEditAppointment = (appointmentId) => {

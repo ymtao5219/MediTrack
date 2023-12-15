@@ -54,19 +54,16 @@ function Dashboard({ currentView , userId}) {
       case 'medicalRecords':
         return <MedicalRecords records={data} />;
       case 'makeAppointment':
-        return <PatientCreateAppointment patientId={'61d5d3e12345678912345678'} />;
-      //hard coded patient id, TODO: change to dynamic
+        return <PatientCreateAppointment patientId={userId} />;
 
       case 'createMedicalRecord':
-        return <CreateMedicalRecord patientId={{userId}} />;
-      // hard coded patient id, TODO: change to dynamic
+        return <CreateMedicalRecord patientId={userId} />;
 
       case 'doctorAppointments':
-        return <DoctorAppointments doctorId={'657514a0c6f2772cb05410c4'} />;
-      // hard coded doctor id, TODO: change to dynamic
+        return <DoctorAppointments doctorId={userId} />;
 
       case 'patientAppointments':
-        return <PatientAppointments patientId={'61d5d3e12345678912345678'} />;
+        return <PatientAppointments patientId={userId} />;
       // hard coded patient id, TODO: change to dynamic
 
       default:

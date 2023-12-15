@@ -20,7 +20,7 @@ function PatientCreateAppointment({ patientId }) {
     e.preventDefault();
     console.log('Creating appointment...');
     console.log('Patient ID:', patientId);
-    axios.post(`http://localhost:8080/appointments/patients/${patientId}`, {
+    const response = axios.post(`http://localhost:8080/appointments/patients/${patientId}`, {
       doctorId: selectedDoctor,
       dateOfAppointment: appointmentDate,
       notes
@@ -34,6 +34,7 @@ function PatientCreateAppointment({ patientId }) {
       console.error('Error creating appointment:', error);
       // Handle error
     });
+    console.log(response);
   };
 
   return (
