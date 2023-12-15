@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './CreateMedicalRecord.css';
 
-function CreateMedicalRecord() {
+function CreateMedicalRecord(doctorId) {
     const [patients, setPatients] = useState([]);
     const [selectedPatientId, setSelectedPatientId] = useState('');
     const [recordType, setRecordType] = useState('');
@@ -36,11 +36,14 @@ function CreateMedicalRecord() {
             formData.append('file', file);
         }
         console.log('selectedPatientId',selectedPatientId);
-        axios.post(`http://localhost:8080/patients/${selectedPatientId}/medicalrecords`, {
+        console.log('docotrId',doctorId);
+        const DoctorId = doctorId;
+        axios.post(`http://localhost:8080/medicalrecords/patients/${selectedPatientId}`, {
             dateOfSubmission,
             recordType,
             recordDescription,
-            file
+            file,
+            DoctorId
         })
             .then(response => {
                 console.log('Medical record created:', response.data);
