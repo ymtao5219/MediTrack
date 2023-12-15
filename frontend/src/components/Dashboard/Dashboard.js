@@ -8,6 +8,7 @@ import DoctorInfo from '../DoctorInfo/DoctorInfo';
 import PatientInfo from '../PatientInfo/PatientInfo';
 import DoctorAppointments from '../DoctorAppointments/DoctorAppointments';
 import PatientAppointments from '../PatientAppointments/PatientAppointments';
+import DoctorMedicalRecords from '../DoctorMedicalRecords/DoctorMedicalRecords';
 
 // Dashboard component
 function Dashboard({ currentView , userId}) {
@@ -29,7 +30,7 @@ function Dashboard({ currentView , userId}) {
         url = `http://localhost:8080/doctors/${userId}`; // Replace with correct endpoint
       }
       else if (currentView === 'medicalRecords') {
-        url = `http://localhost:8080/patients/${userId}/medicalrecords`; // Replace with correct endpoint
+        url = `http://localhost:8080/medicalrecords/patients/${userId}`; // Replace with correct endpoint
       }
 
       try {
@@ -57,15 +58,16 @@ function Dashboard({ currentView , userId}) {
         return <PatientCreateAppointment patientId={userId} />;
 
       case 'createMedicalRecord':
-        return <CreateMedicalRecord patientId={userId} />;
+        return <CreateMedicalRecord doctorId={userId} />;
 
       case 'doctorAppointments':
         return <DoctorAppointments doctorId={userId} />;
 
       case 'patientAppointments':
         return <PatientAppointments patientId={userId} />;
-      // hard coded patient id, TODO: change to dynamic
 
+      case 'doctorMedicalRecords':
+        return <DoctorMedicalRecords doctorId={userId} />;
       default:
         return <p>No contents found.</p>;
     }

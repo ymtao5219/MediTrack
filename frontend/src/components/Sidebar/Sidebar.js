@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
 import logo from './logo_nb.png';
+import Logout from '../Logout';
 
 function Sidebar({ userType, onSidebarClick }) {
   const [activeItem, setActiveItem] = useState(null);
@@ -47,6 +48,10 @@ function Sidebar({ userType, onSidebarClick }) {
                 <i className="fa-solid fa-notes-medical"></i>
                 <a href="#">Create Medical Record</a>
               </li>
+              <li className={`nav-item ${activeItem === 'doctorMedicalRecords' ? 'active' : ''}`} onClick={() => handleSidebarClick('doctorMedicalRecords')}>
+                <i className="fa-solid fa-file-medical"></i>
+                <a href="#">Medical Records</a>
+              </li>
               <li className={`nav-item ${activeItem === 'doctorAppointments' ? 'active' : ''}`} onClick={() => handleSidebarClick('doctorAppointments')}>
                 <i className="fa-solid fa-stethoscope"></i>
                 <a href="#">Doctor Appointments</a>
@@ -56,7 +61,9 @@ function Sidebar({ userType, onSidebarClick }) {
         </ul>
       </nav>
       <div className="sidebar-bottom">
-        {/* Add the logout or any other bottom content here */}
+        <div className="sidebar-bottom">
+          <Logout /> {/* Place the Logout component here */}
+        </div>
       </div>
     </aside>
   );
