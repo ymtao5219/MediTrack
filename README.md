@@ -10,7 +10,7 @@ This application digitizes the management of medical records, reducing the need 
 ## Features
 
 - **Electronic Medical Records**: Patients can upload their records or fill out information online.
-- **Real-time Updates**: Doctors receive instant updates on patient records.
+- **Updates**: Doctors receive instant updates on patient records.
 - **Secure Access with JWT Authentication**: Ensures that patient data is securely accessed by authorized personnel only. Users must authenticate using JWT tokens.
 - **Efficient Record Management**: Streamlines the process of updating and managing patient records.
 
