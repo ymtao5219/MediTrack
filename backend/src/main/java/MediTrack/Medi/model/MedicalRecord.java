@@ -11,7 +11,7 @@ import lombok.Data;
 public class MedicalRecord {
     @Id
     private String recordId;
-    private String DoctorId;
+    private String doctorId;
     private LocalDate dateOfSubmission;
     @NotEmpty
     private String recordType;

@@ -38,7 +38,10 @@ public class MedicalRecordService {
     public List<MedicalRecord> getAllMedicalRecord() {
         return medicalRecordRepository.findAll();
     }
+    public List<MedicalRecord> getMedicalRecordsByDoctorId(String doctorId) {
+        return medicalRecordRepository.findBydoctorId(doctorId);
 
+    }
     public List<MedicalRecord> getMedicalRecordsByPatientId(String patientId) {
         Patient patient = mongoTemplate.findById(patientId, Patient.class);
         

@@ -1,3 +1,4 @@
+
 package MediTrack.Medi.controller;
 
 import java.util.List;
@@ -24,19 +25,19 @@ import jakarta.validation.Valid;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/patients/{patientid}/medicalrecords")
+@RequestMapping("/medicalrecords")
 public class MedicalRecordController {
     @Autowired
     private MedicalRecordService medicalservice;
 
-    @PostMapping()
+    @PostMapping("/patients/{patientid}")
     public ResponseEntity<MedicalRecord> createMedicalRecord(@Valid @RequestBody MedicalRecord medicalrecord,
             @PathVariable String patientid) {
         MedicalRecord newMedicalRecord = medicalservice.createMedicalRecord(medicalrecord, patientid);
         return new ResponseEntity<>(newMedicalRecord, HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/patients/{patientid}")
     public ResponseEntity<List<MedicalRecord>> getMedicalRecordsByPatientId(@PathVariable String patientid) {
         try {
             List<MedicalRecord> medicalRecords = medicalservice.getMedicalRecordsByPatientId(patientid);
@@ -50,8 +51,23 @@ public class MedicalRecordController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+    @GetMapping("/doctors/{DoctorId}")
+    public ResponseEntity<List<MedicalRecord>> getMedicalRecordsByDoctorId(@PathVariable String DoctorId) {
+        try {
+            List<MedicalRecord> medicalRecords = medicalservice.getMedicalRecordsByDoctorId(DoctorId);
 
-    @GetMapping("/{id}")
+            if (medicalRecords.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            } else {
+                return new ResponseEntity<>(medicalRecords, HttpStatus.OK);
+            }
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+
+    @GetMapping("/patients/{patientid}/{id}")
     public ResponseEntity<Optional<MedicalRecord>> getSingleAppointment(@PathVariable String id) {
         Optional<MedicalRecord> medicalrecord = medicalservice.getSingleMedicalRecord(id);
         if (medicalrecord.isPresent()) {
@@ -61,7 +77,7 @@ public class MedicalRecordController {
         }
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/patients/{patientid}/{id}")
     public ResponseEntity<MedicalRecord> updateMedicalRecord(@PathVariable String id,@PathVariable String patientid ,@RequestBody MedicalRecord medicalrecordDetails) {
         boolean isUpdated = medicalservice.updateMedicalRecord(id, patientid,medicalrecordDetails);
 
@@ -73,7 +89,7 @@ public class MedicalRecordController {
 
     }
     
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/patients/{patientid}/{id}")
     public ResponseEntity<Void> deleteMedicalRecord(@PathVariable String id,@PathVariable String patientid) {
         boolean isDeleted = medicalservice.deleteMedicalRecord(id,patientid);
         if (isDeleted) {
