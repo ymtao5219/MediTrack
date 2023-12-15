@@ -17,10 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import MediTrack.Medi.model.Appointment;
 import MediTrack.Medi.service.AppointmentService;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/appointments")
-@CrossOrigin(origins = "*")
 public class AppointmentController {
     @Autowired
     private AppointmentService appointmentService;

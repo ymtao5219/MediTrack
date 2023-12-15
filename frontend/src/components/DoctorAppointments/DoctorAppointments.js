@@ -4,15 +4,34 @@ import axios from 'axios';
 function DoctorAppointments({ doctorId }) {
   const [appointments, setAppointments] = useState([]);
 
+  const fetchPatientName = async (patientId) => {
+    try {
+      const response = await axios.get(`http://localhost:8080/patients/${patientId}`);
+      return response.data.firstName + ' ' + response.data.lastName; // Assuming the patient object has firstName and lastName
+    } catch (error) {
+      console.error('Error fetching patient name:', error);
+      return 'Unknown Patient'; // Fallback name
+    }
+  };
+
+
   useEffect(() => {
-    axios.get(`http://localhost:8080/appointments/doctors/${doctorId}`)
-      .then(response => {
-        setAppointments(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching appointments:', error);
-      });
-  }, [doctorId]);
+    const fetchAppointments = async () => {
+        try {
+            const response = await axios.get(`http://localhost:8080/appointments/doctors/${doctorId}`);
+            const appointmentsWithNames = await Promise.all(response.data.map(async appointment => {
+                const patientName = await fetchPatientName(appointment.patientId);
+                return { ...appointment, patientName }; // Add the patientName to the appointment object
+            }));
+            setAppointments(appointmentsWithNames);
+        } catch (error) {
+            console.error('Error fetching appointments:', error);
+        }
+    };
+
+    fetchAppointments();
+}, [doctorId]);
+
 
   return (
     <div className="doctor-appointments">
