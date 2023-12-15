@@ -1,0 +1,2732 @@
+[{
+  "_id": {
+    "$oid": "61d5d3e12345678912345683"
+  },
+  "userId": {
+    "$oid": "61d5d3e12345678912345684"
+  },
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "dateOfBirth": "1985-05-22",
+  "gender": "Female",
+  "contactNumber": "987-654-3210",
+  "emailAddress": "alicesmith@example.com",
+  "address": "456 Side St, Othertown, OT",
+  "registrationDate": "2021-01-20",
+  "medicalRecords": [
+    {
+      "recordId": {
+        "$oid": "61d5d3e12345678912345685"
+      },
+      "dateOfSubmission": "2021-04-10",
+      "recordType": "Dermatology Consultation",
+      "recordDescription": "Consultation for skin rash",
+      "fileLocation": "/path/to/dermatology-consultation.pdf"
+    },
+    {
+      "_id": {
+        "$oid": "657415cd14dc5c3e87cb9033"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray",
+      "fileLocation": "/path/to/file/xray1.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "657415ce14dc5c3e87cb9034"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray",
+      "fileLocation": "/path/to/file/xray1.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "657415cf14dc5c3e87cb9035"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray",
+      "fileLocation": "/path/to/file/xray1.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "6574163ff8c6e03d3d045c4d"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray",
+      "fileLocation": "/path/to/file/xray1.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "657421144589b975b7fcae1d"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "657421304589b975b7fcae1e"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "657421334589b975b7fcae1f"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "6574befa528c245f55b8c9ac"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "6574bf2d528c245f55b8c9ad"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray",
+      "fileLocation": "/path/to/file/xray1.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "6574bf34528c245f55b8c9ae"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/xray1.jsd;lsajkfpg"
+    },
+    {
+      "_id": {
+        "$oid": "6574c556528c245f55b8c9cc"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/xray1.jsd;lsajkfpg"
+    },
+    {
+      "_id": {
+        "$oid": "6574ceda528c245f55b8c9f6"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/xray1.jsd;lsajkfpg"
+    },
+    {
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/new"
+    },
+    {
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/new1"
+    },
+    {
+      "_id": {
+        "$oid": "6574dcbd5331732f08469de0"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/test"
+    },
+    {
+      "_id": {
+        "$oid": "6574e02bc991cb655a444840"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/test_newo"
+    },
+    {
+      "_id": {
+        "$oid": "6574e123c991cb655a444841"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/tessadfsdf"
+    },
+    {
+      "_id": {
+        "$oid": "6574e127c991cb655a444842"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/tessadfsdf"
+    },
+    {
+      "_id": {
+        "$oid": "6574e128c991cb655a444843"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/tessadfsdf"
+    },
+    {
+      "_id": {
+        "$oid": "6574e128c991cb655a444844"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698465600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/tessadfsdf"
+    },
+    {
+      "_id": {
+        "$oid": "6574ee8305458f2f4018d4c9"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1699156800000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/tessadfsdf"
+    },
+    {
+      "_id": {
+        "$oid": "6574ee8705458f2f4018d4ca"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1700888400000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/tessadfsdf"
+    },
+    {
+      "_id": {
+        "$oid": "6574ee9805458f2f4018d4cb"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1703998800000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/tessadfsdf"
+    },
+    {
+      "_id": {
+        "$oid": "6574fe2305458f2f4018d4ce"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1706677200000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/New"
+    },
+    {
+      "_id": {
+        "$oid": "657524cb7ca0c354c2907a3a"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1706677200000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/New"
+    }
+  ],
+  "appointments": [
+    {
+      "appointmentId": {
+        "$oid": "61d5d3e12345678912345686"
+      },
+      "doctorId": {
+        "$oid": "61d5d3e12345678912345687"
+      },
+      "dateOfAppointment": "2021-05-05",
+      "notes": "Skin rash follow-up"
+    },
+    {
+      "_id": {
+        "$oid": "657422394589b975b7fcae20"
+      },
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1698552000000"
+        }
+      },
+      "notes": "Patient complained about chest pain."
+    },
+    {
+      "_id": {
+        "$oid": "657422664589b975b7fcae21"
+      },
+      "doctorId": {
+        "$oid": "61d5d3e12345678912245678"
+      },
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1698552000000"
+        }
+      },
+      "notes": "Patient complained about chest pain."
+    },
+    {
+      "_id": {
+        "$oid": "6574aae268b12e3b195074a3"
+      },
+      "doctorId": {
+        "$oid": "61d5d3e12345678912245678"
+      },
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1698552000000"
+        }
+      },
+      "notes": "Patient complained about chest pain."
+    },
+    {
+      "_id": {
+        "$oid": "6574aae968b12e3b195074a4"
+      },
+      "doctorId": {
+        "$oid": "61d5d3e12345678912245678"
+      },
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1698552000000"
+        }
+      },
+      "notes": "Patient complained about chest pain1."
+    },
+    {
+      "_id": {
+        "$oid": "6574e3047db21b4fcbf14443"
+      },
+      "doctorId": {
+        "$oid": "61d5d3e12345678912245678"
+      },
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1698552000000"
+        }
+      },
+      "notes": "Patient complained about chest pain1."
+    },
+    {
+      "_id": {
+        "$oid": "6574e3097db21b4fcbf14444"
+      },
+      "doctorId": {
+        "$oid": "61d5d3e12345678912245678"
+      },
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1698552000000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.dsad"
+    },
+    {
+      "_id": {
+        "$oid": "6574e3f41a14363b4170d615"
+      },
+      "doctorId": "61d5d3e12345678912245678",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1698552000000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.dsad"
+    },
+    {
+      "_id": {
+        "$oid": "6574eec705458f2f4018d4cc"
+      },
+      "doctorId": "61d5d3e12345678912245678",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1698724800000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.dsad"
+    },
+    {
+      "_id": {
+        "$oid": "6574eecd05458f2f4018d4cd"
+      },
+      "doctorId": "61d5d3e12345678912245678",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701234000000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.dsad"
+    },
+    {
+      "_id": {
+        "$oid": "657524e57ca0c354c2907a3b"
+      },
+      "doctorId": "61d5d3e12345678912245678",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701234000000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.dsad"
+    },
+    {
+      "_id": {
+        "$oid": "657524e97ca0c354c2907a3c"
+      },
+      "doctorId": "61d5d3e12345678912245678",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701234000000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.asrweer"
+    },
+    {
+      "_id": {
+        "$oid": "657524fc7ca0c354c2907a3d"
+      },
+      "doctorId": "61d5d3e12345678912245678",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1764392400000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.asrweer"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61d5d3e12345678912345678"
+  },
+  "userId": {
+    "$oid": "61d5d3e12345678912345679"
+  },
+  "firstName": "John",
+  "lastName": "Doe",
+  "dateOfBirth": "1990-01-01",
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johndoe@example.com",
+  "address": "123 Main St, Anytown, AN",
+  "registrationDate": "2021-01-10",
+  "medicalRecords": [
+    {
+      "recordId": {
+        "$oid": "61d5d3e12345678912345680"
+      },
+      "dateOfSubmission": "2021-02-15",
+      "recordType": "General Checkup",
+      "recordDescription": "Annual physical examination",
+      "fileLocation": "/path/to/physical-exam-results.pdf"
+    },
+    {
+      "_id": {
+        "$oid": "6578e7528620493fb5245e34"
+      },
+      "recordType": "123",
+      "recordDescription": "4444"
+    },
+    {
+      "_id": {
+        "$oid": "6578e8738620493fb5245e35"
+      },
+      "recordType": "test type",
+      "recordDescription": "test description"
+    },
+    {
+      "_id": {
+        "$oid": "6578e9698620493fb5245e36"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1709182800000"
+        }
+      },
+      "recordType": "test type 1",
+      "recordDescription": "test desc"
+    },
+    {
+      "_id": {
+        "$oid": "657a27108620493fb5245e42"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1701752400000"
+        }
+      },
+      "recordType": "doctor apple",
+      "recordDescription": "aaaa"
+    },
+    {
+      "_id": {
+        "$oid": "657a65f421b06e032e297d17"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1702011600000"
+        }
+      },
+      "recordType": "123",
+      "recordDescription": "123"
+    }
+  ],
+  "appointments": [
+    {
+      "appointmentId": {
+        "$oid": "61d5d3e12345678912345681"
+      },
+      "doctorId": {
+        "$oid": "61d5d3e12345678912345682"
+      },
+      "dateOfAppointment": "2021-03-20",
+      "notes": "Follow-up appointment"
+    },
+    {
+      "_id": {
+        "$oid": "6578d7d0ecec1701d71a8218"
+      },
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701234000000"
+        }
+      },
+      "notes": "Li-Xuan"
+    },
+    {
+      "_id": {
+        "$oid": "6578d8c0a1d13b4ef638dfc8"
+      },
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701234000000"
+        }
+      },
+      "notes": "Li-Xuan-2"
+    },
+    {
+      "_id": {
+        "$oid": "6578d95ea1d13b4ef638dfc9"
+      },
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701234000000"
+        }
+      },
+      "notes": "Li-Xuan-2"
+    },
+    {
+      "_id": {
+        "$oid": "6578da258620493fb5245e2f"
+      },
+      "doctorId": "",
+      "notes": "testtest"
+    },
+    {
+      "_id": {
+        "$oid": "6578da268620493fb5245e30"
+      },
+      "doctorId": "",
+      "notes": "testtest"
+    },
+    {
+      "_id": {
+        "$oid": "6578da498620493fb5245e31"
+      },
+      "doctorId": "",
+      "notes": "testtest"
+    },
+    {
+      "_id": {
+        "$oid": "6578e4248620493fb5245e32"
+      },
+      "doctorId": "Amanda Doe - Cardiologist",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703566800000"
+        }
+      },
+      "notes": "Test for Amanda Doe"
+    },
+    {
+      "_id": {
+        "$oid": "6578e45f8620493fb5245e33"
+      },
+      "doctorId": "Amanda Doe - Cardiologist",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703566800000"
+        }
+      },
+      "notes": "Test for Amanda Doe"
+    },
+    {
+      "_id": {
+        "$oid": "6578e9b68620493fb5245e37"
+      },
+      "doctorId": "Amanda Doe - Cardiologist",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703998800000"
+        }
+      },
+      "notes": "as212"
+    },
+    {
+      "_id": {
+        "$oid": "6578f2cc8620493fb5245e38"
+      },
+      "doctorId": "",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1700974800000"
+        }
+      },
+      "notes": "1123455"
+    },
+    {
+      "_id": {
+        "$oid": "6578f39d8620493fb5245e39"
+      },
+      "doctorId": "",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703048400000"
+        }
+      },
+      "notes": "444"
+    },
+    {
+      "_id": {
+        "$oid": "6578f5068620493fb5245e3a"
+      },
+      "doctorId": "",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703480400000"
+        }
+      },
+      "notes": "222"
+    },
+    {
+      "_id": {
+        "$oid": "6578f56e8620493fb5245e3b"
+      },
+      "doctorId": "John Doe - Cardiologist",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1704430800000"
+        }
+      },
+      "notes": "test_test"
+    },
+    {
+      "_id": {
+        "$oid": "6578f7848620493fb5245e3c"
+      },
+      "doctorId": "Amanda Li - Cardiologist",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1704430800000"
+        }
+      },
+      "notes": "ss"
+    },
+    {
+      "_id": {
+        "$oid": "657910538620493fb5245e3d"
+      },
+      "doctorId": "John Doe - Cardiologist",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1702962000000"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "_id": {
+        "$oid": "6579115e8620493fb5245e3e"
+      },
+      "doctorId": "65753737281fcf223503f91b",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703826000000"
+        }
+      },
+      "notes": "aaa"
+    },
+    {
+      "_id": {
+        "$oid": "6579118e8620493fb5245e3f"
+      },
+      "doctorId": "6575198f41457d16c8cbe86f",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703739600000"
+        }
+      },
+      "notes": "aaa"
+    },
+    {
+      "_id": {
+        "$oid": "657912e48620493fb5245e40"
+      },
+      "doctorId": "65753737281fcf223503f91b",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703653200000"
+        }
+      },
+      "notes": "hello!"
+    },
+    {
+      "_id": {
+        "$oid": "657a19d48620493fb5245e41"
+      },
+      "doctorId": "61a8b9e7f1b74e5f4c8b4568",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1702443600000"
+        }
+      },
+      "notes": "test Michael"
+    },
+    {
+      "_id": {
+        "$oid": "657b5e2c1b66134a031eb1bb"
+      },
+      "doctorId": "",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "-61442219038000"
+        }
+      },
+      "notes": "222"
+    },
+    {
+      "_id": {
+        "$oid": "657b5e411b66134a031eb1bc"
+      },
+      "doctorId": "",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "-55130094238000"
+        }
+      },
+      "notes": "222"
+    },
+    {
+      "_id": {
+        "$oid": "657b5e571b66134a031eb1bd"
+      },
+      "doctorId": "6575198f41457d16c8cbe86f",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701493200000"
+        }
+      },
+      "notes": "fff"
+    },
+    {
+      "_id": {
+        "$oid": "657b8a332ab7bc0aabbc1895"
+      },
+      "doctorId": "657b7f581b66134a031eb1e8",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703221200000"
+        }
+      },
+      "notes": "asss"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "65740289aa8b603c3862c8eb"
+  },
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "485582400000"
+    }
+  },
+  "gender": "Female",
+  "contactNumber": "987-654-3210",
+  "emailAddress": "alicesmith@example.com",
+  "address": "456 Side St, Othertown, OT",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1611118800000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "6574038762122c4fc0ed3d8c"
+  },
+  "firstName": "SeanHong",
+  "lastName": "2024",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "485582400000"
+    }
+  },
+  "gender": "Female",
+  "contactNumber": "987-654-3210",
+  "emailAddress": "alicesmith@example.com",
+  "address": "456 Side St, Othertown, OT",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1611118800000"
+    }
+  },
+  "medicalRecords": [
+    {
+      "_id": {
+        "$oid": "6574038762122c4fc0ed3d89"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1618027200000"
+        }
+      },
+      "recordType": "Dermatology Consultation",
+      "recordDescription": "Consultation for skin rash",
+      "fileLocation": "/path/to/dermatology-consultation.pdf"
+    }
+  ],
+  "appointments": [
+    {
+      "_id": {
+        "$oid": "6574038762122c4fc0ed3d8a"
+      },
+      "doctorId": {
+        "$oid": "6574038762122c4fc0ed3d8b"
+      },
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1620187200000"
+        }
+      },
+      "notes": "Skin rash follow-up"
+    }
+  ],
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657406237fbb6255a2f378ae"
+  },
+  "firstName": "Alice",
+  "lastName": "Smith",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "485582400000"
+    }
+  },
+  "gender": "Female",
+  "contactNumber": "987-654-3210",
+  "emailAddress": "alicesmith@example.com",
+  "address": "456 Side St, Othertown, OT",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1611118800000"
+    }
+  },
+  "medicalRecords": [
+    {
+      "_id": {
+        "$oid": "657406237fbb6255a2f378ab"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1618027200000"
+        }
+      },
+      "recordType": "Dermatology Consultation",
+      "recordDescription": "Consultation for skin rash",
+      "fileLocation": "/path/to/dermatology-consultation.pdf"
+    }
+  ],
+  "appointments": [
+    {
+      "_id": {
+        "$oid": "657406237fbb6255a2f378ac"
+      },
+      "doctorId": {
+        "$oid": "657406237fbb6255a2f378ad"
+      },
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1620187200000"
+        }
+      },
+      "notes": "Skin rash follow-up"
+    }
+  ],
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657525947ca0c354c2907a3e"
+  },
+  "userId": "61d5d3e12345678912344684",
+  "firstName": "John_New",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "631170000000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient",
+  "medicalRecords": [
+    {
+      "_id": {
+        "$oid": "657525bb7ca0c354c2907a3f"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1706677200000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/New"
+    },
+    {
+      "_id": {
+        "$oid": "657525ee7ca0c354c2907a40"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1706677200000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/New"
+    },
+    {
+      "_id": {
+        "$oid": "657525ef7ca0c354c2907a41"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1706677200000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/New"
+    },
+    {
+      "_id": {
+        "$oid": "657526487ca0c354c2907a42"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1706677200000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/sadasdsad"
+    },
+    {
+      "_id": {
+        "$oid": "657526ac7ca0c354c2907a43"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1706677200000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/AAA"
+    },
+    {
+      "_id": {
+        "$oid": "6575270f7ca0c354c2907a44"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1706677200000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/AAA"
+    },
+    {
+      "_id": {
+        "$oid": "657527697ca0c354c2907a45"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1769835600000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray1",
+      "fileLocation": "/path/to/file/AAA"
+    },
+    {
+      "_id": {
+        "$oid": "65764efd57e4992959109079"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1698638400000"
+        }
+      },
+      "recordType": "X-ray",
+      "recordDescription": "Chest X-ray2",
+      "fileLocation": "/path/to/file/YOYO"
+    }
+  ],
+  "appointments": [
+    {
+      "_id": {
+        "$oid": "657527ab7ca0c354c2907a46"
+      },
+      "doctorId": "61d5d3e12345678912245678",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1764392400000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.asrweer"
+    },
+    {
+      "_id": {
+        "$oid": "657567c2462ab83c2fecaa83"
+      },
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1764392400000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.asrweer"
+    },
+    {
+      "_id": {
+        "$oid": "657567c6462ab83c2fecaa84"
+      },
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1764392400000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.asrweer"
+    },
+    {
+      "_id": {
+        "$oid": "657567c7462ab83c2fecaa85"
+      },
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1764392400000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.asrweer"
+    },
+    {
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1764392400000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.asrweer"
+    },
+    {
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1764392400000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.sasassaas"
+    },
+    {
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1764392400000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.sasassaas"
+    },
+    {
+      "_id": {
+        "$oid": "65756c1cf27a157c3f6faf19"
+      },
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1764392400000"
+        }
+      },
+      "notes": "Patient complained about chest pain1.sasassaas"
+    },
+    {
+      "_id": {
+        "$oid": "657637ee395caf6e4c1248ba"
+      },
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703826000000"
+        }
+      },
+      "notes": "sadasd complained about chest XXX."
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6575585b27fd110b31a45c98"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "6575597000bb4268c567dbbe"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657572a873efa012bf7b65e9"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john.doeemail.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657572c773efa012bf7b65ea"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657572d073efa012bf7b65eb"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "dasdasdemail.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657574cfbdeff22a2c6ff2cb"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "dasdasdemail.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657575cc60cc13259a751387"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "dasdasdemail.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657575d560cc13259a751388"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "dasdasdemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657575dd60cc13259a751389"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "1",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "6575775735814749f170867e"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "6575775f35814749f170867f"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemail.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "6575792bed7ab614cf5d6f2a"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemail.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757a9dbe545020e576a8ae"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemail.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757aa4be545020e576a8af"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757ad0370c795fb0b315ac"
+  },
+  "userId": "65752828f8891d7e6f6620d1",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757ae9370c795fb0b315ad"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757af6370c795fb0b315ae"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757b63370c795fb0b315b0"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757bf01cd3057598c743f6"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757cb0dca33116cbd6e229"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757cb4dca33116cbd6e22a"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757cccdca33116cbd6e22b"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient",
+  "medicalRecords": [
+    {
+      "_id": {
+        "$oid": "657b83a11b66134a031eb1eb"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1703739600000"
+        }
+      },
+      "recordType": "test T",
+      "recordDescription": "ttt"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "65757cfedca33116cbd6e236"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757d02dca33116cbd6e237"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757d0dde180952bf2c7102"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757d23de180952bf2c7104"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757d28de180952bf2c7105"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "",
+  "lastName": "",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757d38de180952bf2c7107"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757d3ede180952bf2c7108"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757d67bc7a4631dc9a51aa"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757e9cbf63c65c9e6d3749"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757eafbf63c65c9e6d374a"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemail.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757eb4bf63c65c9e6d374b"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757eb8bf63c65c9e6d374c"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757ecd35013965c29a2eba"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757ee635013965c29a2ebb"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757efe35013965c29a2ebf"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757f8235013965c29a2ec7"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757fc2c9acc30934f2cda9"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65757fc4c9acc30934f2cdaa"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "6575817e096c593be3c5cf6c"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65758183096c593be3c5cf6d"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7321323890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "65758191040ff628c05352ec"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7321323890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657581a9040ff628c05352ed"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "6576129ba17c57539236a4aa"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@emailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657612d1a17c57539236a4ae"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@emailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657612d5a17c57539236a4af"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657615597edd1a2e2893efd0"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Doe",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "johnemailcom",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "6576167328c9972ef5124c1b"
+  },
+  "userId": "657248c3f1e4fee1822cc5e8",
+  "firstName": "Sean",
+  "lastName": "Sean",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "649483200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "123-456-7890",
+  "emailAddress": "john@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657941d0cd8e3c367f7cb794"
+  },
+  "userId": "65753314df4956568ec4aad1",
+  "firstName": "John",
+  "lastName": "Y",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "632379600000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "+1234567890",
+  "emailAddress": "john@example.com",
+  "address": "123 Main Street",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1673326800000"
+    }
+  },
+  "medicalRecords": [],
+  "appointments": [],
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657a3212330daa2596c657e9"
+  },
+  "userId": "657a31ff330daa2596c657e7",
+  "firstName": "Li",
+  "lastName": "Hong",
+  "contactNumber": "234-567-8901",
+  "emailAddress": "alice.smith@email.com",
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b59a00220f04ebbafb70b"
+  },
+  "userId": "657b59a00220f04ebbafb709",
+  "firstName": "aaa",
+  "lastName": "aaa",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "850453200000"
+    }
+  },
+  "gender": "Female",
+  "contactNumber": "9686876",
+  "emailAddress": "a@gak.com",
+  "address": "efwewfewwefe",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1702530000000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b5e1e0220f04ebbafb711"
+  },
+  "userId": "657a2e77330daa2596c657e0",
+  "firstName": "test",
+  "lastName": "test",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b5e2c0220f04ebbafb712"
+  },
+  "userId": "657a2e77330daa2596c657e0",
+  "firstName": "NewSean",
+  "lastName": "test",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient",
+  "medicalRecords": [
+    {
+      "_id": {
+        "$oid": "657b89cf2ab7bc0aabbc1893"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1702530000000"
+        }
+      },
+      "recordType": "New test type",
+      "recordDescription": "new desc"
+    }
+  ],
+  "appointments": [
+    {
+      "_id": {
+        "$oid": "657b8e44c7f09106bac3431e"
+      },
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701234000000"
+        }
+      },
+      "notes": "Li-Xuan-2"
+    },
+    {
+      "_id": {
+        "$oid": "657b93e9b490ff208e291bad"
+      },
+      "patientId": "3434234",
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701234000000"
+        }
+      },
+      "notes": "Li-Xuan-2"
+    },
+    {
+      "_id": {
+        "$oid": "657b93f3b490ff208e291bae"
+      },
+      "patientId": "657b5e2c0220f04ebbafb712",
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701234000000"
+        }
+      },
+      "notes": "Li-Xuan-2"
+    },
+    {
+      "_id": {
+        "$oid": "657b9457b490ff208e291bb3"
+      },
+      "patientId": "657b5e2c0220f04ebbafb712",
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701320400000"
+        }
+      },
+      "notes": "Li-Xuan-2"
+    },
+    {
+      "_id": {
+        "$oid": "657b945bb490ff208e291bb4"
+      },
+      "patientId": "657b5e2c0220f04ebbafb712",
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701320400000"
+        }
+      },
+      "notes": "Li-Xuan-2"
+    },
+    {
+      "_id": {
+        "$oid": "657b9461b490ff208e291bb5"
+      },
+      "patientId": "657b5e2c0220f04ebbafb712",
+      "doctorId": "657514a0c6f2772cb05410c4",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1701320400000"
+        }
+      },
+      "notes": "Li-Xuan-2dsfklfsdjfklds"
+    },
+    {
+      "_id": {
+        "$oid": "657b97898b40fb1a41f232b0"
+      },
+      "patientId": "657b5e2c0220f04ebbafb712",
+      "doctorId": "657b903858f49963849f5ccc",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703653200000"
+        }
+      },
+      "notes": "hahaha"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "657b5ed50220f04ebbafb719"
+  },
+  "userId": "657b5ec10220f04ebbafb717",
+  "firstName": "test",
+  "lastName": "test",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b61170220f04ebbafb71e"
+  },
+  "userId": "657b5ec10220f04ebbafb717",
+  "firstName": "test",
+  "lastName": "test",
+  "gender": "Male",
+  "contactNumber": "46464465",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b61470220f04ebbafb71f"
+  },
+  "userId": "657b5ec10220f04ebbafb717",
+  "firstName": "test",
+  "lastName": "test",
+  "gender": "Male",
+  "contactNumber": "46464465",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b614c0220f04ebbafb720"
+  },
+  "userId": "657b5ec10220f04ebbafb717",
+  "firstName": "test",
+  "lastName": "test",
+  "gender": "Male",
+  "contactNumber": "46464465",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b61500220f04ebbafb721"
+  },
+  "userId": "657b5ec10220f04ebbafb717",
+  "firstName": "test",
+  "lastName": "test",
+  "gender": "Male",
+  "contactNumber": "46464465",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b637d0220f04ebbafb738"
+  },
+  "userId": "657b5ec10220f04ebbafb717",
+  "firstName": "test",
+  "lastName": "test",
+  "gender": "Male",
+  "contactNumber": "46464465",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b63cb0220f04ebbafb739"
+  },
+  "userId": "657b5ec10220f04ebbafb717",
+  "firstName": "test",
+  "lastName": "test",
+  "gender": "Male",
+  "contactNumber": "46464465",
+  "emailAddress": "john.doe@email.com",
+  "address": "123 Main St, City, Country",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1698465600000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b731e6773a32a847c4cf7"
+  },
+  "userId": "657b72ac6773a32a847c4cf4",
+  "firstName": "sadasdfds",
+  "lastName": "dsfdsf",
+  "contactNumber": "234-567-8901",
+  "emailAddress": "alice.smith@email.com",
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b73ee6773a32a847c4cfa"
+  },
+  "userId": "657b73ee6773a32a847c4cf8",
+  "firstName": "seanhong94",
+  "lastName": "seanhong94",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "1701838800000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "2432434",
+  "emailAddress": "seanhong94@gmail.com",
+  "address": "sdfsafdsaf",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1702530000000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b746b6773a32a847c4cff"
+  },
+  "userId": "657b746b6773a32a847c4cfd",
+  "firstName": "Seanhong93",
+  "lastName": "Seanhong93",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "1702357200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "2143242",
+  "emailAddress": "seanhong93@gmail.com",
+  "address": "dsagdffg",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1702530000000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b747b6773a32a847c4d00"
+  },
+  "userId": "657b72ac6773a32a847c4cf4",
+  "firstName": "Sdsf",
+  "lastName": "dsfdsf",
+  "contactNumber": "234-567-8901",
+  "emailAddress": "alice.smith@email.com",
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b8ac8b0a10b7262339da6"
+  },
+  "userId": "657b8ac8b0a10b7262339da4",
+  "firstName": "Alex",
+  "lastName": "Tao",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "-1572807600000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "189999999999",
+  "emailAddress": "guess.who.am.i@douniwan.com",
+  "address": "520 Northampton Rd",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1702530000000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient"
+},{
+  "_id": {
+    "$oid": "657b8f6fb732fc02e70c694a"
+  },
+  "userId": "657b8f6fb732fc02e70c6948",
+  "firstName": "yiming1",
+  "lastName": "y1",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "1703221200000"
+    }
+  },
+  "gender": "Male",
+  "contactNumber": "1234",
+  "emailAddress": "yi@yi.com",
+  "address": "asd",
+  "registrationDate": {
+    "$date": {
+      "$numberLong": "1702530000000"
+    }
+  },
+  "_class": "MediTrack.Medi.model.Patient",
+  "medicalRecords": [
+    {
+      "_id": {
+        "$oid": "657b905f58f49963849f5cce"
+      },
+      "dateOfSubmission": {
+        "$date": {
+          "$numberLong": "1702530000000"
+        }
+      },
+      "recordType": "T",
+      "recordDescription": "dsfsdffsdf"
+    }
+  ],
+  "appointments": [
+    {
+      "_id": {
+        "$oid": "657b914a58f49963849f5cd2"
+      },
+      "doctorId": "657b903858f49963849f5ccc",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "1703912400000"
+        }
+      },
+      "notes": "node"
+    },
+    {
+      "_id": {
+        "$oid": "657b95f48b40fb1a41f232ad"
+      },
+      "patientId": "657b8f6fb732fc02e70c694a",
+      "doctorId": "657b903858f49963849f5ccc",
+      "dateOfAppointment": {
+        "$date": {
+          "$numberLong": "-58664372638000"
+        }
+      },
+      "notes": "hi nd"
+    }
+  ]
+}]
